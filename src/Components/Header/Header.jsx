@@ -1,11 +1,30 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../context/LanguageContext";
 
 const data = {
   logo: "/assets/img/logo.svg",
   logoUrl: "/",
-  menuItems: [
-    { label: "Home", href: "/" },
+};
+
+const menuData = {
+  me: [
+    { label: "POČETNA", href: "/" },
+    { label: "NOVOSTI", href: "/blog" },
+    { label: "O NAMA", href: "/about" },
+    { label: "KONTAKT", href: "/contact" },
+    {
+      label: "VIŠE",
+      href: "/contact",
+      children: [
+        { label: "GALERIJA", href: "/gallery" },
+        { label: "USLUGE", href: "/services" },
+        { label: "PROJEKTI", href: "/projects" },
+      ],
+    },
+  ],
+  en: [
+    { label: "HOME", href: "/" },
     { label: "NEWS", href: "/blog" },
     { label: "ABOUT", href: "/about" },
     { label: "CONTACT", href: "/contact" },
@@ -21,6 +40,11 @@ const data = {
   ],
 };
 
+const languages = [
+  { code: "me", label: "MNE", flag: "🇲🇪" },
+  { code: "en", label: "ENG", flag: "🇬🇧" },
+];
+
 const Header = () => {
   const [isShowMobileMenu, setIsShowMobileMenu] = useState(false);
   const [openMobileSubmenuIndex, setOpenMobileSubmenuIndex] = useState([]);
@@ -28,11 +52,11 @@ const Header = () => {
   const [isSearchActive, setIsSearchActive] = useState(false);
 
   const [isLangOpen, setIsLangOpen] = useState(false);
-const [selectedLang, setSelectedLang] = useState({
-  code: "me",
-  label: "MNE",
-  flag: "🇲🇪",
-});
+  const { language, changeLanguage } = useLanguage();
+
+  const selectedLang = languages.find((lang) => lang.code === language) || languages[0];
+
+  const currentMenuItems = menuData[language] || menuData.me;
 
   const handleOpenMobileSubmenu = (index) => {
     if (openMobileSubmenuIndex.includes(index)) {
@@ -59,11 +83,6 @@ const [selectedLang, setSelectedLang] = useState({
     };
   }, []);
 
-  const languages = [
-  { code: "me", label: "MNE", flag: "🇲🇪" },
-  { code: "en", label: "ENG", flag: "🇬🇧" },
-];
-
   return (
     <>
       <header className={`cs_site_header cs_style_1 cs_sticky_header ${isSticky ? isSticky : ""}`}>
@@ -79,7 +98,7 @@ const [selectedLang, setSelectedLang] = useState({
                 <div className="cs_nav cs_heading_color">
                   <nav className={`cs_nav_list_wrap text-uppercase ${isShowMobileMenu ? "cs_active" : ""}`}>
                     <ul className={`cs_nav_list`}>
-                      {data.menuItems.map((item, index) => (
+                      {currentMenuItems.map((item, index) => (
                         <li key={index} className={item.children ? "menu-item-has-children" : ""}>
                           <Link to={item.href}>{item.label}</Link>
                           {item.children && (
@@ -119,41 +138,33 @@ const [selectedLang, setSelectedLang] = useState({
               </div>
               <div className="cs_main_header_right">
                 <div className="cs_header_icon_btns">
+                  <div className="cs_header_lang_wrap">
+                    <button type="button" className="cs_header_lang_btn" onClick={() => setIsLangOpen(!isLangOpen)}>
+                      <span className="cs_header_lang_flag">{selectedLang.flag}</span>
+                      <span className="cs_header_lang_text">{selectedLang.label}</span>
+                      <span className={`cs_header_lang_arrow ${isLangOpen ? "active" : ""}`}>▼</span>
+                    </button>
 
-<div className="cs_header_lang_wrap">
-  <button
-    type="button"
-    className="cs_header_lang_btn"
-    onClick={() => setIsLangOpen(!isLangOpen)}
-  >
-    <span className="cs_header_lang_flag">{selectedLang.flag}</span>
-    <span className="cs_header_lang_text">{selectedLang.label}</span>
-    <span className={`cs_header_lang_arrow ${isLangOpen ? "active" : ""}`}>
-      ▼
-    </span>
-  </button>
-
-  {isLangOpen && (
-    <div className="cs_header_lang_dropdown">
-      {languages.map((lang) => (
-        <button
-          key={lang.code}
-          type="button"
-          className={`cs_header_lang_item ${
-            selectedLang.code === lang.code ? "active" : ""
-          }`}
-          onClick={() => {
-            setSelectedLang(lang);
-            setIsLangOpen(false);
-          }}
-        >
-          <span className="cs_header_lang_flag">{lang.flag}</span>
-          <span className="cs_header_lang_text">{lang.label}</span>
-        </button>
-      ))}
-    </div>
-  )}
-</div>                </div>
+                    {isLangOpen && (
+                      <div className="cs_header_lang_dropdown">
+                        {languages.map((lang) => (
+                          <button
+                            key={lang.code}
+                            type="button"
+                            className={`cs_header_lang_item ${selectedLang.code === lang.code ? "active" : ""}`}
+                            onClick={() => {
+                              changeLanguage(lang.code);
+                              setIsLangOpen(false);
+                            }}
+                          >
+                            <span className="cs_header_lang_flag">{lang.flag}</span>
+                            <span className="cs_header_lang_text">{lang.label}</span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

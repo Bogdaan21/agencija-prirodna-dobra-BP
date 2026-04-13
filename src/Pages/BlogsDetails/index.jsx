@@ -5,12 +5,15 @@ import BlogDetailsSection from "../../Components/BlogsDetails";
 import PageHeading from "../../Components/PageHeading";
 import { pageTitle } from "../../helper";
 import { db } from "../../firebase";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function BlogDetailsPage() {
   const { slug } = useParams();
 
   const [loading, setLoading] = useState(true);
   const [blogData, setBlogData] = useState(null);
+
+  const { language } = useLanguage();
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -31,15 +34,18 @@ export default function BlogDetailsPage() {
         const mappedBlog = {
           postThumb: firebaseBlog.imageUrl || "/assets/img/post_1.jpg",
           date: formatDate(firebaseBlog.date),
-          category: { title: "Blog", url: "/blog" },
-          title: firebaseBlog?.title?.en || firebaseBlog?.title?.me || "Untitled Post",
+          category: {
+            title: language === "me" ? "Novosti" : "Blog",
+            url: "/blog",
+          },
+          title:
+            firebaseBlog?.title?.[language] || firebaseBlog?.title?.en || firebaseBlog?.title?.me || "Untitled Post",
           content: [
             {
               type: "html",
-              html: firebaseBlog?.content?.en || firebaseBlog?.content?.me || "",
+              html: firebaseBlog?.content?.[language] || firebaseBlog?.content?.en || firebaseBlog?.content?.me || "",
             },
           ],
-          images: [],
           gallery: firebaseBlog.gallery || [],
           sections: [],
           videoUrl: "",
@@ -48,8 +54,6 @@ export default function BlogDetailsPage() {
             title: "",
             description: "",
           },
-          formTitle: "Leave A Reply",
-          formNote: "Your email address will not be published. Required fields are marked *",
         };
 
         setBlogData(mappedBlog);
@@ -71,9 +75,8 @@ export default function BlogDetailsPage() {
   const breadcrumbsData = {
     backgroundImage: "/assets/img/about_heading_bg.jpg",
     breadcrumbs: [
-      { label: "Home", link: "/" },
-      { label: "Blog", link: "/blog" },
-      { label: blogData?.title || "Blog Details", active: true },
+      { label: language === "me" ? "Početna" : "Home", link: "/" },
+      { label: language === "me" ? "Novosti" : "Blog", link: "/blog" },
     ],
     title: blogData?.title || "Blog Details",
   };
@@ -107,7 +110,11 @@ export default function BlogDetailsPage() {
         <section>
           <div className="cs_height_100 cs_height_lg_70" />
           <div className="container">
-            <p>The blog post you are looking for does not exist.</p>
+            <p>
+              {language === "me"
+                ? "Blog objava koju tražite ne postoji."
+                : "The blog post you are looking for does not exist."}
+            </p>
           </div>
           <div className="cs_height_100 cs_height_lg_70" />
         </section>

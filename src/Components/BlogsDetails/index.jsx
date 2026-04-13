@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function BlogDetailsSection({ data }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeImageIndex, setActiveImageIndex] = useState(0);
+  
+  const { language } = useLanguage();
 
   const openLightbox = (index) => {
     setActiveImageIndex(index);
@@ -94,7 +97,7 @@ export default function BlogDetailsSection({ data }) {
           {!!data.gallery?.length && (
             <>
               <div className="cs_height_40 cs_height_lg_25" />
-              <h3 className="cs_fs_24 cs_mb_20">Gallery</h3>
+              <h3 className="cs_fs_24 cs_mb_20">{language === "me" ? "Galerija" : "Gallery"}</h3>
 
               <div className="cs_blog_gallery">
                 {data.gallery.map((img, index) => (

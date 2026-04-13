@@ -4,21 +4,27 @@ import BlogSection from "../../Components/BlogSection";
 import { pageTitle } from "../../helper";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../firebase";
-
-const BreadcrumbsData = {
-  backgroundImage: "/assets/img/about_heading_bg.jpg",
-  title: "Latest Post",
-  breadcrumbs: [
-    { label: "Home", link: "/" },
-    { label: "Blog", active: true },
-  ],
-};
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function BlogPage() {
-  pageTitle("Blog | LeafLife");
+  const { language } = useLanguage();
+
+  pageTitle(language === "me" ? "Novosti | LeafLife" : "Blog | LeafLife");
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const breadcrumbsData = useMemo(
+    () => ({
+      backgroundImage: "/assets/img/about_heading_bg.jpg",
+      title: language === "me" ? "Najnovije objave" : "Latest Posts",
+      breadcrumbs: [
+        { label: language === "me" ? "Početna" : "Home", link: "/" },
+        { label: language === "me" ? "Novosti" : "Blog", active: true },
+      ],
+    }),
+    [language],
+  );
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -34,9 +40,11 @@ export default function BlogPage() {
             id: docItem.id,
             image: data.imageUrl || "/assets/img/post_1.jpg",
             date: formatDate(data.date),
-            category: "Blog",
-            title: data?.title?.en || data?.title?.me || "Untitled Post",
+            category: language === "me" ? "Novosti" : "Blog",
+            title: data?.title?.[language] || data?.title?.en || data?.title?.me || "Untitled Post",
             description:
+              data?.excerpt?.[language] ||
+              stripHtml(data?.content?.[language]) ||
               data?.excerpt?.en ||
               stripHtml(data?.content?.en) ||
               data?.excerpt?.me ||
@@ -66,16 +74,14 @@ export default function BlogPage() {
 
   return (
     <>
-      <PageHeading data={BreadcrumbsData} />
+      <PageHeading data={breadcrumbsData} />
 
       <section>
         <div className="cs_height_100 cs_height_lg_70" />
         <div className="container">
           <div className="row d-flex justify-content-center">
             {loading ? (
-              <div className="col-lg-8">
-                <p>Loading blog posts...</p>
-              </div>
+              <div className="col-lg-8">{language === "me" ? "Učitavanje objava..." : "Loading blog posts..."}</div>
             ) : (
               <BlogSection data={blogData} />
             )}

@@ -1,0 +1,50 @@
+import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
+
+const LanguageContext = createContext(null);
+
+export function LanguageProvider({ children }) {
+  const [language, setLanguage] = useState("me");
+
+  useEffect(() => {
+    const savedLanguage = localStorage.getItem("language");
+
+    if (savedLanguage) {
+      setLanguage(savedLanguage);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("language", language);
+  }, [language]);
+
+  const changeLanguage = (lang) => {
+    setLanguage(lang);
+  };
+
+  const value = useMemo(
+    () => ({
+      language,
+      setLanguage,
+      changeLanguage,
+      isMontenegrin: language === "me",
+      isEnglish: language === "en",
+    }),
+    [language]
+  );
+
+  return (
+    <LanguageContext.Provider value={value}>
+      {children}
+    </LanguageContext.Provider>
+  );
+}
+
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+
+  if (!context) {
+    throw new Error("useLanguage must be used inside LanguageProvider");
+  }
+
+  return context;
+}
