@@ -1,0 +1,117 @@
+.cs_add_blog_section {
+  padding: 120px 0;
+  min-height: 100vh;
+}
+
+.cs_add_blog_card {
+  .cs_card_card_out,
+  .cs_card_card_in {
+    width: 100%;
+  }
+}
+
+.cs_add_blog_header {
+  margin-bottom: 25px;
+}
+
+.cs_add_blog_subtitle {
+  margin: 0;
+  color: #666;
+}
+
+.cs_add_blog_form {
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1b1b1b;
+  }
+}
+
+.cs_file_input {
+  padding: 14px 16px;
+  background-color: white;
+}
+
+.admin_cms {
+  background-color: white;
+}
+
+.cs_add_blog_preview {
+  img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 10px;
+    display: block;
+  }
+}
+
+.cs_editor_wrap {
+  .ql-toolbar.ql-snow {
+    border: 1px solid #e7e7e7;
+    border-radius: 8px 8px 0 0;
+    background: #fff;
+  }
+
+  .ql-container.ql-snow {
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    min-height: 280px;
+    background: #fff;
+  }
+
+  .ql-editor {
+    min-height: 280px;
+    font-size: 16px;
+    color: #444;
+  }
+}
+
+.cs_add_blog_actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cs_editor_wrap {
+  .jodit-container {
+    border-radius: 8px;
+    overflow: hidden;
+    color: black;
+  }
+
+  .jodit-workplace {
+    min-height: 320px;
+  }
+
+  .jodit-wysiwyg {
+    blockquote {
+      position: relative;
+      margin: 18px 0;
+      padding: 18px 22px 18px 48px;
+      background: #f8f5f3;
+      border-left: 4px solid #856267;
+      border-radius: 8px;
+      color: #3d312f;
+      font-style: italic;
+    }
+
+    blockquote::before {
+      content: "“";
+      position: absolute;
+      top: 8px;
+      left: 14px;
+      font-size: 40px;
+      line-height: 1;
+      color: #856267;
+      font-style: normal;
+      font-weight: 700;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cs_add_blog_section {
+    padding: 90px 0;
+  }
+}

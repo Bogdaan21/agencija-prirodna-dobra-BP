@@ -1,0 +1,218 @@
+.cs_admin_table_section {
+  padding: 20px 0;
+  min-height: 100vh;
+}
+
+.cs_admin_table_loading {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    margin: 0;
+    font-size: 16px;
+  }
+}
+
+.cs_admin_topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.cs_admin_topbar_right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cs_admin_user_box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cs_admin_user_box_label {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.cs_admin_user_box_email {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1b1b1b;
+  line-height: 1.4;
+}
+
+.cs_admin_table_card {
+  .cs_card_card_out {
+    width: 100%;
+  }
+
+  .cs_card_card_in {
+    width: 100%;
+  }
+}
+
+.cs_admin_table_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.cs_admin_table_subtitle {
+  margin: 0;
+  color: #666;
+}
+
+.cs_admin_table_wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.cs_admin_table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+
+  thead {
+    tr {
+      th {
+        padding: 16px 18px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #1b1b1b;
+        border-bottom: 1px solid #e9e9e9;
+        background-color: #f8f8f8;
+        text-align: left;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        padding: 16px 18px;
+        border-bottom: 1px solid #e9e9e9;
+        color: #555;
+        vertical-align: top;
+      }
+    }
+  }
+}
+
+.cs_admin_table_empty {
+  text-align: center;
+  padding: 30px !important;
+  color: #777 !important;
+}
+
+.cs_admin_action_btn {
+  border: none;
+  outline: none;
+  min-width: 90px;
+  padding: 10px 14px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cs_admin_edit_btn {
+  background-color: #d8f0df;
+  color: #2d7a43;
+
+  &:hover {
+    background-color: #c5e9cf;
+  }
+}
+
+.cs_admin_delete_btn {
+  background-color: #f9d7d7;
+  color: #c0392b;
+
+  &:hover {
+    background-color: #f3c2c2;
+  }
+}
+
+.cs_admin_action_btn {
+  border: none;
+  outline: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+}
+
+/* EDIT */
+.cs_admin_edit_btn {
+  background-color: #e6f4ea; // svijetlo zelena
+  color: #2e7d32;
+
+  &:hover {
+    background-color: #d4edda;
+    color: #1b5e20;
+  }
+}
+
+/* DELETE */
+.cs_admin_delete_btn {
+  background-color: #fdecea; // svijetlo crvena
+  color: #c62828;
+
+  &:hover {
+    background-color: #f8d7da;
+    color: #8e0000;
+  }
+}
+
+.cs_admin_btn_content {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+@media (max-width: 991px) {
+  .cs_admin_table_section {
+    padding: 90px 0;
+  }
+
+  .cs_admin_user_box {
+    align-items: flex-start;
+  }
+
+  .cs_admin_topbar_right {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_admin_table_header {
+    align-items: flex-start;
+  }
+
+  .cs_admin_topbar {
+    align-items: flex-start;
+  }
+
+  .cs_admin_topbar_right {
+    align-items: flex-start;
+  }
+}
