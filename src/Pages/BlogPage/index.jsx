@@ -71,7 +71,7 @@ export default function BlogPage() {
       <section>
         <div className="cs_height_100 cs_height_lg_70" />
         <div className="container">
-          <div className="row">
+          <div className="row d-flex justify-content-center">
             {loading ? (
               <div className="col-lg-8">
                 <p>Loading blog posts...</p>

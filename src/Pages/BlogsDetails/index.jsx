@@ -121,7 +121,7 @@ export default function BlogDetailsPage() {
       <section>
         <div className="cs_height_100 cs_height_lg_70" />
         <div className="container">
-          <div className="row">
+          <div className="row d-flex justify-content-center">
             <BlogDetailsSection data={blogData} />
           </div>
         </div>
