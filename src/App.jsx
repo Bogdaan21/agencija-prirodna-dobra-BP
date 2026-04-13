@@ -22,6 +22,7 @@ import Error404 from "./Pages/Error404";
 import AdminTable from "./Pages/AdminTable";
 import AdminAdd from "./Pages/AdminAdd";
 import AdminEdit from "./Pages/AdminEdit";
+import PrivateRoute from "./Components/PrivateRoute";
 
 function App() {
   Aos.init({
@@ -62,9 +63,32 @@ function App() {
         </Route>
         <Route path="/login" element={<Login />} />
 
-        <Route path="/admintable" element={<AdminTable />} />
-        <Route path="/adminadd" element={<AdminAdd />} />
-        <Route path="/adminedit/:id" element={<AdminEdit />} />
+        <Route
+          path="/admintable"
+          element={
+            <PrivateRoute>
+              <AdminTable />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/adminadd"
+          element={
+            <PrivateRoute>
+              <AdminAdd />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/adminedit/:id"
+          element={
+            <PrivateRoute>
+              <AdminEdit />
+            </PrivateRoute>
+          }
+        />
 
         <Route path="/signup" element={<Register />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
