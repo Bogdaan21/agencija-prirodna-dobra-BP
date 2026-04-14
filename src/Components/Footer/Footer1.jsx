@@ -20,7 +20,7 @@ const data = {
         { label: "ABOUT US", url: "/about" },
         { label: "GALLERY", url: "/gallery" },
         { label: "PROJECTS", url: "/projects" },
-        { label: "BLOG", url: "/blog" },
+        { label: "NEWS", url: "/news" },
       ],
     },
     {

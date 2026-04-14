@@ -50,7 +50,7 @@ export default function BlogPage() {
               data?.excerpt?.me ||
               stripHtml(data?.content?.me) ||
               "",
-            link: `/blog/${data.slug || docItem.id}`,
+            link: `/news/${data.slug || docItem.id}`,
           };
         });
 

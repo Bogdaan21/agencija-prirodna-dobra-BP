@@ -36,7 +36,7 @@ export default function BlogDetailsPage() {
           date: formatDate(firebaseBlog.date),
           category: {
             title: language === "me" ? "Novosti" : "Blog",
-            url: "/blog",
+            url: "/news",
           },
           title:
             firebaseBlog?.title?.[language] || firebaseBlog?.title?.en || firebaseBlog?.title?.me || "Untitled Post",
@@ -76,7 +76,7 @@ export default function BlogDetailsPage() {
     backgroundImage: "/assets/img/about_heading_bg.jpg",
     breadcrumbs: [
       { label: language === "me" ? "Početna" : "Home", link: "/" },
-      { label: language === "me" ? "Novosti" : "Blog", link: "/blog" },
+      { label: language === "me" ? "Novosti" : "News", link: "/news" },
     ],
     title: blogData?.title || "Blog Details",
   };
@@ -101,7 +101,7 @@ export default function BlogDetailsPage() {
             backgroundImage: "/assets/img/about_heading_bg.jpg",
             breadcrumbs: [
               { label: "Home", link: "/" },
-              { label: "Blog", link: "/blog" },
+              { label: "News", link: "/news" },
               { label: "Not Found", active: true },
             ],
             title: "Blog Not Found",

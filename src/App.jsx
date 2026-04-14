@@ -51,8 +51,8 @@ function App() {
           <Route path="/projects" element={<ProjectPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/blog/:slug" element={<BlogDetailsPage />} />
+          <Route path="/news" element={<BlogPage />} />
+          <Route path="/news/:slug" element={<BlogDetailsPage />} />
 
           <Route path="/projects/:projectId" element={<ProjectDetailsPage />} />
           <Route path="/faq" element={<FaqPage />} />

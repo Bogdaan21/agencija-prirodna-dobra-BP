@@ -13,7 +13,7 @@ const data = {
       href: "/contact",
       children: [
         { label: "GALLERY", href: "/gallery" },
-        { label: "BLOG", href: "/blog" },
+        { label: "NEWS", href: "/news" },
         { label: "CONTACT", href: "/contact" },
       ],
     },
