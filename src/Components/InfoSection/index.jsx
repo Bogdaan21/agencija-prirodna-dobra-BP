@@ -19,10 +19,7 @@ export default function InfoList({ data, slug }) {
             {/* TITLE */}
             {title && (
               <h2 className="cs_card_title cs_fs_80 mb-0">
-                <Link
-                  to={`/projects/${slug}`}
-                  dangerouslySetInnerHTML={{ __html: title }}
-                />
+                <Link to={`/projects/${slug}`} dangerouslySetInnerHTML={{ __html: title }} />
               </h2>
             )}
 
@@ -31,9 +28,7 @@ export default function InfoList({ data, slug }) {
               {info?.map((item, index) => (
                 <li key={index}>
                   <p className="mb-0">{item.label}</p>
-                  <h4 className="mb-0 cs_fs_20 cs_bold">
-                    {item.value}
-                  </h4>
+                  <h4 className="mb-0 cs_fs_20 cs_bold">{item.value}</h4>
                 </li>
               ))}
             </ul>
@@ -42,6 +37,7 @@ export default function InfoList({ data, slug }) {
 
         <div className="cs_height_100 cs_height_lg_70" />
       </div>
+      <hr />
     </section>
   );
 }

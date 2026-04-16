@@ -1,21 +1,16 @@
-import PageHeading from "../../Components/PageHeading";
 import GallerySection from "../../Components/GallerySection";
 import CardSection from "../../Components/CardSection";
 import { pageTitle } from "../../helper";
 import projectJson from "../../data/project.json";
+import { useParams } from "react-router-dom";
 
 export default function GalleryPage() {
   pageTitle("Gallery | LeafLife");
 
   const { projects } = projectJson;
+  const { slug } = useParams(); // ako si u ruti
 
-  // 🔥 skuplja sve slike iz svih projekata
-  const galleryData = projects.flatMap((project) =>
-    project.gallery?.map((img) => ({
-      ...img,
-      projectSlug: project.slug, // ako želiš klik kasnije
-    })) || []
-  );
+  const galleryData = projects.find((project) => project.slug === slug)?.gallery || [];
 
   const BreadcrumbsData = {
     backgroundImage: "/assets/img/about_heading_bg.jpg",
@@ -35,10 +30,6 @@ export default function GalleryPage() {
 
   return (
     <>
-      <PageHeading data={BreadcrumbsData} />
-
-      <div className="cs_height_100 cs_height_lg_70" />
-
       <GallerySection data={galleryData} />
 
       <div className="cs_height_100 cs_height_lg_70" />
