@@ -49,13 +49,14 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
 
           <Route path="/projects" element={<ProjectPage />} />
+          <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
+
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
-          
+
           <Route path="/news" element={<BlogPage />} />
           <Route path="/news/:slug" element={<BlogDetailsPage />} />
 
-          <Route path="/projects/:projectId" element={<ProjectDetailsPage />} />
           <Route path="/faq" element={<FaqPage />} />
         </Route>
 
