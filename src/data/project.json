@@ -12,347 +12,129 @@
 
   "projects": [
     {
-      "slug": "evening-garden123",
+      "slug": "djalovica-klisura",
 
-      "title": "EVENING GARDEN123",
-      "imageSrc": "/assets/img/project_thumb_10.jpg",
-      "imageAlt": "Evening Garden",
+      "title": "Spomenik prirode Đalovića klisura",
+      "imageSrc": "/assets/img/projects/djalovica-klisura/cover.jpg",
+      "imageAlt": "Đalovića klisura",
 
       "info": [
         { "label": "YEAR", "value": "2024" },
-        { "label": "LOCATION", "value": "SUNNYVALE, CA" },
-        { "label": "SERVICE", "value": "GARDEN LANDSCAPING1234" }
+        { "label": "LOCATION", "value": "Bijelo Polje, Crna Gora" },
+        { "label": "TYPE", "value": "Spomenik prirode" }
       ],
 
       "breadcrumbs": {
         "backgroundImage": "/assets/img/project_heading_bg.jpg",
-        "title": "EVENING GARDEN",
+        "title": "Đalovića klisura",
         "breadcrumbs": [
           { "label": "Home", "link": "/" },
-          { "label": "Evening garden", "active": true }
+          { "label": "Đalovića klisura", "active": true }
         ]
       },
 
-      "video": {
-        "url": "https://www.youtube.com/embed/rRid6GCJtgc",
-        "thumbnail": "/assets/img/video_block_bg_2.jpg"
-      },
-
       "sliderImages": [
-        "/assets/img/project_thumb_10.jpg",
-        "/assets/img/project_thumb_10.jpg",
-        "/assets/img/project_thumb_10.jpg"
+        "/assets/img/projects/djalovica-klisura/cover.jpg",
+        "/assets/img/projects/djalovica-klisura/1.jpg",
+        "/assets/img/projects/djalovica-klisura/2.jpg"
       ],
 
-      "description": "Tucked behind an old Japanese estate, this garden design evokes the charm of a hidden garden. The lighting design enhances the feeling of discovery, revealing unexpected beauty at every turn. It's a garden where every night feels like an adventure.",
+      "description": "Đalovića klisura predstavlja jedno od najimpresivnijih prirodnih područja sjevera Crne Gore. Nalazi se na zapadnom obodu Pešterske visoravni i proteže se dužinom od oko 7,5 km. Klisura je usječena u krečnjački masiv i dostiže dubinu do 627 metara, što je čini jednim od najdramatičnijih pejzaža u regionu.",
 
-      "outcomes": "With a team of dedicated landscape architects and horticultural experts, we blend art and science to transform your outdoor space into a living masterpiece. We go beyond aesthetics, integrating sustainable practices, water-saving solutions, and eco-friendly choices to ensure your garden is as environmentally responsible as it is stunning. From the initial consultation to the final blossom, we are with you every step of the way, bringing your vision of dream garden to life expertly and efficiently.",
+      "outcomes": "Područje je bogato izvorima, podzemnim vodama, speleološkim objektima i raznovrsnim ekosistemima. Posebno se izdvajaju Glava Bistrice i Juriška vrela, kao i stalni tok rijeke Bistrice koji se nizvodno uliva u Lim. Klisura je stanište brojnih biljnih i životinjskih vrsta, uključujući endemske vrste i zaštićene vrste širom Balkana.",
 
       "features": [
         {
-          "iconClass": "fa6-solid:hand-holding-droplet",
-          "title": "Customized Garden Designs"
+          "iconClass": "fa6-solid:mountain",
+          "title": "Impresivan kanjonski reljef"
         },
         {
-          "iconClass": "fa6-solid:utensils",
-          "title": "Guaranteed Maintenance Plans"
+          "iconClass": "fa6-solid:water",
+          "title": "Izvori i rijeka Bistrica"
         },
         {
-          "iconClass": "fa6-solid:vials",
-          "title": "Soil Testing and Improvement"
+          "iconClass": "fa6-solid:leaf",
+          "title": "Bogata flora i fauna"
         },
         {
-          "iconClass": "fa6-solid:feather",
-          "title": "Hardscape and Aquascape Feature"
+          "iconClass": "fa6-solid:landmark",
+          "title": "Speleološki objekti"
         },
         {
-          "iconClass": "fa6-solid:seedling",
-          "title": "Plant Selection and Installation"
+          "iconClass": "fa6-solid:tree",
+          "title": "Šumski ekosistemi"
         },
         {
-          "iconClass": "fa6-solid:handshake",
-          "title": "Sustainable Eco-Friendly Options"
+          "iconClass": "fa6-solid:binoculars",
+          "title": "Turistički potencijal"
         }
       ],
 
       "gallery": [
         {
-          "imgSrc": "/assets/img/work_thumb_1.jpg",
-          "title": "Gallery A",
-          "year": "2024",
-          "height": "694px"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/1.jpg",
+          "title": "Panorama Đalovića klisure sa Koritskom visoravni",
+          "height": "500px"
         },
         {
-          "imgSrc": "/assets/img/work_thumb_2.jpg",
-          "title": "Gallery B",
-          "year": "2024",
-          "height": "383px"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/2.jpg",
+          "title": "Rijeka Bistrica nakon kiše",
+          "height": "400px"
         },
         {
-          "imgSrc": "/assets/img/work_thumb_2.jpg",
-          "title": "Gallery B",
-          "year": "2024",
-          "height": "383px"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/3.jpg",
+          "title": "Đalovića klisura u zimskom ambijentu",
+          "height": "400px"
         },
         {
-          "imgSrc": "/assets/img/work_thumb_4.jpg",
-          "title": "Gallery D",
-          "year": "2024",
-          "height": "383px"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/4.jpg",
+          "title": "Juriška vrela (Vrelo Bistrice)",
+          "height": "450px"
         },
         {
-          "imgSrc": "/assets/img/work_thumb_3.jpg",
-          "title": "Gallery C",
-          "year": "2024",
-          "height": "287px"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/5.jpg",
+          "title": "Glava Bistrice – Koritska pećina",
+          "height": "380px"
         },
         {
-          "imgSrc": "/assets/img/work_thumb_2.jpg",
-          "title": "Gallery B",
-          "year": "2024",
-          "height": "480px"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/6.jpg",
+          "title": "Vražji virovi",
+          "height": "420px"
         },
         {
-          "imgSrc": "/assets/img/work_thumb_5.jpg",
-          "title": "Gallery E",
-          "year": "2024",
-          "height": "190px"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/7.jpg",
+          "title": "Izlazak iz sjenke – Juriško vrelo",
+          "height": "380px"
         },
         {
-          "imgSrc": "/assets/img/work_thumb_4.jpg",
-          "title": "Gallery D",
-          "year": "2024",
-          "height": "383px"
-        }
-      ]
-    },
-    {
-      "slug": "evening-garden54356",
-
-      "title": "EVENING garden54356",
-      "imageSrc": "/assets/img/project_thumb_10.jpg",
-      "imageAlt": "Evening Garden",
-
-      "info": [
-        { "label": "YEAR", "value": "2024" },
-        { "label": "LOCATION", "value": "SUNNYVALE, CA" },
-        { "label": "SERVICE", "value": "GARDEN LANDSCAPING1234" }
-      ],
-
-      "breadcrumbs": {
-        "backgroundImage": "/assets/img/project_heading_bg.jpg",
-        "title": "EVENING garden54356",
-        "breadcrumbs": [
-          { "label": "Home", "link": "/" },
-          { "label": "Evening garden", "active": true }
-        ]
-      },
-
-      "video": {
-        "url": "https://www.youtube.com/embed/rRid6GCJtgc",
-        "thumbnail": "/assets/img/video_block_bg_2.jpg"
-      },
-
-      "sliderImages": [
-        "/assets/img/project_thumb_10.jpg",
-        "/assets/img/project_thumb_10.jpg",
-        "/assets/img/project_thumb_10.jpg"
-      ],
-
-      "description": "Tucked behind an old Japanese estate, this garden design evokes the charm of a hidden garden. The lighting design enhances the feeling of discovery, revealing unexpected beauty at every turn. It's a garden where every night feels like an adventure.",
-
-      "outcomes": "With a team of dedicated landscape architects and horticultural experts, we blend art and science to transform your outdoor space into a living masterpiece. We go beyond aesthetics, integrating sustainable practices, water-saving solutions, and eco-friendly choices to ensure your garden is as environmentally responsible as it is stunning. From the initial consultation to the final blossom, we are with you every step of the way, bringing your vision of dream garden to life expertly and efficiently.",
-
-      "features": [
-        {
-          "iconClass": "fa6-solid:hand-holding-droplet",
-          "title": "Customized Garden Designs"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/8.jpg",
+          "title": "Sifon u pećini – Juriško vrelo",
+          "height": "420px"
         },
         {
-          "iconClass": "fa6-solid:utensils",
-          "title": "Guaranteed Maintenance Plans"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/9.jpg",
+          "title": "Tok rijeke Bistrice u klisuri",
+          "height": "450px"
         },
         {
-          "iconClass": "fa6-solid:vials",
-          "title": "Soil Testing and Improvement"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/10.jpg",
+          "title": "Sipari i stijene klisure",
+          "height": "380px"
         },
         {
-          "iconClass": "fa6-solid:feather",
-          "title": "Hardscape and Aquascape Feature"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/11.jpg",
+          "title": "Gornji tok rijeke Bistrice",
+          "height": "400px"
         },
         {
-          "iconClass": "fa6-solid:seedling",
-          "title": "Plant Selection and Installation"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/12.jpg",
+          "title": "Đalovića klisura – prirodni pejzaž",
+          "height": "400px"
         },
         {
-          "iconClass": "fa6-solid:handshake",
-          "title": "Sustainable Eco-Friendly Options"
-        }
-      ],
-
-      "gallery": [
-        {
-          "imgSrc": "/assets/img/work_thumb_1.jpg",
-          "title": "Gallery A",
-          "year": "2024",
-          "height": "694px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_2.jpg",
-          "title": "Gallery B",
-          "year": "2024",
-          "height": "383px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_2.jpg",
-          "title": "Gallery B",
-          "year": "2024",
-          "height": "383px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_4.jpg",
-          "title": "Gallery D",
-          "year": "2024",
-          "height": "383px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_3.jpg",
-          "title": "Gallery C",
-          "year": "2024",
-          "height": "287px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_2.jpg",
-          "title": "Gallery B",
-          "year": "2024",
-          "height": "480px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_5.jpg",
-          "title": "Gallery E",
-          "year": "2024",
-          "height": "190px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_4.jpg",
-          "title": "Gallery D",
-          "year": "2024",
-          "height": "383px"
-        }
-      ]
-    },
-    {
-      "slug": "evening-garden3498893275",
-
-      "title": "EVENING garden3498893275",
-      "imageSrc": "/assets/img/project_thumb_10.jpg",
-      "imageAlt": "Evening Garden",
-
-      "info": [
-        { "label": "YEAR", "value": "2024" },
-        { "label": "LOCATION", "value": "SUNNYVALE, CA" },
-        { "label": "SERVICE", "value": "GARDEN LANDSCAPING1234" }
-      ],
-
-      "breadcrumbs": {
-        "backgroundImage": "/assets/img/project_heading_bg.jpg",
-        "title": "EVENING garden3498893275",
-        "breadcrumbs": [
-          { "label": "Home", "link": "/" },
-          { "label": "Evening garden", "active": true }
-        ]
-      },
-
-      "video": {
-        "url": "https://www.youtube.com/embed/rRid6GCJtgc",
-        "thumbnail": "/assets/img/video_block_bg_2.jpg"
-      },
-
-      "sliderImages": [
-        "/assets/img/project_thumb_10.jpg",
-        "/assets/img/project_thumb_10.jpg",
-        "/assets/img/project_thumb_10.jpg"
-      ],
-
-      "description": "Tucked behind an old Japanese estate, this garden design evokes the charm of a hidden garden. The lighting design enhances the feeling of discovery, revealing unexpected beauty at every turn. It's a garden where every night feels like an adventure.",
-
-      "outcomes": "With a team of dedicated landscape architects and horticultural experts, we blend art and science to transform your outdoor space into a living masterpiece. We go beyond aesthetics, integrating sustainable practices, water-saving solutions, and eco-friendly choices to ensure your garden is as environmentally responsible as it is stunning. From the initial consultation to the final blossom, we are with you every step of the way, bringing your vision of dream garden to life expertly and efficiently.",
-
-      "features": [
-        {
-          "iconClass": "fa6-solid:hand-holding-droplet",
-          "title": "Customized Garden Designs"
-        },
-        {
-          "iconClass": "fa6-solid:utensils",
-          "title": "Guaranteed Maintenance Plans"
-        },
-        {
-          "iconClass": "fa6-solid:vials",
-          "title": "Soil Testing and Improvement"
-        },
-        {
-          "iconClass": "fa6-solid:feather",
-          "title": "Hardscape and Aquascape Feature"
-        },
-        {
-          "iconClass": "fa6-solid:seedling",
-          "title": "Plant Selection and Installation"
-        },
-        {
-          "iconClass": "fa6-solid:handshake",
-          "title": "Sustainable Eco-Friendly Options"
-        }
-      ],
-
-      "gallery": [
-        {
-          "imgSrc": "/assets/img/work_thumb_1.jpg",
-          "title": "Gallery A",
-          "year": "2024",
-          "height": "694px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_2.jpg",
-          "title": "Gallery B",
-          "year": "2024",
-          "height": "383px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_2.jpg",
-          "title": "Gallery B",
-          "year": "2024",
-          "height": "383px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_4.jpg",
-          "title": "Gallery D",
-          "year": "2024",
-          "height": "383px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_3.jpg",
-          "title": "Gallery C",
-          "year": "2024",
-          "height": "287px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_2.jpg",
-          "title": "Gallery B",
-          "year": "2024",
-          "height": "480px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_5.jpg",
-          "title": "Gallery E",
-          "year": "2024",
-          "height": "190px"
-        },
-        {
-          "imgSrc": "/assets/img/work_thumb_4.jpg",
-          "title": "Gallery D",
-          "year": "2024",
-          "height": "383px"
+          "imgSrc": "/assets/img/projects/djalovica-klisura/13.jpg",
+          "title": "Poskok u prirodnom staništu",
+          "height": "350px"
         }
       ]
     }

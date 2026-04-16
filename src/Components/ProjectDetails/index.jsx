@@ -46,7 +46,7 @@ export default function ProjectDetailsSection({ data }) {
             <div className="col-lg-7">
               {/* ✅ SAFE MAP */}
               <ul className="cs_project_details_info cs_mp_0">
-                {data?.projectInfo?.map((item, index) => (
+                {data?.info?.map((item, index) => (
                   <li key={index}>
                     <p className="mb-0">{item.label}</p>
                     <h4 className="mb-0 cs_fs_20 cs_bold">{item.value}</h4>
