@@ -44,7 +44,6 @@ export default function ProjectDetailsSection({ data }) {
 
           <div className="row cs_gap_x_40 cs_gap_y_30">
             <div className="col-lg-7">
-
               {/* ✅ SAFE MAP */}
               <ul className="cs_project_details_info cs_mp_0">
                 {data?.projectInfo?.map((item, index) => (
@@ -68,17 +67,15 @@ export default function ProjectDetailsSection({ data }) {
                   }}
                 >
                   <span className="cs_player_btn cs_heading_color">
-                    ▶
+                    <svg width={19} height={22} viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.5 11L0.5 21.3923V0.607696L18.5 11Z" fill="currentColor" />
+                    </svg>
                   </span>
                 </Link>
               )}
             </div>
 
-            <VideoModal
-              isTrue={toggle}
-              iframeSrc={iframeSrc}
-              handelClose={handelClose}
-            />
+            <VideoModal isTrue={toggle} iframeSrc={iframeSrc} handelClose={handelClose} />
 
             <div className="col-lg-5">
               <div className="cs_slider cs_style_1">
@@ -112,13 +109,17 @@ export default function ProjectDetailsSection({ data }) {
 
                 <div className="d-flex justify-content-center cs_slider_arrows_4_transparent_wrap">
                   <div className="cs_slider_arrows cs_style_4">
-                    <div ref={prevRef} style={{ cursor: "pointer" }}>◀</div>
+                    <div ref={prevRef} style={{ cursor: "pointer" }}>
+                      ◀
+                    </div>
 
                     <div className="cs_slider_number cs_style_2 cs_bold">
                       {currentSlide} / {data?.sliderImages?.length || 0}
                     </div>
 
-                    <div ref={nextRef} style={{ cursor: "pointer" }}>▶</div>
+                    <div ref={nextRef} style={{ cursor: "pointer" }}>
+                      ▶
+                    </div>
                   </div>
                 </div>
               </div>
@@ -133,7 +134,8 @@ export default function ProjectDetailsSection({ data }) {
                 <b className="cs_heading_color">DESCRIPTION:</b>
                 <br />
                 {data?.description}
-                <br /><br />
+                <br />
+                <br />
 
                 <b className="cs_heading_color">OUTCOMES</b>
                 <br />
@@ -143,25 +145,17 @@ export default function ProjectDetailsSection({ data }) {
 
             <div className="col-xl-5">
               <div className="row cs_gap_x_20 cs_gap_y_20">
-
                 {/* ✅ SAFE FEATURES */}
                 {data?.features?.map((feature, index) => (
                   <div className="col-sm-6" key={index}>
                     <div className="cs_iconbox cs_style_2">
                       <div className="cs_iconbox_icon">
-                        <Icon
-                          icon={feature.iconClass}
-                          width="30"
-                          height="26"
-                        />
+                        <Icon icon={feature.iconClass} width="30" height="26" />
                       </div>
-                      <p className="cs_iconbox_title cs_bold cs_fs_20 mb-0 cs_heading_color">
-                        {feature.title}
-                      </p>
+                      <p className="cs_iconbox_title cs_bold cs_fs_20 mb-0 cs_heading_color">{feature.title}</p>
                     </div>
                   </div>
                 ))}
-
               </div>
             </div>
           </div>
