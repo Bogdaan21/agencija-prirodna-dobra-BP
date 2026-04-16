@@ -73,7 +73,7 @@ const Header = () => {
         setIsSticky("cs_sticky_active");
       } else {
         setIsSticky("");
-      }
+      } 
     };
 
     window.addEventListener("scroll", handleScroll);
