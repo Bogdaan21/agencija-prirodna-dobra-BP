@@ -15,7 +15,7 @@ const heroData = {
     "Crafting dream gardens with passion, creativity, and sustainability for over a decade with our experienced landscape artists and gardener teams.",
   btnText1: "Get Started",
   btnUrl1: "/services",
-  btnText2: "Explore Projects",
+  btnText2: "Explore Projects", 
   btnUrl2: "/projects",
 
   funfact: {
@@ -29,6 +29,7 @@ const heroData = {
     link: "/projects/hachioji-garden",
   },
   backgrounds: [
+    "/assets/img/cover-hero.jpg",
     "/assets/img/hero_bg.jpg",
     "/assets/img/hero_bg_4.jpg",
     "/assets/img/hero_bg_2.jpg",

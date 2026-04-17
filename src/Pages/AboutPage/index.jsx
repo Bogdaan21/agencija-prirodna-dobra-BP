@@ -4,170 +4,143 @@ import AboutUs from "../../Components/Aboutus";
 import ValueSection from "../../Components/ValueSection";
 import FeatureSection from "../../Components/FeatureSection";
 import TeamMember from "../../Components/Team";
-import BrandSection from "../../Components/BrandSection";
 import WorkSection1 from "../../Components/WorksSection/WorkSection1";
 import CardSection from "../../Components/CardSection";
 import { pageTitle } from "../../helper";
 
 const BreadcrumbsData = {
   backgroundImage: "/assets/img/about_heading_bg.jpg",
-  title: "ABOUT US",
+  title: "O NAMA",
   breadcrumbs: [
-    { label: "Home", link: "/" },
-    { label: "About", active: true },
+    { label: "Početna", link: "/" },
+    { label: "O nama", active: true },
   ],
 };
 
 const aboutUsData = {
-  title: `CRAFTING <br><span>DREAM GARDENS</span> <br>INTO REALITY`,
+  title: `AGENCIJA ZA <br><span>UPRAVLJANJE PRIRODNIM DOBRIMA</span> <br>OPŠTINE BIJELO POLJE`,
 
   introduction:
-    "At LeafLife, we are passionate about transforming outdoor spaces into breathtaking gardens that tell a unique story. Our journey began over a decade ago, driven by a shared love for nature",
+    "Agencija za upravljanje prirodnim dobrima opštine Bijelo Polje osnovana je odlukom Skupštine opštine Bijelo Polje sa ciljem kontinuiranog upravljanja, zaštite i unapređenja životne sredine u zaštićenim prirodnim područjima.",
+
   introduction1:
-    "and design. Since then, we have dedicated ourselves to creating gardens that enhance your property. Our solid commitment to sustainability, innovation, and collaboration has been the foundation of our success.",
+    "Pored očuvanja vrsta, ekosistema i pejzaža, Agencija promoviše održivo korišćenje prirodnih resursa, podržava naučna istraživanja, monitoring, edukaciju, jačanje kapaciteta zaposlenih, kao i aktivnosti promocije i podizanja svijesti o značaju zaštite prirode.",
 
   video: {
     videoUrl: "https://www.youtube.com/embed/rRid6GCJtgc",
     backgroundImage: "/assets/img/video_block_bg.jpg",
   },
+
   cta: {
     backgroundImage: "/assets/img/cta_bg_3.jpg",
-    buttonUrl: "/projects",
-    buttonText: "Explore Projects",
+    buttonUrl: "/zasticena-podrucja",
+    buttonText: "Pogledaj zaštićena područja",
   },
 };
 
 const valueData = {
-  sectionTitle: "VALUES",
-  values: [{ text: "Landscape Design" }, { text: "Indoor Garden" }],
+  sectionTitle: "NAŠE OBLASTI DJELOVANJA",
+  values: [
+    { text: "Zaštita prirode" },
+    { text: "Održivo upravljanje" },
+    { text: "Edukacija i monitoring" },
+    { text: "Promocija prirodnih dobara" },
+  ],
 };
 
 const featureData = {
-  sectionTitle: "WE ARE <span>DIFFERENT</span> IN EVERY WAYS",
-  buttonText: "Get Started",
-  buttonUrl: "/services",
+  sectionTitle: "NAŠA <span>ULOGA I ODGOVORNOSTI</span>",
+  buttonText: "Kontakt",
+  buttonUrl: "/contact",
   image: "/assets/img/feature_thumb.jpg",
   features: [
     {
-      icon: "fa6-regular:heart",
-      title: "Passion in every work",
+      icon: "fa6-solid:leaf",
+      title: "Zaštita i očuvanje",
       description:
-        "We are deeply passionate about creating beautiful, sustainable green landscapes for our clients.",
+        "Primarna funkcija Agencije je zaštita i očuvanje vrsta, ekosistema, pejzaža i prirodnih vrijednosti u zaštićenim područjima.",
     },
     {
-      icon: "fa6-solid:link",
-      title: "Collaboration on top",
+      icon: "fa6-solid:people-group",
+      title: "Podrška lokalnoj zajednici",
       description:
-        "We make your dream design come true by combining your ideas with our 10+ years of garden design expertise.",
+        "Zaštićena područja posmatramo i kao pokretače održivog razvoja lokalne zajednice i unapređenja kvaliteta života stanovništva.",
     },
     {
-      icon: "fa6-solid:layer-group",
-      title: "Sustainability in check",
+      icon: "fa6-solid:flask",
+      title: "Istraživanje i monitoring",
       description:
-        "We love nurturing nature, one garden at a time, so that you can enjoy the beautiful landscape of our garden even longer.",
+        "Područja pod upravljanjem Agencije pružaju osnovu za naučna istraživanja, monitoring stanja prirode i unapređenje stručnih kapaciteta.",
     },
     {
-      icon: "fa6-brands:ubuntu",
-      title: "Creativity unleashed",
+      icon: "fa6-solid:bullhorn",
+      title: "Promocija i edukacija",
       description:
-        "We make sure to only give you our innovative designs that stand out to make sure that your garden is not like the others.",
+        "Kroz promociju, marketing i edukativne aktivnosti radimo na podizanju svijesti o važnosti očuvanja prirodnih dobara.",
     },
   ],
 };
 
 const teamMembersData = {
-  title: `OUR TEAM <br><span>OF</span> DEDICATION`,
-  subtitle: "WORKS",
+  title: `ORGANIZACIONA <br><span>STRUKTURA</span>`,
+  subtitle: "AGENCIJA",
   teamMembers: [
     {
       img: "/assets/img/team_member_1.jpg",
-      name: "Sarah Turner",
-      role: "Founder & Lead Designer",
-      description: "Experienced in 10 years of Garden Landscape design.",
+      name: "Savjet Društva",
+      role: "Organ upravljanja",
+      description: "Učestvuje u usmjeravanju rada i donošenju ključnih odluka Društva.",
     },
     {
       img: "/assets/img/team_member_2.jpg",
-      name: "John Mason",
-      role: "Landscape Architect",
-      description: "Experienced in 10 years of Garden Landscape design.",
+      name: "Izvršni direktor",
+      role: "Rukovođenje Društvom",
+      description: "Koordinira rad Agencije i odgovoran je za sprovođenje planova i programa rada.",
     },
     {
       img: "/assets/img/team_member_3.jpg",
-      name: "Emily Parker",
-      role: "Horticulture Expert",
-      description: "Experienced in 10 years of Garden Landscape design.",
+      name: "Služba za razvoj i administrativno-pravne poslove",
+      role: "Stručni i administrativni poslovi",
+      description:
+        "Obavlja stručne, pravne, ekonomske i zajedničke poslove iz oblasti zaštite životne sredine, valorizacije i unapređenja prirodnih dobara.",
     },
     {
       img: "/assets/img/team_member_4.jpg",
-      name: "David Anderson",
-      role: "Team Project Manager",
-      description: "Experienced in 10 years of Garden Landscape design.",
-    },
-    {
-      img: "/assets/img/team_member_2.jpg",
-      name: "John Mason",
-      role: "Landscape Architect",
-      description: "Experienced in 10 years of Garden Landscape design.",
+      name: "Rendžerska služba",
+      role: "Zaštita i nadzor",
+      description:
+        "Vrši poslove čuvanja zaštićenog dobra u skladu sa Zakonom o zaštiti prirode i Zakonom o zaštiti lica i imovine.",
     },
   ],
 };
 
-const brandLogos = [
-  "/assets/img/brand_logo_1.svg",
-  "/assets/img/brand_logo_2.svg",
-  "/assets/img/brand_logo_3.svg",
-  "/assets/img/brand_logo_4.svg",
-  "/assets/img/brand_logo_5.svg",
-  "/assets/img/brand_logo_6.svg",
-  "/assets/img/brand_logo_3.svg",
-];
-
 const WorkingData = {
-  title: "OUR <span>WORK</span>",
-  subtitle: "GALLERY",
+  title: "ZAŠTIĆENA <span>PODRUČJA</span>",
+  subtitle: "POD UPRAVLJANJEM",
   galleryItems: [
     {
-      imgSrc: "/assets/img/work_thumb_1.jpg",
-      title: "Gallery A",
-      year: "2024",
+      imgSrc: "/assets/img/projects/djalovica-klisura/cover.jpg",
+      title: "Spomenik prirode Đalovića klisura",
       height: "694px",
     },
     {
-      imgSrc: "/assets/img/work_thumb_2.jpg",
-      title: "Gallery B",
-      year: "2024",
-      height: "287px",
-    },
-    {
-      imgSrc: "/assets/img/work_thumb_2.jpg",
-      title: "Gallery B",
-      year: "2024",
-      height: "383px",
-    },
-    {
-      imgSrc: "/assets/img/work_thumb_4.jpg",
-      title: "Gallery D",
-      year: "2024",
-      height: "480px",
-    },
-    {
-      imgSrc: "/assets/img/work_thumb_5.jpg",
-      title: "Gallery E",
-      year: "2024",
-      height: "190px",
+      imgSrc: "/assets/img/projects/djalovica-klisura/cover.jpg",
+      title: "Spomenik prirode Rijeka Ćehotina",
+      height: "694px",
     },
   ],
 };
 
 const cardData = {
   backgroundImage: "/assets/img/card_bg.jpg",
-  tags: ["Home", "Garden", "Landscape Design", "Expert"],
-  title: "MAKE YOUR DREAM <br /> GARDEN INTO REALITY",
-  buttonLink: "/projects",
+  tags: ["Bijelo Polje", "Zaštita prirode", "Održivi razvoj", "Prirodna dobra"],
+  title: "UPRAVLJANJE PRIRODOM <br /> ZA DOBROBIT ZAJEDNICE",
+  buttonLink: "/zasticena-podrucja",
 };
 
 export default function AboutPage() {
-  pageTitle("About Us | LeafLife");
+  pageTitle("O nama | Agencija za upravljanje prirodnim dobrima");
+
   return (
     <>
       <PageHeading data={BreadcrumbsData} />
@@ -177,7 +150,6 @@ export default function AboutPage() {
         <FeatureSection data={featureData} />
       </div>
       <TeamMember data={teamMembersData} />
-      <BrandSection data={brandLogos} />
       <WorkSection1 data={WorkingData} />
       <CardSection data={cardData} />
     </>

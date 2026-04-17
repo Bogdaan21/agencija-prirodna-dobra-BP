@@ -13,6 +13,7 @@ export default function WorkSection1({ data }) {
                 dangerouslySetInnerHTML={{ __html: data.subtitle }}
               ></h3>
               <h2
+                style={{ fontSize: "50px" }}
                 className="cs_section_title cs_fs_80 mb-0"
                 dangerouslySetInnerHTML={{ __html: data.title }}
               />

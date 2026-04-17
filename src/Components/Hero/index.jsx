@@ -40,10 +40,7 @@ export default function HeroSection({ data }) {
                 </Link>
               </div>
             </div>
-            <div
-              className="cs_hero_funfact_wrap wow fadeInRight"
-              data-aos="fade-left"
-            >
+            <div className="cs_hero_funfact_wrap wow fadeInRight" data-aos="fade-left">
               <div className="cs_hero_funfact">
                 <h3
                   className="cs_fs_24 cs_bold cs_white_color mb-0"
@@ -63,13 +60,7 @@ export default function HeroSection({ data }) {
             </div>
             <div className="cs_hero_box wow fadeInUp" data-aos="fade-up">
               <div className="cs_hero_box_icon cs_mb_29">
-                <svg
-                  width={22}
-                  height={30}
-                  viewBox="0 0 22 30"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width={22} height={30} viewBox="0 0 22 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M11 0C4.93447 0 0 4.97132 0 11.0821C0 13.0939 0.895529 15.2575 0.933059 15.3488C1.22229 16.0404 1.793 17.1147 2.20453 17.7445L9.74665 29.2575C10.0553 29.7295 10.5121 30 11 30C11.4879 30 11.9447 29.7295 12.2534 29.2581L19.7961 17.7445C20.2083 17.1147 20.7784 16.0404 21.0676 15.3488C21.1051 15.2581 22 13.0945 22 11.0821C22 4.97132 17.0655 0 11 0ZM19.8744 14.8429C19.6162 15.4628 19.085 16.4622 18.7155 17.0267L11.1728 28.5404C11.0239 28.7679 10.9767 28.7679 10.8279 28.5404L3.28512 17.0267C2.91565 16.4622 2.38441 15.4622 2.12624 14.8422C2.11523 14.8155 1.29412 12.824 1.29412 11.0821C1.29412 5.69035 5.64818 1.30378 11 1.30378C16.3518 1.30378 20.7059 5.69035 20.7059 11.0821C20.7059 12.8266 19.8828 14.8233 19.8744 14.8429Z"
                     fill="currentColor"
@@ -88,17 +79,8 @@ export default function HeroSection({ data }) {
                 className="cs_hero_box_subtitle mb-0 cs_opacity_7_5"
                 dangerouslySetInnerHTML={{ __html: data.box.subtitle }}
               ></p>
-              <Link
-                to={data.box.link}
-                className="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color"
-              >
-                <svg
-                  width={16}
-                  height={16}
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <Link to={data.box.link} className="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
+                <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z"
                     fill="currentColor"
@@ -124,9 +106,7 @@ export default function HeroSection({ data }) {
 
                 renderBullet: function (index, className) {
                   return `<li class="${className}" role="presentation" style="margin: 0;">
-                            <button type="button" style="z-index: 1; background-color: white;">${
-                              index + 1
-                            }</button>
+                            <button type="button" style="z-index: 1; background-color: white;">${index + 1}</button>
                           </li>`;
                 },
               }}
@@ -148,6 +128,7 @@ export default function HeroSection({ data }) {
                         top: 0,
                         left: 0,
                         zIndex: -1,
+                        filter: "brightness(0.6)",
                       }}
                     />
                   </div>
@@ -170,10 +151,7 @@ export default function HeroSection({ data }) {
                         <span>0{currentSlide}</span>
                       </span>{" "}
                       <span className="cs_slider_number_seperator" />{" "}
-                      <span
-                        className="cs_total_numbers"
-                        data-number="${slick.slideCount}"
-                      >
+                      <span className="cs_total_numbers" data-number="${slick.slideCount}">
                         <span>0{data.backgrounds.length}</span>
                       </span>
                     </>
