@@ -10,30 +10,32 @@ import CTASection from "../../Components/CTASection";
 import { pageTitle } from "../../helper";
 
 const heroData = {
-  title: "CREATE YOUR <b>DREAM GARDEN</b>",
+  title: "ZAŠTITA <b>PRIRODNIH DOBARA</b> BIJELO POLJE",
+
   subtitle:
-    "Crafting dream gardens with passion, creativity, and sustainability for over a decade with our experienced landscape artists and gardener teams.",
-  btnText1: "Get Started",
-  btnUrl1: "/services",
-  btnText2: "Explore Projects", 
-  btnUrl2: "/projects",
+    "Agencija za upravljanje prirodnim dobrima opštine Bijelo Polje posvećena je zaštiti, očuvanju i unapređenju zaštićenih područja kroz održivo upravljanje, monitoring i razvoj lokalne zajednice.",
+
+  btnText1: "Zaštićena područja",
+  btnUrl1: "/projects",
+
+  btnText2: "Kontakt",
+  btnUrl2: "/contact",
 
   funfact: {
-    number: "500+",
-    text: "Satisfied Clients",
+    number: "866 ha",
+    text: "Zaštićene površine",
   },
+
   box: {
-    title: "Hachioji Garden",
-    subtitle:
-      "We design Hachioji Garden as a part of our new Landscape Design Commission in the country.",
-    link: "/projects/hachioji-garden",
+    title: "Đalovića klisura",
+    subtitle: "Jedno od najvrijednijih prirodnih područja sa bogatom florom, faunom i speleološkim objektima.",
+    link: "/projects/djalovica-klisura",
   },
+
   backgrounds: [
     "/assets/img/cover-hero.jpg",
-    "/assets/img/hero_bg.jpg",
-    "/assets/img/hero_bg_4.jpg",
-    "/assets/img/hero_bg_2.jpg",
-    "/assets/img/hero_bg_4.jpg",
+    "/assets/img/djalovica-klisura/1.jpg",
+    "/assets/img/djalovica-klisura/2.jpg",
   ],
 };
 
@@ -51,8 +53,7 @@ const featureData = {
     {
       icon: "fa6-regular:heart",
       title: "Passion in every work",
-      description:
-        "We are deeply passionate about creating beautiful, sustainable green landscapes for our clients.",
+      description: "We are deeply passionate about creating beautiful, sustainable green landscapes for our clients.",
     },
     {
       icon: "fa6-solid:link",
@@ -200,8 +201,7 @@ const worksData = {
       image: "/assets/img/project_thumb_10.jpg",
       name: "ZEN HAVEN",
       location: "PALO ALTO, CA",
-      description:
-        "This modern garden blends minimalist design with nature for a peaceful retreat.",
+      description: "This modern garden blends minimalist design with nature for a peaceful retreat.",
     },
     {
       image: "/assets/img/project_thumb_11.jpg",
