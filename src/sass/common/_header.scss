@@ -166,6 +166,11 @@
 
 .cs_site_branding {
   display: inline-flex;
+  height: 80px;
+  padding: 10px 0;
+  @media (max-width: 1300px) {
+    height: 65px;
+  }
   + .cs_nav {
     margin-left: 80px;
     @media (max-width: 1600px) {

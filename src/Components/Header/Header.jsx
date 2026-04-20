@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 
 const data = {
-  logo: "/assets/img/logo.svg",
+  logo: "/assets/img/logo.png",
   logoUrl: "/",
 };
 
