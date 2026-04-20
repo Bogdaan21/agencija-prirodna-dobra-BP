@@ -70,7 +70,7 @@ export default function BlogDetailsPage() {
     if (slug) {
       fetchBlog();
     }
-  }, [slug]);
+  }, [slug, language]);
 
   const breadcrumbsData = {
     backgroundImage: "/assets/img/about_heading_bg.jpg",
