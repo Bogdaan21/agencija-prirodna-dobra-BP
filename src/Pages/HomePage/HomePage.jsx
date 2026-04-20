@@ -9,73 +9,6 @@ import WorksSection from "../../Components/WorksSection";
 import CTASection from "../../Components/CTASection";
 import { pageTitle } from "../../helper";
 
-const heroData = {
-  title: "ZAŠTITA <b>PRIRODNIH DOBARA</b> BIJELO POLJE",
-
-  subtitle:
-    "Agencija za upravljanje prirodnim dobrima opštine Bijelo Polje posvećena je zaštiti, očuvanju i unapređenju zaštićenih područja kroz održivo upravljanje, monitoring i razvoj lokalne zajednice.",
-
-  btnText1: "Zaštićena područja",
-  btnUrl1: "/projects",
-
-  btnText2: "Kontakt",
-  btnUrl2: "/contact",
-
-  funfact: {
-    number: "866 ha",
-    text: "Zaštićene površine",
-  },
-
-  box: {
-    title: "Đalovića klisura",
-    subtitle: "Jedno od najvrijednijih prirodnih područja sa bogatom florom, faunom i speleološkim objektima.",
-    link: "/projects/djalovica-klisura",
-  },
-
-  backgrounds: [
-    "/assets/img/cover-hero.jpg",
-    "/assets/img/djalovica-klisura/1.jpg",
-    "/assets/img/djalovica-klisura/2.jpg",
-  ],
-};
-
-const valueData = {
-  sectionTitle: "VALUES",
-  values: [{ text: "Landscape Design" }, { text: "Indoor Garden" }],
-};
-
-const featureData = {
-  sectionTitle: "WE ARE <span>DIFFERENT</span> IN EVERY WAYS",
-  buttonText: "Get Started",
-  buttonUrl: "/services",
-  image: "/assets/img/feature_thumb.jpg",
-  features: [
-    {
-      icon: "fa6-regular:heart",
-      title: "Passion in every work",
-      description: "We are deeply passionate about creating beautiful, sustainable green landscapes for our clients.",
-    },
-    {
-      icon: "fa6-solid:link",
-      title: "Collaboration on top",
-      description:
-        "We make your dream design come true by combining your ideas with our 10+ years of garden design expertise.",
-    },
-    {
-      icon: "fa6-solid:layer-group",
-      title: "Sustainability in check",
-      description:
-        "We love nurturing nature, one garden at a time, so that you can enjoy the beautiful landscape of our garden even longer.",
-    },
-    {
-      icon: "fa6-brands:ubuntu",
-      title: "Creativity unleashed",
-      description:
-        "We make sure to only give you our innovative designs that stand out to make sure that your garden is not like the others.",
-    },
-  ],
-};
-
 const workingProcessData = {
   sectionTitle: "SIMPLE STEPS FOR OUR <span>LANDSCAPE</span> WORK",
 
@@ -105,66 +38,6 @@ const workingProcessData = {
   ],
 };
 
-const servicesData = {
-  title: "SERVICES",
-  btnText: " See More Services",
-  btnUrl: "/services",
-  service: [
-    {
-      title: "HOME GARDEN",
-      subtitle:
-        "Crafting the perfect garden space for your home. Whether indoor or outdoor, we got it all ready for your greenery needs.",
-      image: "/assets/img/service_thumb_1.jpg",
-      link: "services/home-garden",
-      tags: [
-        { label: "Home", url: "/" },
-        { label: "Garden", url: "/" },
-        { label: "Landscape Design", url: "/" },
-        { label: "Expert", url: "/" },
-      ],
-    },
-    {
-      title: "PLANT SELECTION",
-      subtitle:
-        "Crafting the perfect garden space for your home. Whether indoor or outdoor, we got it all ready for your greenery needs.",
-      image: "/assets/img/service_thumb_2.jpg",
-      link: "services/plant-selection",
-      tags: [
-        { label: "Home", url: "/" },
-        { label: "Garden", url: "/" },
-        { label: "Landscape Design", url: "/" },
-        { label: "Expert", url: "/" },
-      ],
-    },
-    {
-      title: "HARD SCAPING",
-      subtitle:
-        "Crafting the perfect garden space for your home. Whether indoor or outdoor, we got it all ready for your greenery needs.",
-      image: "/assets/img/service_thumb_3.jpg",
-      link: "services/hard-scaping",
-      tags: [
-        { label: "Home", url: "/" },
-        { label: "Garden", url: "/" },
-        { label: "Landscape Design", url: "/" },
-        { label: "Expert", url: "/" },
-      ],
-    },
-    {
-      title: "PUBLIC GARDEN",
-      subtitle:
-        "Crafting the perfect garden space for your home. Whether indoor or outdoor, we got it all ready for your greenery needs.",
-      image: "/assets/img/service_thumb_4.jpg",
-      link: "services/public-garden",
-      tags: [
-        { label: "Home", url: "/" },
-        { label: "Garden", url: "/" },
-        { label: "Landscape Design", url: "/" },
-        { label: "Expert", url: "/" },
-      ],
-    },
-  ],
-};
-
 const testimonialData = {
   sectionTitle: "TESTIMONIAL",
   testimonials: [
@@ -186,33 +59,6 @@ const testimonialData = {
   ],
 };
 
-const worksData = {
-  title: "GET TO <span>KNOW</span> OUR <br /> LATEST GARDEN <span>WORKS</span>",
-  subtitle: "WORKS",
-  slides: [
-    {
-      image: "/assets/img/project_thumb_9.jpg",
-      name: "SERENE RETREAT",
-      location: "SUNNYVALE, CA",
-      description:
-        "A tranquil garden oasis perfect for your relaxation time with family or alone within your comfortable home.",
-    },
-    {
-      image: "/assets/img/project_thumb_10.jpg",
-      name: "ZEN HAVEN",
-      location: "PALO ALTO, CA",
-      description: "This modern garden blends minimalist design with nature for a peaceful retreat.",
-    },
-    {
-      image: "/assets/img/project_thumb_11.jpg",
-      name: "URBAN EDEN",
-      location: "SAN FRANCISCO, CA",
-      description:
-        "An urban backyard transformed into a vibrant, green escape with blooming flowers and winding paths.",
-    },
-  ],
-};
-
 const ctaData = {
   backgroundImage: "/assets/img/cta_bg.jpg",
   title: "READY TO TRANSFORM <br /> YOUR GARDEN?",
@@ -224,13 +70,13 @@ export default function HomePage() {
   pageTitle("Nature");
   return (
     <>
-      <HeroSection data={heroData} />
-      <ValueSection data={valueData} />
-      <FeatureSection data={featureData} />
+      <HeroSection />
+      <ValueSection />
+      <FeatureSection />
+      <WorksSection />
+      <ServicesSection />
       <WorkingProcess data={workingProcessData} />
-      <ServicesSection data={servicesData} />
       <TestimonialSection data={testimonialData} />
-      <WorksSection data={worksData} />
       <CTASection data={ctaData} />
     </>
   );

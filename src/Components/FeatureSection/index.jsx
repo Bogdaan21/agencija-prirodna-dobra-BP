@@ -2,7 +2,39 @@ import { Icon } from "@iconify/react/dist/iconify.js";
 import React from "react";
 import { Link } from "react-router-dom";
 
-export default function FeatureSection({ data }) {
+export default function FeatureSection() {
+  const data = {
+    sectionTitle: "NAŠA <span>ULOGA I ODGOVORNOSTI</span>",
+    buttonText: "Kontakt",
+    buttonUrl: "/contact",
+    image: "/assets/img/feature_thumb.jpg",
+    features: [
+      {
+        icon: "fa6-solid:leaf",
+        title: "Zaštita i očuvanje",
+        description:
+          "Primarna funkcija Agencije je zaštita i očuvanje vrsta, ekosistema, pejzaža i prirodnih vrijednosti u zaštićenim područjima.",
+      },
+      {
+        icon: "fa6-solid:people-group",
+        title: "Podrška lokalnoj zajednici",
+        description:
+          "Zaštićena područja posmatramo i kao pokretače održivog razvoja lokalne zajednice i unapređenja kvaliteta života stanovništva.",
+      },
+      {
+        icon: "fa6-solid:flask",
+        title: "Istraživanje i monitoring",
+        description:
+          "Područja pod upravljanjem Agencije pružaju osnovu za naučna istraživanja, monitoring stanja prirode i unapređenje stručnih kapaciteta.",
+      },
+      {
+        icon: "fa6-solid:bullhorn",
+        title: "Promocija i edukacija",
+        description:
+          "Kroz promociju, marketing i edukativne aktivnosti radimo na podizanju svijesti o važnosti očuvanja prirodnih dobara.",
+      },
+    ],
+  };
   return (
     <section>
       <div className="cs_height_100 cs_height_lg_70" />
@@ -10,7 +42,7 @@ export default function FeatureSection({ data }) {
         <div className="cs_section_heading cs_style_1">
           <h2
             className="cs_section_title cs_fs_80 mb-0"
-              style={{ fontSize: "50px" }}
+            style={{ fontSize: "50px" }}
             data-aos="fade-down"
             dangerouslySetInnerHTML={{ __html: data.sectionTitle }}
           />

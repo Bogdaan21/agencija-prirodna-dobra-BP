@@ -1,8 +1,32 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import projectJson from "../../data/project.json";
 
-export default function ServicesSection({ data }) {
-  const [hoveredIndex, setHoveredIndex] = useState(0); // default active card
+export default function ServicesSection() {
+  const [hoveredIndex, setHoveredIndex] = useState(0);
+
+  const data = {
+    title: "PROJECTS",
+    btnText: "See More Projects",
+    btnUrl: "/projects",
+    service: projectJson.projects.map((project) => {
+      const location = project.info?.find((item) => item.label === "LOCATION")?.value || "";
+      const service = project.info?.find((item) => item.label === "SERVICE")?.value || "";
+      const year = project.info?.find((item) => item.label === "YEAR")?.value || "";
+
+      return {
+        title: project.title,
+        subtitle: `${service}${location ? ` — ${location}` : ""}`,
+        image: project.imageSrc,
+        link: `/projects/${project.slug}`,
+        tags: [
+          ...(year ? [{ label: year, url: `/projects/${project.slug}` }] : []),
+          ...(location ? [{ label: location, url: `/projects/${project.slug}` }] : []),
+          ...(service ? [{ label: service, url: `/projects/${project.slug}` }] : []),
+        ],
+      };
+    }),
+  };
 
   return (
     <section>
@@ -10,7 +34,7 @@ export default function ServicesSection({ data }) {
       <div className="container">
         <div className="cs_section_heading cs_style_3">
           <h3
-            className="cs_brackets_title cs_normal cs_fs_16 mb-0 "
+            className="cs_brackets_title cs_normal cs_fs_16 mb-0"
             data-aos="fade-up"
             dangerouslySetInnerHTML={{ __html: data.title }}
           />
@@ -30,14 +54,14 @@ export default function ServicesSection({ data }) {
         <div className="cs_card_1_group" data-aos="fade-right">
           {data.service.map((service, index) => (
             <div
-              key={index}
+              key={service.link}
               className={`cs_card cs_style_1 cs_hover_active cs_heading_bg cs_bg_filed ${
                 hoveredIndex === index ? "active" : ""
               }`}
               style={{
                 backgroundImage: `url(${service.image})`,
               }}
-              onMouseEnter={() => setHoveredIndex(index)} // hover sets the active index
+              onMouseEnter={() => setHoveredIndex(index)}
             >
               <div className="cs_card_top">
                 <div className="cs_card_tags">
@@ -48,15 +72,18 @@ export default function ServicesSection({ data }) {
                   ))}
                 </div>
               </div>
+
               <div className="cs_card_bottom">
                 <h2 className="cs_card_title cs_white_color cs_fs_32">
                   {service.title}
                 </h2>
+
                 <p
                   className="cs_card_subtitle mb-0 cs_white_color"
                   dangerouslySetInnerHTML={{ __html: service.subtitle }}
                 />
               </div>
+
               <Link
                 to={service.link}
                 className="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color"
@@ -78,6 +105,7 @@ export default function ServicesSection({ data }) {
           ))}
         </div>
       </div>
+
       <div className="cs_height_100 cs_height_lg_70"></div>
     </section>
   );

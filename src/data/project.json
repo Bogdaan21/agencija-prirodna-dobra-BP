@@ -137,6 +137,387 @@
           "height": "350px"
         }
       ]
+    },
+    {
+      "slug": "djalovica-klisura-1",
+
+      "title": "Spomenik prirode Đalovića klisura",
+      "imageSrc": "/assets/img/projects/djalovica-klisura/cover.jpg",
+      "imageAlt": "Đalovića klisura",
+
+      "info": [
+        { "label": "YEAR", "value": "2024" },
+        { "label": "LOCATION", "value": "Bijelo Polje, Crna Gora" },
+        { "label": "TYPE", "value": "Spomenik prirode" }
+      ],
+
+      "breadcrumbs": {
+        "backgroundImage": "/assets/img/project_heading_bg.jpg",
+        "title": "Đalovića klisura",
+        "breadcrumbs": [
+          { "label": "Home", "link": "/" },
+          { "label": "Đalovića klisura", "active": true }
+        ]
+      },
+
+      "sliderImages": [
+        "/assets/img/projects/djalovica-klisura/cover.jpg",
+        "/assets/img/projects/djalovica-klisura/1.jpg",
+        "/assets/img/projects/djalovica-klisura/2.jpg"
+      ],
+
+      "description": "Đalovića klisura predstavlja jedno od najimpresivnijih prirodnih područja sjevera Crne Gore. Nalazi se na zapadnom obodu Pešterske visoravni i proteže se dužinom od oko 7,5 km. Klisura je usječena u krečnjački masiv i dostiže dubinu do 627 metara, što je čini jednim od najdramatičnijih pejzaža u regionu.",
+
+      "outcomes": "Područje je bogato izvorima, podzemnim vodama, speleološkim objektima i raznovrsnim ekosistemima. Posebno se izdvajaju Glava Bistrice i Juriška vrela, kao i stalni tok rijeke Bistrice koji se nizvodno uliva u Lim. Klisura je stanište brojnih biljnih i životinjskih vrsta, uključujući endemske vrste i zaštićene vrste širom Balkana.",
+
+      "features": [
+        {
+          "iconClass": "fa6-solid:mountain",
+          "title": "Impresivan kanjonski reljef"
+        },
+        {
+          "iconClass": "fa6-solid:water",
+          "title": "Izvori i rijeka Bistrica"
+        },
+        {
+          "iconClass": "fa6-solid:leaf",
+          "title": "Bogata flora i fauna"
+        },
+        {
+          "iconClass": "fa6-solid:landmark",
+          "title": "Speleološki objekti"
+        },
+        {
+          "iconClass": "fa6-solid:tree",
+          "title": "Šumski ekosistemi"
+        },
+        {
+          "iconClass": "fa6-solid:binoculars",
+          "title": "Turistički potencijal"
+        }
+      ],
+
+      "gallery": [
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/1.jpg",
+          "title": "Panorama Đalovića klisure sa Koritskom visoravni",
+          "height": "500px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/2.jpg",
+          "title": "Rijeka Bistrica nakon kiše",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/3.jpg",
+          "title": "Đalovića klisura u zimskom ambijentu",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/4.jpg",
+          "title": "Juriška vrela (Vrelo Bistrice)",
+          "height": "450px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/5.jpg",
+          "title": "Glava Bistrice – Koritska pećina",
+          "height": "380px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/6.jpg",
+          "title": "Vražji virovi",
+          "height": "420px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/7.jpg",
+          "title": "Izlazak iz sjenke – Juriško vrelo",
+          "height": "380px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/8.jpg",
+          "title": "Sifon u pećini – Juriško vrelo",
+          "height": "420px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/9.jpg",
+          "title": "Tok rijeke Bistrice u klisuri",
+          "height": "450px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/10.jpg",
+          "title": "Sipari i stijene klisure",
+          "height": "380px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/11.jpg",
+          "title": "Gornji tok rijeke Bistrice",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/12.jpg",
+          "title": "Đalovića klisura – prirodni pejzaž",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/13.jpg",
+          "title": "Poskok u prirodnom staništu",
+          "height": "350px"
+        }
+      ]
+    },
+    {
+      "slug": "djalovica-klisura-2",
+
+      "title": "Spomenik prirode Đalovića klisura",
+      "imageSrc": "/assets/img/projects/djalovica-klisura/cover.jpg",
+      "imageAlt": "Đalovića klisura",
+
+      "info": [
+        { "label": "YEAR", "value": "2024" },
+        { "label": "LOCATION", "value": "Bijelo Polje, Crna Gora" },
+        { "label": "TYPE", "value": "Spomenik prirode" }
+      ],
+
+      "breadcrumbs": {
+        "backgroundImage": "/assets/img/project_heading_bg.jpg",
+        "title": "Đalovića klisura",
+        "breadcrumbs": [
+          { "label": "Home", "link": "/" },
+          { "label": "Đalovića klisura", "active": true }
+        ]
+      },
+
+      "sliderImages": [
+        "/assets/img/projects/djalovica-klisura/cover.jpg",
+        "/assets/img/projects/djalovica-klisura/1.jpg",
+        "/assets/img/projects/djalovica-klisura/2.jpg"
+      ],
+
+      "description": "Đalovića klisura predstavlja jedno od najimpresivnijih prirodnih područja sjevera Crne Gore. Nalazi se na zapadnom obodu Pešterske visoravni i proteže se dužinom od oko 7,5 km. Klisura je usječena u krečnjački masiv i dostiže dubinu do 627 metara, što je čini jednim od najdramatičnijih pejzaža u regionu.",
+
+      "outcomes": "Područje je bogato izvorima, podzemnim vodama, speleološkim objektima i raznovrsnim ekosistemima. Posebno se izdvajaju Glava Bistrice i Juriška vrela, kao i stalni tok rijeke Bistrice koji se nizvodno uliva u Lim. Klisura je stanište brojnih biljnih i životinjskih vrsta, uključujući endemske vrste i zaštićene vrste širom Balkana.",
+
+      "features": [
+        {
+          "iconClass": "fa6-solid:mountain",
+          "title": "Impresivan kanjonski reljef"
+        },
+        {
+          "iconClass": "fa6-solid:water",
+          "title": "Izvori i rijeka Bistrica"
+        },
+        {
+          "iconClass": "fa6-solid:leaf",
+          "title": "Bogata flora i fauna"
+        },
+        {
+          "iconClass": "fa6-solid:landmark",
+          "title": "Speleološki objekti"
+        },
+        {
+          "iconClass": "fa6-solid:tree",
+          "title": "Šumski ekosistemi"
+        },
+        {
+          "iconClass": "fa6-solid:binoculars",
+          "title": "Turistički potencijal"
+        }
+      ],
+
+      "gallery": [
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/1.jpg",
+          "title": "Panorama Đalovića klisure sa Koritskom visoravni",
+          "height": "500px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/2.jpg",
+          "title": "Rijeka Bistrica nakon kiše",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/3.jpg",
+          "title": "Đalovića klisura u zimskom ambijentu",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/4.jpg",
+          "title": "Juriška vrela (Vrelo Bistrice)",
+          "height": "450px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/5.jpg",
+          "title": "Glava Bistrice – Koritska pećina",
+          "height": "380px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/6.jpg",
+          "title": "Vražji virovi",
+          "height": "420px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/7.jpg",
+          "title": "Izlazak iz sjenke – Juriško vrelo",
+          "height": "380px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/8.jpg",
+          "title": "Sifon u pećini – Juriško vrelo",
+          "height": "420px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/9.jpg",
+          "title": "Tok rijeke Bistrice u klisuri",
+          "height": "450px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/10.jpg",
+          "title": "Sipari i stijene klisure",
+          "height": "380px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/11.jpg",
+          "title": "Gornji tok rijeke Bistrice",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/12.jpg",
+          "title": "Đalovića klisura – prirodni pejzaž",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/13.jpg",
+          "title": "Poskok u prirodnom staništu",
+          "height": "350px"
+        }
+      ]
+    },
+    {
+      "slug": "djalovica-klisura-3",
+
+      "title": "Spomenik prirode Đalovića klisura",
+      "imageSrc": "/assets/img/projects/djalovica-klisura/cover.jpg",
+      "imageAlt": "Đalovića klisura",
+
+      "info": [
+        { "label": "YEAR", "value": "2024" },
+        { "label": "LOCATION", "value": "Bijelo Polje, Crna Gora" },
+        { "label": "TYPE", "value": "Spomenik prirode" }
+      ],
+
+      "breadcrumbs": {
+        "backgroundImage": "/assets/img/project_heading_bg.jpg",
+        "title": "Đalovića klisura",
+        "breadcrumbs": [
+          { "label": "Home", "link": "/" },
+          { "label": "Đalovića klisura", "active": true }
+        ]
+      },
+
+      "sliderImages": [
+        "/assets/img/projects/djalovica-klisura/cover.jpg",
+        "/assets/img/projects/djalovica-klisura/1.jpg",
+        "/assets/img/projects/djalovica-klisura/2.jpg"
+      ],
+
+      "description": "Đalovića klisura predstavlja jedno od najimpresivnijih prirodnih područja sjevera Crne Gore. Nalazi se na zapadnom obodu Pešterske visoravni i proteže se dužinom od oko 7,5 km. Klisura je usječena u krečnjački masiv i dostiže dubinu do 627 metara, što je čini jednim od najdramatičnijih pejzaža u regionu.",
+
+      "outcomes": "Područje je bogato izvorima, podzemnim vodama, speleološkim objektima i raznovrsnim ekosistemima. Posebno se izdvajaju Glava Bistrice i Juriška vrela, kao i stalni tok rijeke Bistrice koji se nizvodno uliva u Lim. Klisura je stanište brojnih biljnih i životinjskih vrsta, uključujući endemske vrste i zaštićene vrste širom Balkana.",
+
+      "features": [
+        {
+          "iconClass": "fa6-solid:mountain",
+          "title": "Impresivan kanjonski reljef"
+        },
+        {
+          "iconClass": "fa6-solid:water",
+          "title": "Izvori i rijeka Bistrica"
+        },
+        {
+          "iconClass": "fa6-solid:leaf",
+          "title": "Bogata flora i fauna"
+        },
+        {
+          "iconClass": "fa6-solid:landmark",
+          "title": "Speleološki objekti"
+        },
+        {
+          "iconClass": "fa6-solid:tree",
+          "title": "Šumski ekosistemi"
+        },
+        {
+          "iconClass": "fa6-solid:binoculars",
+          "title": "Turistički potencijal"
+        }
+      ],
+
+      "gallery": [
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/1.jpg",
+          "title": "Panorama Đalovića klisure sa Koritskom visoravni",
+          "height": "500px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/2.jpg",
+          "title": "Rijeka Bistrica nakon kiše",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/3.jpg",
+          "title": "Đalovića klisura u zimskom ambijentu",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/4.jpg",
+          "title": "Juriška vrela (Vrelo Bistrice)",
+          "height": "450px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/5.jpg",
+          "title": "Glava Bistrice – Koritska pećina",
+          "height": "380px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/6.jpg",
+          "title": "Vražji virovi",
+          "height": "420px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/7.jpg",
+          "title": "Izlazak iz sjenke – Juriško vrelo",
+          "height": "380px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/8.jpg",
+          "title": "Sifon u pećini – Juriško vrelo",
+          "height": "420px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/9.jpg",
+          "title": "Tok rijeke Bistrice u klisuri",
+          "height": "450px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/10.jpg",
+          "title": "Sipari i stijene klisure",
+          "height": "380px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/11.jpg",
+          "title": "Gornji tok rijeke Bistrice",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/12.jpg",
+          "title": "Đalovića klisura – prirodni pejzaž",
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/13.jpg",
+          "title": "Poskok u prirodnom staništu",
+          "height": "350px"
+        }
+      ]
     }
   ]
 }

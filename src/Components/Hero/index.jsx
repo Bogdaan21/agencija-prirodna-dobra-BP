@@ -3,8 +3,38 @@ import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { EffectCube } from "swiper/modules";
-export default function HeroSection({ data }) {
+export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(1);
+
+  const heroData = {
+  title: "ZAŠTITA <b>PRIRODNIH DOBARA</b> BIJELO POLJE",
+
+  subtitle:
+    "Agencija za upravljanje prirodnim dobrima opštine Bijelo Polje posvećena je zaštiti, očuvanju i unapređenju zaštićenih područja kroz održivo upravljanje, monitoring i razvoj lokalne zajednice.",
+
+  btnText1: "Zaštićena područja",
+  btnUrl1: "/projects",
+
+  btnText2: "Kontakt",
+  btnUrl2: "/contact",
+
+  funfact: {
+    number: "866 ha",
+    text: "Zaštićene površine",
+  },
+
+  box: {
+    title: "Đalovića klisura",
+    subtitle: "Jedno od najvrijednijih prirodnih područja sa bogatom florom, faunom i speleološkim objektima.",
+    link: "/projects/djalovica-klisura",
+  },
+
+  backgrounds: [
+    "/assets/img/cover-hero.jpg",
+    "/assets/img/djalovica-klisura/1.jpg",
+    "/assets/img/djalovica-klisura/2.jpg",
+  ],
+};
 
   return (
     <>
@@ -15,28 +45,28 @@ export default function HeroSection({ data }) {
               <h1
                 className="cs_hero_title cs_fs_100 cs_normal cs_mb_12 cs_white_color cs_gradient_color_1 wow fadeInUp"
                 data-aos="fade-up"
-                dangerouslySetInnerHTML={{ __html: data.title }}
+                dangerouslySetInnerHTML={{ __html: heroData.title }}
               />
 
               <p
                 className="cs_hero_subtitle cs_fs_20 cs_mb_32 cs_opacity_7_5"
-                dangerouslySetInnerHTML={{ __html: data.subtitle }}
+                dangerouslySetInnerHTML={{ __html: heroData.subtitle }}
               ></p>
 
               <div className="cs_hero_btns">
                 <Link
-                  to={data.btnUrl1}
+                  to={heroData.btnUrl1}
                   data-aos="fade-right"
                   className="cs_btn cs_style_1 cs_bold cs_heading_color cs_white_bg wow fadeInLeft"
                 >
-                  {data.btnText1}
+                  {heroData.btnText1}
                 </Link>
                 <Link
-                  to={data.btnUrl2}
+                  to={heroData.btnUrl2}
                   data-aos="fade-left"
                   className="cs_btn cs_style_2 cs_bold cs_white_color wow fadeInRight"
                 >
-                  {data.btnText2}
+                  {heroData.btnText2}
                 </Link>
               </div>
             </div>
@@ -44,11 +74,11 @@ export default function HeroSection({ data }) {
               <div className="cs_hero_funfact">
                 <h3
                   className="cs_fs_24 cs_bold cs_white_color mb-0"
-                  dangerouslySetInnerHTML={{ __html: data.funfact.number }}
+                  dangerouslySetInnerHTML={{ __html: heroData.funfact.number }}
                 />
                 <p
                   className="cs_fs_20 cs_white_color cs_opacity_7_5 cs_mb_16"
-                  dangerouslySetInnerHTML={{ __html: data.funfact.text }}
+                  dangerouslySetInnerHTML={{ __html: heroData.funfact.text }}
                 ></p>
 
                 <div className="cs_circle_group">
@@ -73,13 +103,13 @@ export default function HeroSection({ data }) {
               </div>
               <h3
                 className="cs_hero_box_title cs_fs_24 cs_mb_12 cs_white_color"
-                dangerouslySetInnerHTML={{ __html: data.box.title }}
+                dangerouslySetInnerHTML={{ __html: heroData.box.title }}
               ></h3>
               <p
                 className="cs_hero_box_subtitle mb-0 cs_opacity_7_5"
-                dangerouslySetInnerHTML={{ __html: data.box.subtitle }}
+                dangerouslySetInnerHTML={{ __html: heroData.box.subtitle }}
               ></p>
-              <Link to={data.box.link} className="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
+              <Link to={heroData.box.link} className="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
                 <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z"
@@ -113,7 +143,7 @@ export default function HeroSection({ data }) {
               onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex + 1)}
               className="cs_slider_wrapper"
             >
-              {data.backgrounds.map((src, index) => (
+              {heroData.backgrounds.map((src, index) => (
                 <SwiperSlide key={index}>
                   <div className="cs_slide">
                     <img
@@ -152,7 +182,7 @@ export default function HeroSection({ data }) {
                       </span>{" "}
                       <span className="cs_slider_number_seperator" />{" "}
                       <span className="cs_total_numbers" data-number="${slick.slideCount}">
-                        <span>0{data.backgrounds.length}</span>
+                        <span>0{heroData.backgrounds.length}</span>
                       </span>
                     </>
                   </div>
