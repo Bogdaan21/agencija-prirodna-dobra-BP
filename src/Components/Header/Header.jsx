@@ -10,7 +10,6 @@ const data = {
 const menuData = {
   me: [
     { label: "POČETNA", href: "/" },
-    { label: "NOVOSTI", href: "/news" },
     { label: "O NAMA", href: "/about" },
     { label: "KONTAKT", href: "/contact" },
     {
@@ -25,7 +24,6 @@ const menuData = {
   ],
   en: [
     { label: "HOME", href: "/" },
-    { label: "NEWS", href: "/news" },
     { label: "ABOUT", href: "/about" },
     { label: "CONTACT", href: "/contact" },
     {
