@@ -28,7 +28,6 @@ function App() {
   Aos.init({
     duration: 1200,
     delay: 0.2,
-    disable: "mobile",
     once: true,
   });
   const { pathname } = useLocation();

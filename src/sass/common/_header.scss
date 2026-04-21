@@ -168,6 +168,9 @@
   display: inline-flex;
   height: 80px;
   padding: 10px 0;
+  img {
+    height: 100%;
+  }
   @media (max-width: 1300px) {
     height: 65px;
   }
