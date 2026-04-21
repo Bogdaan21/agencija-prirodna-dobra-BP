@@ -42,7 +42,6 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout1 />}>
           <Route index element={<HomePage />} />
-          <Route path="/services" element={<ServicePage />} />
         </Route>
 
         <Route path="/" element={<Layout />}>
@@ -52,7 +51,6 @@ function App() {
           <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
 
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
 
           <Route path="/news" element={<BlogPage />} />
           <Route path="/news/:slug" element={<BlogDetailsPage />} />
@@ -91,9 +89,6 @@ function App() {
             </PrivateRoute>
           }
         />
-
-        <Route path="/signup" element={<Register />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="*" element={<Error404 />} />
       </Routes>
     </>

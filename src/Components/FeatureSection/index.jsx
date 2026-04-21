@@ -83,7 +83,6 @@ export default function FeatureSection() {
         <div className="cs_section_heading cs_style_1">
           <h2
             className="cs_section_title cs_fs_80 mb-0"
-            style={{ fontSize: "50px" }}
             data-aos="fade-down"
             dangerouslySetInnerHTML={{ __html: data.sectionTitle }}
           />

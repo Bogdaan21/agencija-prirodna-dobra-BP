@@ -5,6 +5,8 @@ import ProjectDetailsSection from "../../Components/ProjectDetails";
 import { pageTitle } from "../../helper";
 import projectJson from "../../data/project.json";
 import { useLanguage } from "../../context/LanguageContext";
+import GalleryPage from "../GalleryPage";
+
 
 export default function ProjectDetailsPage() {
   const { slug } = useParams();
@@ -60,6 +62,7 @@ export default function ProjectDetailsPage() {
     <>
       <PageHeading data={translatedProject.breadcrumbs} />
       <ProjectDetailsSection data={translatedProject} />
+      <GalleryPage data={translatedProject.gallery} />
     </>
   );
 }

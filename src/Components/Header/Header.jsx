@@ -14,9 +14,7 @@ const menuData = {
     {
       label: "VIŠE",
       href: "/contact",
-      children: [
-        { label: "PROJEKTI", href: "/projects" },
-      ],
+      children: [{ label: "PROJEKTI", href: "/projects" }],
     },
     { label: "KONTAKT", href: "/contact" },
   ],
@@ -31,7 +29,7 @@ const menuData = {
         { label: "PROJECTS", href: "/projects" },
       ],
     },
-    { label: "CONTACT", href: "/contact" }
+    { label: "CONTACT", href: "/contact" },
   ],
 };
 
@@ -59,6 +57,11 @@ const Header = () => {
     } else {
       setOpenMobileSubmenuIndex((prev) => [...prev, index]);
     }
+  };
+
+  const handleCloseMobileMenu = () => {
+    setIsShowMobileMenu(false);
+    setOpenMobileSubmenuIndex([]);
   };
 
   useEffect(() => {
@@ -95,7 +98,9 @@ const Header = () => {
                     <ul className={`cs_nav_list`}>
                       {currentMenuItems.map((item, index) => (
                         <li key={index} className={item.children ? "menu-item-has-children" : ""}>
-                          <Link to={item.href}>{item.label}</Link>
+                          <Link to={item.href} onClick={handleCloseMobileMenu}>
+                            {item.label}
+                          </Link>
                           {item.children && (
                             <>
                               <ul
@@ -104,8 +109,10 @@ const Header = () => {
                                 }}
                               >
                                 {item.children.map((child, i) => (
-                                  <li key={i} onClick={() => setIsShowMobileMenu(!isShowMobileMenu)}>
-                                    <Link to={child.href}>{child.label}</Link>
+                                  <li key={i}>
+                                    <Link to={child.href} onClick={handleCloseMobileMenu}>
+                                      {child.label}
+                                    </Link>
                                   </li>
                                 ))}
                               </ul>
