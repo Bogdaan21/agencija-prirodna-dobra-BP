@@ -58,7 +58,7 @@ export default function BlogDetailsPage() {
 
         setBlogData(mappedBlog);
 
-        pageTitle(`${firebaseBlog?.title?.en || firebaseBlog?.title?.me || "Blog Details"} | LeafLife`);
+        pageTitle(`${firebaseBlog?.title?.en || firebaseBlog?.title?.me || "Detaljno"} | Agencija za upravljanje prirodnim dobrima`);
       } catch (error) {
         console.error("Error fetching blog:", error);
         setBlogData(null);

@@ -31,7 +31,7 @@ function Register() {
     // Simulate login API call
     alert("Login successful!");
   };
-  pageTitle("Register | LeafLife");
+  pageTitle("Register | aupdbp");
   return (
     <div className="cs_card cs_style_10">
       <div className="cs_card_left">

@@ -274,7 +274,7 @@ export default function AboutPage() {
 
   const data = content[language] || content.me;
 
-  pageTitle(language === "me" ? "O nama | LeafLife" : "About Us | LeafLife");
+  pageTitle("O nama | Agencija za upravljanje prirodnim dobrima");
   return (
     <>
       <PageHeading data={data.BreadcrumbsData} />

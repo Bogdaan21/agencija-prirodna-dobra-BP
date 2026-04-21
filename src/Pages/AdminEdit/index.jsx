@@ -28,7 +28,7 @@ function EditBlog() {
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
 
-  pageTitle("Edit Blog | LeafLife");
+  pageTitle("Edit News | Agencija za upravljanje prirodnim dobrima");
 
   const editorConfig = useMemo(
     () => ({

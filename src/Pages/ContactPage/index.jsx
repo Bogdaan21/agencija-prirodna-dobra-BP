@@ -71,11 +71,7 @@ export default function ContactPage() {
     buttonLink: "/projects",
   };
 
-  pageTitle(
-    language === "me"
-      ? "Kontakt | LeafLife"
-      : "Contact | LeafLife"
-  );
+    pageTitle("Kontakt | Agencija za upravljanje prirodnim dobrima");
 
   return (
     <>

@@ -24,7 +24,7 @@ export default function ProjectPage() {
     })),
   };
 
-  pageTitle(language === "me" ? "Projekti | LeafLife" : "Projects | LeafLife");
+    pageTitle("Zaštićena područja | Agencija za upravljanje prirodnim dobrima");
 
   return (
     <>

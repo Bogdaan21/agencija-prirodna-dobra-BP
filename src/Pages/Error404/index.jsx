@@ -22,7 +22,7 @@ const Error404 = () => {
     buttonText: "Return Home",
     buttonLink: "/",
   };
-  pageTitle("Error");
+  pageTitle("Greška");
   return (
     <>
       {/* Start Header Section */}

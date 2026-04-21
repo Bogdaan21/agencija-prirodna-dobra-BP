@@ -80,7 +80,7 @@ const faqData2 = {
 };
 
 export default function FaqPage() {
-  pageTitle("Faq | LeafLife");
+  pageTitle("Faq | Agencija za upravljanje prirodnim dobrima");
   return (
     <>
       <PageHeading data={BreadcrumbsData} />

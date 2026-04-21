@@ -24,7 +24,7 @@ function ForgotPassword() {
     alert("Password recovery instructions sent!");
   };
 
-  pageTitle("Forgot Password | LeafLife");
+  pageTitle("Forgot Password | aupdbp");
   return (
     <div className="cs_card cs_style_10">
       <div className="cs_card_left">

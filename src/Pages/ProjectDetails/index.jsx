@@ -56,7 +56,7 @@ export default function ProjectDetailsPage() {
     })),
   };
 
-  pageTitle(`${translatedProject.title} | LeafLife`);
+  pageTitle(`${translatedProject.title} | Agencija za upravljanje prirodnim dobrima`);
 
   return (
     <>

@@ -14,7 +14,7 @@ function Login() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    pageTitle("Login | LeafLife");
+    pageTitle("Login | Agencija za upravljanje prirodnim dobrima");
 
     return () => {
       setPassword("");

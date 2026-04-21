@@ -7,9 +7,9 @@ import { db } from "../../firebase";
 import { useLanguage } from "../../context/LanguageContext";
 
 export default function BlogPage() {
-  const { language } = useLanguage(); 
+  const { language } = useLanguage();
 
-  pageTitle(language === "me" ? "Novosti | LeafLife" : "Blog | LeafLife");
+  pageTitle("Novosti | Agencija za upravljanje prirodnim dobrima");
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);

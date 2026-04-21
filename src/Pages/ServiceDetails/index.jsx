@@ -82,19 +82,19 @@ const testimonialData = {
   title: "TESTIMONIAL",
   testimonialData: [
     {
-      text: `LeafLife's dedication to bringing our <span>vision</span> to life was exceptional. They turned our <span>backyard</span> into a haven of tranquility. Their attention to detail and sustainable practices on their design <span>impressed</span> us.`,
+      text: `aupdbp's dedication to bringing our <span>vision</span> to life was exceptional. They turned our <span>backyard</span> into a haven of tranquility. Their attention to detail and sustainable practices on their design <span>impressed</span> us.`,
       img: "/assets/img/avatar.png",
       name: "MARIA HUGH",
       designation: "Marketing of Elston Company",
     },
     {
-      text: `LeafLife's dedication to bringing our <span>vision</span> to life was exceptional. They turned our <span>backyard</span> into a haven of tranquility. Their attention to detail and sustainable practices on their design <span>impressed</span> us.`,
+      text: `aupdbp's dedication to bringing our <span>vision</span> to life was exceptional. They turned our <span>backyard</span> into a haven of tranquility. Their attention to detail and sustainable practices on their design <span>impressed</span> us.`,
       img: "/assets/img/avatar.png",
       name: "STEVE EVANS",
       designation: "CEO of Malley Company",
     },
     {
-      text: `LeafLife's dedication to bringing our <span>vision</span> to life was exceptional. They turned our <span>backyard</span> into a haven of tranquility. Their attention to detail and sustainable practices on their design <span>impressed</span> us.`,
+      text: `aupdbp's dedication to bringing our <span>vision</span> to life was exceptional. They turned our <span>backyard</span> into a haven of tranquility. Their attention to detail and sustainable practices on their design <span>impressed</span> us.`,
       img: "/assets/img/avatar.png",
       name: "STEVE EVANS",
       designation: "CEO of Malley Company",
@@ -110,7 +110,7 @@ const cardData = {
 };
 
 export default function ServiceDetailsPage() {
-  pageTitle("Service Details | LeafLife");
+  pageTitle("Service Details | aupdbp");
   return (
     <>
       <ServiceDetailsSection data={serviceDetailsData} />{" "}

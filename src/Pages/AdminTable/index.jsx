@@ -14,7 +14,7 @@ function AdminTable() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    pageTitle("Admin Table | LeafLife");
+    pageTitle("Admin Table | Agencija za upravljanje prirodnim dobrima");
 
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (!currentUser) {

@@ -1,6 +1,5 @@
 import GallerySection from "../../Components/GallerySection";
 import CardSection from "../../Components/CardSection";
-import { pageTitle } from "../../helper";
 import projectJson from "../../data/project.json";
 import { useParams } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
@@ -47,8 +46,6 @@ export default function GalleryPage() {
         : "NATURE MANAGEMENT <br /> FOR THE BENEFIT OF THE COMMUNITY",
     buttonLink: "/projects",
   };
-
-  pageTitle(language === "me" ? "Galerija | LeafLife" : "Gallery | LeafLife");
 
   return (
     <>

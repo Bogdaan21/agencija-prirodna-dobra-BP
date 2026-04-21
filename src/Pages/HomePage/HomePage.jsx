@@ -10,7 +10,7 @@ import CTASection from "../../Components/CTASection";
 import { pageTitle } from "../../helper";
 
 export default function HomePage() {
-  pageTitle("Nature");
+  pageTitle("Agencija za upravljanje prirodnim dobrima");
   return (
     <>
       <HeroSection />

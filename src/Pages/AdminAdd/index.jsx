@@ -25,7 +25,7 @@ function AdminAdd() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
 
-  pageTitle("Add Blog | LeafLife");
+  pageTitle("Add News | Agencija za upravljanje prirodnim dobrima");
 
   const editorConfig = useMemo(
     () => ({

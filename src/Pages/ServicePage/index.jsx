@@ -67,7 +67,7 @@ export default function ServicePage() {
     buttonUrl: "/contact",
   };
 
-  pageTitle("Service | LeafLife");
+  pageTitle("Service | aupdbp");
   return (
     <>
       <PageHeading data={BreadcrumbsData} />
