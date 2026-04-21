@@ -434,7 +434,7 @@ hr {
 }
 
 .cs_page_heading.cs_style_1 {
-  min-height: 420px;
+  min-height: 320px;
   display: flex;
   align-items: flex-end;
   padding: 140px 0 40px;
@@ -1134,4 +1134,8 @@ hr {
   &:hover {
     opacity: 0.6;
   }
+}
+
+.mb-10 {
+  margin-bottom: 5rem;
 }

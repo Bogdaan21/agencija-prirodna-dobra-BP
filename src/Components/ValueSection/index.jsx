@@ -1,15 +1,32 @@
 import React from "react";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function ValueSection() {
-  const valueData = {
-    sectionTitle: "NAŠE OBLASTI DJELOVANJA",
-    values: [
-      { text: "Zaštita prirode" },
-      { text: "Održivo upravljanje" },
-      { text: "Edukacija i monitoring" },
-      { text: "Promocija prirodnih dobara" },
-    ],
+  const { language } = useLanguage();
+
+  const valueContent = {
+    me: {
+      sectionTitle: "NAŠE OBLASTI DJELOVANJA",
+      values: [
+        { text: "Zaštita prirode" },
+        { text: "Održivo upravljanje" },
+        { text: "Edukacija i monitoring" },
+        { text: "Promocija prirodnih dobara" },
+      ],
+    },
+
+    en: {
+      sectionTitle: "OUR AREAS OF ACTIVITY",
+      values: [
+        { text: "Nature Protection" },
+        { text: "Sustainable Management" },
+        { text: "Education and Monitoring" },
+        { text: "Promotion of Natural Assets" },
+      ],
+    },
   };
+
+  const valueData = valueContent[language] || valueContent.me;
 
   return (
     <section className="">

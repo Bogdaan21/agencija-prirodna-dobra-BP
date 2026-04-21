@@ -1,7 +1,15 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-export default function BrandSection({ data }) {
+export default function BrandSection() {
+    const data = [
+    "/assets/img/brand_logo_1.svg",
+    "/assets/img/brand_logo_2.svg",
+    "/assets/img/brand_logo_3.svg",
+    "/assets/img/brand_logo_4.svg",
+    "/assets/img/brand_logo_5.svg",
+    "/assets/img/brand_logo_6.svg",
+  ];
   return (
     <div className="cs_gray_bg">
       <div className="cs_height_64 cs_height_lg_50" />
@@ -39,7 +47,8 @@ export default function BrandSection({ data }) {
           ))}
         </Swiper>
       </div>
-      <div className="cs_height_64 cs_height_lg_50" />
+      
+      <div className="cs_height_64 cs_height_lg_50 mb-10" />
     </div>
   );
 }

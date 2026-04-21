@@ -1,59 +1,107 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const data = {
-  logo: "/assets/img/logo-colour.png",
-  newsletterText: " Stay updated with our latest <br /> projects and gardening tips.",
-  menus: [
-    {
-      title: "SUPPORT",
-      links: [
-        { label: "FAQ", url: "/faq" },
-        { label: "USER GUIDE", url: "/" },
-        { label: "TESTIMONIAL", url: "/" },
-        { label: "CUSTOMER", url: "/" },
-      ],
-    },
-    {
-      title: "LINKS",
-      links: [
-        { label: "ABOUT US", url: "/about" },
-        { label: "GALLERY", url: "/gallery" },
-        { label: "PROJECTS", url: "/projects" },
-        { label: "NEWS", url: "/news" },
-      ],
-    },
-    {
-      title: "SERVICES",
-      links: [
-        { label: "HOME GARDEN", url: "/services/services-details" },
-        { label: "PLANT SELECTION", url: "/services/services-details" },
-        { label: "HARDSCAPING", url: "/services/services-details" },
-        { label: "PUBLIC GARDEN", url: "/services/services-details" },
-      ],
-    },
-  ],
-  copyright: "COURTESY © 2025. ALL RIGHTS RESERVED.",
-  bottomLinks: [
-    { label: "PRIVACY POLICY", url: "/" },
-    { label: "TERMS & CONDITION", url: "/" },
-  ],
-};
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function Footer1() {
+  const { language } = useLanguage();
+
+  const content = {
+    me: {
+      logo: "/assets/img/logo-colour.png",
+      newsletterText: "Budite u toku sa najnovijim <br /> projektima i informacijama.",
+      menus: [
+        {
+          title: "PODRŠKA",
+          links: [
+            { label: "FAQ", url: "/faq" },
+            { label: "KORISNIČKO UPUTSTVO", url: "/" },
+            { label: "UTISCI", url: "/" },
+            { label: "KORISNICI", url: "/" },
+          ],
+        },
+        {
+          title: "LINKOVI",
+          links: [
+            { label: "O NAMA", url: "/about" },
+            { label: "PROJEKTI", url: "/projects" },
+            { label: "NOVOSTI", url: "/news" },
+          ],
+        },
+        {
+          title: "OBLASTI",
+          links: [
+            { label: "ZAŠTITA PRIRODE", url: "/projects" },
+            { label: "MONITORING", url: "/projects" },
+            { label: "EDUKACIJA", url: "/projects" },
+            { label: "PROMOCIJA", url: "/projects" },
+          ],
+        },
+      ],
+      copyright: "COURTESY © 2025. SVA PRAVA ZADRŽANA.",
+      bottomLinks: [
+        { label: "POLITIKA PRIVATNOSTI", url: "/" },
+        { label: "USLOVI KORIŠĆENJA", url: "/" },
+      ],
+      emailPlaceholder: "Unesite svoju email adresu ...",
+    },
+
+    en: {
+      logo: "/assets/img/logo-colour.png",
+      newsletterText: "Stay updated with our latest <br /> projects and information.",
+      menus: [
+        {
+          title: "SUPPORT",
+          links: [
+            { label: "FAQ", url: "/faq" },
+            { label: "USER GUIDE", url: "/" },
+            { label: "TESTIMONIALS", url: "/" },
+            { label: "CUSTOMERS", url: "/" },
+          ],
+        },
+        {
+          title: "LINKS",
+          links: [
+            { label: "ABOUT US", url: "/about" },
+            { label: "PROJECTS", url: "/projects" },
+            { label: "NEWS", url: "/news" },
+          ],
+        },
+        {
+          title: "AREAS",
+          links: [
+            { label: "NATURE PROTECTION", url: "/projects" },
+            { label: "MONITORING", url: "/projects" },
+            { label: "EDUCATION", url: "/projects" },
+            { label: "PROMOTION", url: "/projects" },
+          ],
+        },
+      ],
+      copyright: "COURTESY © 2025. ALL RIGHTS RESERVED.",
+      bottomLinks: [
+        { label: "PRIVACY POLICY", url: "/" },
+        { label: "TERMS & CONDITIONS", url: "/" },
+      ],
+      emailPlaceholder: "Enter your email address ...",
+    },
+  };
+
+  const data = content[language] || content.me;
+
   return (
-    <footer className={`cs_footer cs_style_1 `}>
+    <footer className="cs_footer cs_style_1">
       <div className="container">
         <div className="cs_footer_row">
           <div className="cs_footer_col">
             <div className="cs_footer_widget">
               <div className="cs_text_widget">
                 <img data-aos="zoom-in" src={data.logo} alt="Logo" className="wow zoomIn logo-footer-a" />
-                <p dangerouslySetInnerHTML={{ __html: data.newsletterText }}></p>
+                <p dangerouslySetInnerHTML={{ __html: data.newsletterText }} />
               </div>
             </div>
+
             <div className="cs_footer_widget">
               <form action="#" className="cs_newsletter cs_style_1">
-                <input type="email" placeholder="Enter your email address ..." className="cs_newsletter_input" />
+                <input type="email" placeholder={data.emailPlaceholder} className="cs_newsletter_input" />
                 <button type="submit" className="cs_newsletter_btn cs_arrow_btn cs_white_bg cs_heading_color">
                   <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -84,8 +132,9 @@ export default function Footer1() {
 
         <div className="cs_bottom_footer">
           <div className="cs_bottom_footer_left" data-aos="fade-right">
-            <div className="cs_copyright" dangerouslySetInnerHTML={{ __html: data.copyright }}></div>
+            <div className="cs_copyright" dangerouslySetInnerHTML={{ __html: data.copyright }} />
           </div>
+
           <div className="cs_bottom_footer_right" data-aos="fade-left">
             <ul className="cs_footer_links cs_mp_0">
               {data.bottomLinks.map((link, i) => (

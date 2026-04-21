@@ -11,30 +11,27 @@ const menuData = {
   me: [
     { label: "POČETNA", href: "/" },
     { label: "O NAMA", href: "/about" },
-    { label: "KONTAKT", href: "/contact" },
     {
       label: "VIŠE",
       href: "/contact",
       children: [
-        { label: "GALERIJA", href: "/gallery" },
-        { label: "USLUGE", href: "/services" },
         { label: "PROJEKTI", href: "/projects" },
       ],
     },
+    { label: "KONTAKT", href: "/contact" },
   ],
   en: [
     { label: "HOME", href: "/" },
     { label: "ABOUT", href: "/about" },
-    { label: "CONTACT", href: "/contact" },
     {
       label: "MORE",
       href: "/contact",
       children: [
-        { label: "GALLERY", href: "/gallery" },
         { label: "SERVICES", href: "/services" },
         { label: "PROJECTS", href: "/projects" },
       ],
     },
+    { label: "CONTACT", href: "/contact" }
   ],
 };
 
@@ -71,7 +68,7 @@ const Header = () => {
         setIsSticky("cs_sticky_active");
       } else {
         setIsSticky("");
-      } 
+      }
     };
 
     window.addEventListener("scroll", handleScroll);

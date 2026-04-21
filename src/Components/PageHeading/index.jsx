@@ -6,7 +6,6 @@ export default function PageHeading({ data }) {
     <>
       <section
         className="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg"
-        style={{ backgroundImage: `url(${data.backgroundImage})` }}
       >
         <div className="container">
           <ol className="breadcrumb">

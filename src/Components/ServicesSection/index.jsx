@@ -1,28 +1,62 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import projectJson from "../../data/project.json";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function ServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState(0);
+  const { language } = useLanguage();
+
+  const sectionContent = {
+    me: {
+      title: "PROJEKTI",
+      btnText: "Pogledaj sve projekte",
+      btnUrl: "/projects",
+    },
+    en: {
+      title: "PROJECTS",
+      btnText: "See More Projects",
+      btnUrl: "/projects",
+    },
+  };
+
+  const t = sectionContent[language] || sectionContent.me;
 
   const data = {
-    title: "PROJECTS",
-    btnText: "See More Projects",
-    btnUrl: "/projects",
+    title: t.title,
+    btnText: t.btnText,
+    btnUrl: t.btnUrl,
     service: projectJson.projects.map((project) => {
-      const location = project.info?.find((item) => item.label === "LOCATION")?.value || "";
-      const service = project.info?.find((item) => item.label === "SERVICE")?.value || "";
-      const year = project.info?.find((item) => item.label === "YEAR")?.value || "";
+      const location =
+        project.info?.find((item) => item.label === "LOCATION")?.value || "";
+
+      const service =
+        project.info?.find((item) => item.label === "SERVICE")?.value || "";
+
+      const year =
+        project.info?.find((item) => item.label === "YEAR")?.value || "";
 
       return {
-        title: project.title,
+        title:
+          project?.title?.[language] ||
+          project?.title?.en ||
+          project?.title?.me ||
+          project.title ||
+          "",
+
         subtitle: `${service}${location ? ` — ${location}` : ""}`,
+
         image: project.imageSrc,
         link: `/projects/${project.slug}`,
+
         tags: [
           ...(year ? [{ label: year, url: `/projects/${project.slug}` }] : []),
-          ...(location ? [{ label: location, url: `/projects/${project.slug}` }] : []),
-          ...(service ? [{ label: service, url: `/projects/${project.slug}` }] : []),
+          ...(location
+            ? [{ label: location, url: `/projects/${project.slug}` }]
+            : []),
+          ...(service
+            ? [{ label: service, url: `/projects/${project.slug}` }]
+            : []),
         ],
       };
     }),
@@ -40,7 +74,10 @@ export default function ServicesSection() {
           />
 
           <div className="cs_section_right">
-            <Link to={data.btnUrl} className="cs_btn cs_style_2 cs_bold cs_heading_color">
+            <Link
+              to={data.btnUrl}
+              className="cs_btn cs_style_2 cs_bold cs_heading_color"
+            >
               {data.btnText}
             </Link>
           </div>
@@ -72,16 +109,28 @@ export default function ServicesSection() {
 
               <div className="cs_card_bottom">
                 <Link to={service.link}>
-                  <h2 className="cs_card_title cs_white_color cs_fs_32">{service.title}</h2>
+                  <h2 className="cs_card_title cs_white_color cs_fs_32">
+                    {service.title}
+                  </h2>
                 </Link>
+
                 <p
                   className="cs_card_subtitle mb-0 cs_white_color"
                   dangerouslySetInnerHTML={{ __html: service.subtitle }}
                 />
               </div>
 
-              <Link to={service.link} className="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
-                <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <Link
+                to={service.link}
+                className="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color"
+              >
+                <svg
+                  width={16}
+                  height={16}
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
                   <path
                     d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z"
                     fill="currentColor"

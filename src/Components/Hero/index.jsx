@@ -1,40 +1,76 @@
-import React, { useState } from "react";
+import React from "react";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { EffectCube } from "swiper/modules";
+import { useLanguage } from "../../context/LanguageContext";
+
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(1);
+  const { language } = useLanguage();
 
-  const heroData = {
-  title: "ZAŠTITA <b>PRIRODNIH DOBARA</b> BIJELO POLJE",
+  const heroContent = {
+    me: {
+      title: "ZAŠTITA <b>PRIRODNIH DOBARA</b> BIJELO POLJE",
 
-  subtitle:
-    "Agencija za upravljanje prirodnim dobrima opštine Bijelo Polje posvećena je zaštiti, očuvanju i unapređenju zaštićenih područja kroz održivo upravljanje, monitoring i razvoj lokalne zajednice.",
+      subtitle:
+        "Agencija za upravljanje prirodnim dobrima opštine Bijelo Polje posvećena je zaštiti, očuvanju i unapređenju zaštićenih područja kroz održivo upravljanje, monitoring i razvoj lokalne zajednice.",
 
-  btnText1: "Zaštićena područja",
-  btnUrl1: "/projects",
+      btnText1: "Zaštićena područja",
+      btnUrl1: "/projects",
 
-  btnText2: "Kontakt",
-  btnUrl2: "/contact",
+      btnText2: "Kontakt",
+      btnUrl2: "/contact",
 
-  funfact: {
-    number: "866 ha",
-    text: "Zaštićene površine",
-  },
+      funfact: {
+        number: "x2",
+        text: "Zaštićene površine",
+      },
 
-  box: {
-    title: "Đalovića klisura",
-    subtitle: "Jedno od najvrijednijih prirodnih područja sa bogatom florom, faunom i speleološkim objektima.",
-    link: "/projects/djalovica-klisura",
-  },
+      box: {
+        title: "Đalovića klisura",
+        subtitle: "Jedno od najvrijednijih prirodnih područja sa bogatom florom, faunom i speleološkim objektima.",
+        link: "/projects/djalovica-klisura",
+      },
 
-  backgrounds: [
-    "/assets/img/cover-hero.jpg",
-    "/assets/img/djalovica-klisura/1.jpg",
-    "/assets/img/djalovica-klisura/2.jpg",
-  ],
-};
+      backgrounds: [
+        "/assets/img/cover-hero.jpg",
+        "/assets/img/djalovica-klisura/1.jpg",
+        "/assets/img/djalovica-klisura/2.jpg",
+      ],
+    },
+
+    en: {
+      title: "PROTECTION OF <b>NATURAL ASSETS</b> BIJELO POLJE",
+
+      subtitle:
+        "The Agency for the Management of Natural Assets of the Municipality of Bijelo Polje is dedicated to the protection, preservation, and improvement of protected areas through sustainable management, monitoring, and local community development.",
+
+      btnText1: "Protected Areas",
+      btnUrl1: "/projects",
+
+      btnText2: "Contact",
+      btnUrl2: "/contact",
+
+      funfact: {
+        number: "x2",
+        text: "Protected Areas",
+      },
+
+      box: {
+        title: "Đalovića Gorge",
+        subtitle: "One of the most valuable natural areas, rich in flora, fauna, and speleological sites.",
+        link: "/projects/djalovica-klisura",
+      },
+
+      backgrounds: [
+        "/assets/img/cover-hero.jpg",
+        "/assets/img/djalovica-klisura/1.jpg",
+        "/assets/img/djalovica-klisura/2.jpg",
+      ],
+    },
+  };
+
+    const heroData = heroContent[language] || heroContent.me;
 
   return (
     <>
@@ -85,6 +121,9 @@ export default function HeroSection() {
                   <span />
                   <span />
                   <span />
+                  {/* <span style={{ backgroundImage: "url('/assets/img/projects/djalovica-klisura/cover.jpg')" }} />
+                  <span style={{ backgroundImage: "url('/assets/img/projects/cehotina/cover.jpg')" }} />
+                  <span style={{ backgroundImage: "url('/assets/img/projects/cehotina/cover.jpg')" }} /> */}
                 </div>
               </div>
             </div>
@@ -109,7 +148,10 @@ export default function HeroSection() {
                 className="cs_hero_box_subtitle mb-0 cs_opacity_7_5"
                 dangerouslySetInnerHTML={{ __html: heroData.box.subtitle }}
               ></p>
-              <Link to={heroData.box.link} className="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color">
+              <Link
+                to={heroData.box.link}
+                className="cs_arrow_btn cs_hero_box_btn cs_center cs_heading_bg cs_white_color"
+              >
                 <svg width={16} height={16} viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z"
@@ -140,7 +182,6 @@ export default function HeroSection() {
                           </li>`;
                 },
               }}
-              onSlideChange={(swiper) => setCurrentSlide(swiper.realIndex + 1)}
               className="cs_slider_wrapper"
             >
               {heroData.backgrounds.map((src, index) => (
@@ -166,38 +207,6 @@ export default function HeroSection() {
               ))}
             </Swiper>
             {/* Pagination */}
-            <div className="cs_pagination_1_wrap">
-              <div className="container">
-                <div
-                  className="cs_pagination_1_in"
-                  style={{
-                    backgroundColor: "transparent",
-                    pointerEvents: "auto",
-                  }}
-                >
-                  <div className="cs_slider_number cs_style_1 cs_white_color cs_bold">
-                    <>
-                      <span className="cs_current_number" data-number="${i}">
-                        <span>0{currentSlide}</span>
-                      </span>{" "}
-                      <span className="cs_slider_number_seperator" />{" "}
-                      <span className="cs_total_numbers" data-number="${slick.slideCount}">
-                        <span>0{heroData.backgrounds.length}</span>
-                      </span>
-                    </>
-                  </div>
-                  <div
-                    className="cs_pagination cs_style_1"
-                    style={{
-                      position: "relative",
-                      pointerEvents: "auto",
-                    }}
-                  >
-                    <ul className="cs_pagination_1_list" />
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

@@ -10,6 +10,9 @@
     border-radius: 50%;
     border: 1px solid var(--white-color);
     margin-left: -10px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
     &:first-child {
       transition: all 0.65s ease;
     }
@@ -91,11 +94,7 @@
     right: 0;
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    background: linear-gradient(
-      241deg,
-      rgba(255, 255, 255, 0.5) -7.37%,
-      rgba(255, 255, 255, 0.1) 89.52%
-    );
+    background: linear-gradient(241deg, rgba(255, 255, 255, 0.5) -7.37%, rgba(255, 255, 255, 0.1) 89.52%);
     backdrop-filter: blur(5px);
     width: 410px;
     @media (max-width: 991px) {

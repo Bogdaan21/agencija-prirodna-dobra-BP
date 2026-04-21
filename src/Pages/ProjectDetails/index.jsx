@@ -4,32 +4,62 @@ import PageHeading from "../../Components/PageHeading";
 import ProjectDetailsSection from "../../Components/ProjectDetails";
 import { pageTitle } from "../../helper";
 import projectJson from "../../data/project.json";
-import GalleryPage from "../GalleryPage";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function ProjectDetailsPage() {
   const { slug } = useParams();
+  const { language } = useLanguage();
 
   const { projects } = projectJson;
 
   const project = projects.find((item) => item.slug === slug);
 
-  // ❌ ako ne postoji projekat
   if (!project) {
     return <h2>Project not found</h2>;
   }
 
-  // ✅ sad koristi direktno project
-  pageTitle(`${project.title} | LeafLife`);
+  const getLangValue = (value) =>
+    typeof value === "object" && value !== null ? value[language] : value;
+
+  const translatedProject = {
+    ...project,
+    title: getLangValue(project.title),
+    imageAlt: getLangValue(project.imageAlt),
+    description: getLangValue(project.description),
+    outcomes: getLangValue(project.outcomes),
+
+    breadcrumbs: {
+      ...project.breadcrumbs,
+      title: getLangValue(project.breadcrumbs?.title),
+      breadcrumbs: project.breadcrumbs?.breadcrumbs?.map((item) => ({
+        ...item,
+        label: getLangValue(item.label),
+      })),
+    },
+
+    info: project.info?.map((item) => ({
+      ...item,
+      label: getLangValue(item.label),
+      value: getLangValue(item.value),
+    })),
+
+    features: project.features?.map((item) => ({
+      ...item,
+      title: getLangValue(item.title),
+    })),
+
+    gallery: project.gallery?.map((item) => ({
+      ...item,
+      title: getLangValue(item.title),
+    })),
+  };
+
+  pageTitle(`${translatedProject.title} | LeafLife`);
 
   return (
     <>
-      {/* ✅ breadcrumbs */}
-      <PageHeading data={project.breadcrumbs} />
-
-      {/* ✅ svi podaci */}
-      <ProjectDetailsSection data={project} />
-
-      <GalleryPage data={project.gallery} />
+      <PageHeading data={translatedProject.breadcrumbs} />
+      <ProjectDetailsSection data={translatedProject} />
     </>
   );
 }

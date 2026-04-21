@@ -4,6 +4,7 @@ import VideoModal from "../VideoModal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import { Icon } from "@iconify/react";
+import { useLanguage } from "../../context/LanguageContext";
 
 export default function ProjectDetailsSection({ data }) {
   const prevRef = useRef(null);
@@ -13,6 +14,8 @@ export default function ProjectDetailsSection({ data }) {
 
   const [toggle, setToggle] = useState(false);
   const [iframeSrc, setIframeSrc] = useState("about:blank");
+
+  const { language } = useLanguage();
 
   useEffect(() => {
     if (swiperRef.current && prevRef.current && nextRef.current) {
@@ -131,13 +134,13 @@ export default function ProjectDetailsSection({ data }) {
           <div className="row cs_gap_x_40 cs_gap_y_30">
             <div className="col-xl-7">
               <div className="cs_fs_20">
-                <b className="cs_heading_color">DESCRIPTION:</b>
+                <b className="cs_heading_color">{language == "me" ? "OPIS" : "DESCRIPTION"}:</b>
                 <br />
                 {data?.description}
                 <br />
                 <br />
 
-                <b className="cs_heading_color">OUTCOMES</b>
+                <b className="cs_heading_color">{language == "me" ? "REZULTATI" : "OUTCOMES"}:</b>
                 <br />
                 {data?.outcomes}
               </div>
