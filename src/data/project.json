@@ -28,444 +28,555 @@
   },
 
   "projects": [
-{
-  "slug": "djalovica-klisura",
-  "video": {
-    "url": "https://www.youtube.com/embed/pYt9iMONXU4",
-    "thumbnail": "https://img.youtube.com/vi/pYt9iMONXU4/maxresdefault.jpg"
-  },
-  "title": {
-    "me": "Spomenik prirode Đalovića klisura",
-    "en": "Đalovića Gorge Nature Monument"
-  },
-  "imageSrc": "/assets/img/projects/djalovica-klisura/cover.jpg",
-  "imageAlt": {
-    "me": "Đalovića klisura",
-    "en": "Đalovića Gorge"
-  },
-  "info": [
     {
-      "label": {
-        "me": "GODINA",
-        "en": "YEAR"
+      "slug": "djalovica-klisura",
+      "video": {
+        "url": "https://www.youtube.com/embed/pYt9iMONXU4",
+        "thumbnail": "https://img.youtube.com/vi/pYt9iMONXU4/maxresdefault.jpg"
       },
-      "value": {
-        "me": "2024",
-        "en": "2024"
-      }
-    },
-    {
-      "label": {
-        "me": "LOKACIJA",
-        "en": "LOCATION"
+      "title": {
+        "me": "Spomenik prirode Đalovića klisura",
+        "en": "Đalovića Gorge Nature Monument"
       },
-      "value": {
-        "me": "Bijelo Polje, Crna Gora",
-        "en": "Bijelo Polje, Montenegro"
-      }
-    },
-    {
-      "label": {
-        "me": "TIP",
-        "en": "TYPE"
+      "imageSrc": "/assets/img/projects/djalovica-klisura/cover.jpg",
+      "imageAlt": {
+        "me": "Đalovića klisura",
+        "en": "Đalovića Gorge"
       },
-      "value": {
-        "me": "Spomenik prirode",
-        "en": "Nature Monument"
-      }
-    }
-  ],
-  "breadcrumbs": {
-    "backgroundImage": "/assets/img/project_heading_bg.jpg",
-    "title": {
-      "me": "Đalovića klisura",
-      "en": "Đalovića Gorge"
-    },
-    "breadcrumbs": [
-      {
-        "label": {
-          "me": "Početna",
-          "en": "Home"
+      "info": [
+        {
+          "label": {
+            "me": "GODINA",
+            "en": "YEAR"
+          },
+          "value": {
+            "me": "2024",
+            "en": "2024"
+          }
         },
-        "link": "/"
-      },
-      {
-        "label": {
+        {
+          "label": {
+            "me": "LOKACIJA",
+            "en": "LOCATION"
+          },
+          "value": {
+            "me": "Bijelo Polje, Crna Gora",
+            "en": "Bijelo Polje, Montenegro"
+          }
+        },
+        {
+          "label": {
+            "me": "TIP",
+            "en": "TYPE"
+          },
+          "value": {
+            "me": "Spomenik prirode",
+            "en": "Nature Monument"
+          }
+        }
+      ],
+      "breadcrumbs": {
+        "backgroundImage": "/assets/img/project_heading_bg.jpg",
+        "title": {
           "me": "Đalovića klisura",
           "en": "Đalovića Gorge"
         },
-        "active": true
-      }
-    ]
-  },
-  "sliderImages": [
-    "/assets/img/projects/djalovica-klisura/cover.jpg",
-    "/assets/img/projects/djalovica-klisura/1.jpg",
-    "/assets/img/projects/djalovica-klisura/2.jpg"
-  ],
-  "description": {
-    "me": "Đalovića klisura predstavlja jedno od najimpresivnijih prirodnih područja sjevera Crne Gore. Nalazi se na zapadnom obodu Pešterske visoravni i proteže se dužinom od oko 7,5 km. Klisura je usječena u krečnjački masiv i dostiže dubinu do 627 metara, što je čini jednim od najdramatičnijih pejzaža u regionu.",
-    "en": "Đalovića Gorge is one of the most impressive natural areas in northern Montenegro. It is located on the western edge of the Pešter Plateau and stretches for about 7.5 km. The gorge is carved into a limestone massif and reaches a depth of up to 627 meters, making it one of the most dramatic landscapes in the region."
-  },
-  "outcomes": {
-    "me": "Područje je bogato izvorima, podzemnim vodama, speleološkim objektima i raznovrsnim ekosistemima. Posebno se izdvajaju Glava Bistrice i Juriška vrela, kao i stalni tok rijeke Bistrice koji se nizvodno uliva u Lim. Klisura je stanište brojnih biljnih i životinjskih vrsta, uključujući endemske vrste i zaštićene vrste širom Balkana.",
-    "en": "The area is rich in springs, underground waters, speleological formations, and diverse ecosystems. Particularly notable are the headwaters of the Bistrica River and the Juriška springs, as well as the permanent flow of the Bistrica River, which flows downstream into the Lim. The gorge is home to numerous plant and animal species, including endemic and protected species across the Balkans."
-  },
-  "features": [
-    {
-      "iconClass": "fa6-solid:mountain",
-      "title": {
-        "me": "Kanjonski reljef",
-        "en": "Canyon Relief"
-      }
-    },
-    {
-      "iconClass": "fa6-solid:water",
-      "title": {
-        "me": "Izvori i rijeka Bistrica",
-        "en": "Springs and the Bistrica River"
-      }
-    },
-    {
-      "iconClass": "fa6-solid:leaf",
-      "title": {
-        "me": "Bogata flora i fauna",
-        "en": "Rich Flora and Fauna"
-      }
-    },
-    {
-      "iconClass": "fa6-solid:landmark",
-      "title": {
-        "me": "Speleološki objekti",
-        "en": "Speleological Sites"
-      }
-    },
-    {
-      "iconClass": "fa6-solid:tree",
-      "title": {
-        "me": "Šumski ekosistemi",
-        "en": "Forest Ecosystems"
-      }
-    },
-    {
-      "iconClass": "fa6-solid:binoculars",
-      "title": {
-        "me": "Turistički potencijal",
-        "en": "Tourism Potential"
-      }
-    }
-  ],
-  "gallery": [
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/1.jpg",
-      "title": {
-        "me": "Panorama Đalovića klisure sa Koritskom visoravni",
-        "en": "Panorama of Đalovića Gorge from the Korita Plateau"
+        "breadcrumbs": [
+          {
+            "label": {
+              "me": "Početna",
+              "en": "Home"
+            },
+            "link": "/"
+          },
+          {
+            "label": {
+              "me": "Đalovića klisura",
+              "en": "Đalovića Gorge"
+            },
+            "active": true
+          }
+        ]
       },
-      "height": "300px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/2.jpg",
-      "title": {
-        "me": "Đalovića klisura u zimskom ambijentu",
-        "en": "Đalovića Gorge in a winter setting"
+      "sliderImages": [
+        "/assets/img/projects/djalovica-klisura/cover.jpg",
+        "/assets/img/projects/djalovica-klisura/1.jpg",
+        "/assets/img/projects/djalovica-klisura/2.jpg"
+      ],
+      "description": {
+        "me": "Đalovića klisura predstavlja jedno od najimpresivnijih prirodnih područja sjevera Crne Gore. Nalazi se na zapadnom obodu Pešterske visoravni i proteže se dužinom od oko 7,5 km. Klisura je usječena u krečnjački masiv i dostiže dubinu do 627 metara, što je čini jednim od najdramatičnijih pejzaža u regionu.",
+        "en": "Đalovića Gorge is one of the most impressive natural areas in northern Montenegro. It is located on the western edge of the Pešter Plateau and stretches for about 7.5 km. The gorge is carved into a limestone massif and reaches a depth of up to 627 meters, making it one of the most dramatic landscapes in the region."
       },
-      "height": "200px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/3.jpg",
-      "title": {
-        "me": "Juriška vrela - Vrelo Bistrice",
-        "en": "Juriška Springs - Source of the Bistrica"
+      "outcomes": {
+        "me": "Područje je bogato izvorima, podzemnim vodama, speleološkim objektima i raznovrsnim ekosistemima. Posebno se izdvajaju Glava Bistrice i Juriška vrela, kao i stalni tok rijeke Bistrice koji se nizvodno uliva u Lim. Klisura je stanište brojnih biljnih i životinjskih vrsta, uključujući endemske vrste i zaštićene vrste širom Balkana.",
+        "en": "The area is rich in springs, underground waters, speleological formations, and diverse ecosystems. Particularly notable are the headwaters of the Bistrica River and the Juriška springs, as well as the permanent flow of the Bistrica River, which flows downstream into the Lim. The gorge is home to numerous plant and animal species, including endemic and protected species across the Balkans."
       },
-      "height": "500px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/4.jpg",
-      "title": {
-        "me": "Glava Bistrice – Koritska pećina",
-        "en": "Head of the Bistrica – Korita Cave"
-      },
-      "height": "400px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/5.jpg",
-      "title": {
-        "me": "Vražji virovi",
-        "en": "Devil’s Whirlpools"
-      },
-      "height": "580px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/6.jpg",
-      "title": {
-        "me": "Izlazak iz sjenke – Juriško vrelo",
-        "en": "Emerging from the Shadow – Juriško Spring"
-      },
-      "height": "220px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/7.jpg",
-      "title": {
-        "me": "Sifon u pećini – Juriško vrelo",
-        "en": "Siphon in the Cave – Juriško Spring"
-      },
-      "height": "380px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/8.jpg",
-      "title": {
-        "me": "Tok rijeke Bistrice u klisuri",
-        "en": "The flow of the Bistrica River in the gorge"
-      },
-      "height": "220px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/9.jpg",
-      "title": {
-        "me": "Sipari i stijene klisure",
-        "en": "Scree slopes and cliffs of the gorge"
-      },
-      "height": "450px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/10.jpg",
-      "title": {
-        "me": "Gornji tok rijeke Bistrice",
-        "en": "Upper course of the Bistrica River"
-      },
-      "height": "280px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/11.jpg",
-      "title": {
-        "me": "Đalovića klisura – prirodni pejzaž",
-        "en": "Đalovića Gorge – natural landscape"
-      },
-      "height": "500px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/12.jpg",
-      "title": {
-        "me": "Poskok u prirodnom staništu",
-        "en": "Horned viper in its natural habitat"
-      },
-      "height": "400px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/13.jpg",
-      "title": {
-        "me": "Zborno mjesto u Đalovića klisuri",
-        "en": "Meeting point in Đalovića Gorge"
-      },
-      "height": "250px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/14.jpg",
-      "title": {
-        "me": "Klisura",
-        "en": "The Gorge"
-      },
-      "height": "350px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/15.jpg",
-      "title": {
-        "me": "SP Đalovića klisura",
-        "en": "Đalovića Gorge Nature Monument"
-      },
-      "height": "350px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/16.jpg",
-      "title": {
-        "me": "Mapa",
-        "en": "Map"
-      },
-      "height": "250px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/17.jpg",
-      "title": {
-        "me": "Panorama ZP",
-        "en": "Panorama of the Protected Area"
-      },
-      "height": "150px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/18.jpg",
-      "title": {
-        "me": "SP Đalovića klisura",
-        "en": "Đalovića Gorge Nature Monument"
-      },
-      "height": "350px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/19.jpg",
-      "title": {
-        "me": "Poskok u prirodnom staništu",
-        "en": "Horned viper in its natural habitat"
-      },
-      "height": "350px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/20.jpg",
-      "title": {
-        "me": "Gornji tok rijeke Bistrice",
-        "en": "Upper course of the Bistrica River"
-      },
-      "height": "350px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/21.jpg",
-      "title": {
-        "me": "Klisura",
-        "en": "The Gorge"
-      },
-      "height": "350px"
-    },
-    {
-      "imgSrc": "/assets/img/projects/djalovica-klisura/22.jpg",
-      "title": {
-        "me": "Kanjon Bistrice",
-        "en": "Bistrica Canyon"
-      },
-      "height": "350px"
-    }
-  ]
-},
-{
-  "slug": "rijeka-cehotina",
-  "title": {
-    "me": "Spomenik prirode Rijeka Ćehotina",
-    "en": "Ćehotina River Nature Monument"
-  },
-  "imageSrc": "/assets/img/projects/cehotina/cover.jpg",
-  "imageAlt": {
-    "me": "Rijeka Ćehotina",
-    "en": "Ćehotina River"
-  },
-  "info": [
-    {
-      "label": {
-        "me": "GODINA",
-        "en": "YEAR"
-      },
-      "value": {
-        "me": "2024",
-        "en": "2024"
-      }
-    },
-    {
-      "label": {
-        "me": "LOKACIJA",
-        "en": "LOCATION"
-      },
-      "value": {
-        "me": "Bijelo Polje, Crna Gora",
-        "en": "Bijelo Polje, Montenegro"
-      }
-    },
-    {
-      "label": {
-        "me": "TIP",
-        "en": "TYPE"
-      },
-      "value": {
-        "me": "Spomenik prirode",
-        "en": "Nature Monument"
-      }
-    }
-  ],
-  "breadcrumbs": {
-    "backgroundImage": "/assets/img/project_heading_bg.jpg",
-    "title": {
-      "me": "Rijeka Ćehotina",
-      "en": "Ćehotina River"
-    },
-    "breadcrumbs": [
-      {
-        "label": {
-          "me": "Početna",
-          "en": "Home"
+      "features": [
+        {
+          "iconClass": "fa6-solid:mountain",
+          "title": {
+            "me": "Kanjonski reljef",
+            "en": "Canyon Relief"
+          }
         },
-        "link": "/"
+        {
+          "iconClass": "fa6-solid:water",
+          "title": {
+            "me": "Izvori i rijeka Bistrica",
+            "en": "Springs and the Bistrica River"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:leaf",
+          "title": {
+            "me": "Bogata flora i fauna",
+            "en": "Rich Flora and Fauna"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:landmark",
+          "title": {
+            "me": "Speleološki objekti",
+            "en": "Speleological Sites"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:tree",
+          "title": {
+            "me": "Šumski ekosistemi",
+            "en": "Forest Ecosystems"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:binoculars",
+          "title": {
+            "me": "Turistički potencijal",
+            "en": "Tourism Potential"
+          }
+        }
+      ],
+      "gallery": [
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/1.jpg",
+          "title": {
+            "me": "Panorama Đalovića klisure sa Koritskom visoravni",
+            "en": "Panorama of Đalovića Gorge from the Korita Plateau"
+          },
+          "height": "300px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/2.jpg",
+          "title": {
+            "me": "Đalovića klisura u zimskom ambijentu",
+            "en": "Đalovića Gorge in a winter setting"
+          },
+          "height": "200px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/3.jpg",
+          "title": {
+            "me": "Juriška vrela - Vrelo Bistrice",
+            "en": "Juriška Springs - Source of the Bistrica"
+          },
+          "height": "500px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/4.jpg",
+          "title": {
+            "me": "Glava Bistrice – Koritska pećina",
+            "en": "Head of the Bistrica – Korita Cave"
+          },
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/5.jpg",
+          "title": {
+            "me": "Vražji virovi",
+            "en": "Devil’s Whirlpools"
+          },
+          "height": "580px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/6.jpg",
+          "title": {
+            "me": "Izlazak iz sjenke – Juriško vrelo",
+            "en": "Emerging from the Shadow – Juriško Spring"
+          },
+          "height": "220px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/7.jpg",
+          "title": {
+            "me": "Sifon u pećini – Juriško vrelo",
+            "en": "Siphon in the Cave – Juriško Spring"
+          },
+          "height": "380px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/8.jpg",
+          "title": {
+            "me": "Tok rijeke Bistrice u klisuri",
+            "en": "The flow of the Bistrica River in the gorge"
+          },
+          "height": "220px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/9.jpg",
+          "title": {
+            "me": "Sipari i stijene klisure",
+            "en": "Scree slopes and cliffs of the gorge"
+          },
+          "height": "450px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/10.jpg",
+          "title": {
+            "me": "Gornji tok rijeke Bistrice",
+            "en": "Upper course of the Bistrica River"
+          },
+          "height": "280px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/11.jpg",
+          "title": {
+            "me": "Đalovića klisura – prirodni pejzaž",
+            "en": "Đalovića Gorge – natural landscape"
+          },
+          "height": "500px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/12.jpg",
+          "title": {
+            "me": "Poskok u prirodnom staništu",
+            "en": "Horned viper in its natural habitat"
+          },
+          "height": "400px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/13.jpg",
+          "title": {
+            "me": "Zborno mjesto u Đalovića klisuri",
+            "en": "Meeting point in Đalovića Gorge"
+          },
+          "height": "250px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/14.jpg",
+          "title": {
+            "me": "Klisura",
+            "en": "The Gorge"
+          },
+          "height": "350px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/15.jpg",
+          "title": {
+            "me": "SP Đalovića klisura",
+            "en": "Đalovića Gorge Nature Monument"
+          },
+          "height": "350px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/16.jpg",
+          "title": {
+            "me": "Mapa",
+            "en": "Map"
+          },
+          "height": "250px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/17.jpg",
+          "title": {
+            "me": "Panorama ZP",
+            "en": "Panorama of the Protected Area"
+          },
+          "height": "150px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/18.jpg",
+          "title": {
+            "me": "SP Đalovića klisura",
+            "en": "Đalovića Gorge Nature Monument"
+          },
+          "height": "350px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/19.jpg",
+          "title": {
+            "me": "Poskok u prirodnom staništu",
+            "en": "Horned viper in its natural habitat"
+          },
+          "height": "350px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/20.jpg",
+          "title": {
+            "me": "Gornji tok rijeke Bistrice",
+            "en": "Upper course of the Bistrica River"
+          },
+          "height": "350px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/21.jpg",
+          "title": {
+            "me": "Klisura",
+            "en": "The Gorge"
+          },
+          "height": "350px"
+        },
+        {
+          "imgSrc": "/assets/img/projects/djalovica-klisura/22.jpg",
+          "title": {
+            "me": "Kanjon Bistrice",
+            "en": "Bistrica Canyon"
+          },
+          "height": "350px"
+        }
+      ],
+      "mapPoints": [
+        {
+          "id": 1,
+          "name": {
+            "me": "Pećina Zavjet ćutanja",
+            "en": "Vow of Silence Cave"
+          },
+          "lat": 43.080083,
+          "lng": 19.923778
+        },
+        {
+          "id": 2,
+          "name": {
+            "me": "Pećina nad Vražjim firovima",
+            "en": "Cave above Vražji Firovi"
+          },
+          "lat": 43.076306,
+          "lng": 19.922944
+        },
+        {
+          "id": 3,
+          "name": {
+            "me": "Vražji firovi",
+            "en": "Vražji Firovi"
+          },
+          "lat": 43.076567,
+          "lng": 19.922239
+        },
+        {
+          "id": 4,
+          "name": {
+            "me": "Vidikovac Ranitova glava",
+            "en": "Ranitova Glava Viewpoint"
+          },
+          "lat": 43.068361,
+          "lng": 19.92325
+        },
+        {
+          "id": 5,
+          "name": {
+            "me": "Pećina Jamovi",
+            "en": "Jamovi Cave"
+          },
+          "lat": 43.069361,
+          "lng": 19.917667
+        },
+        {
+          "id": 6,
+          "name": {
+            "me": "Glava Bistrice",
+            "en": "Head of Bistrica"
+          },
+          "lat": 43.070611,
+          "lng": 19.917667
+        },
+        {
+          "id": 7,
+          "name": {
+            "me": "Vidikovac Vijenci",
+            "en": "Vijenci Viewpoint"
+          },
+          "lat": 43.072889,
+          "lng": 19.91675
+        },
+        {
+          "id": 8,
+          "name": {
+            "me": "Pećina Juriško vrelo",
+            "en": "Juriško Vrelo Cave"
+          },
+          "lat": 43.074417,
+          "lng": 19.909028
+        },
+        {
+          "id": 9,
+          "name": {
+            "me": "Juriško vrelo",
+            "en": "Juriško Spring"
+          },
+          "lat": 43.074278,
+          "lng": 19.908361
+        },
+        {
+          "id": 10,
+          "name": {
+            "me": "Vidikovac Sjedlo",
+            "en": "Sjedlo Viewpoint"
+          },
+          "lat": 43.072389,
+          "lng": 19.907
+        },
+        {
+          "id": 11,
+          "name": {
+            "me": "Most",
+            "en": "Bridge"
+          },
+          "lat": 43.072358,
+          "lng": 19.901914
+        },
+        {
+          "id": 12,
+          "name": {
+            "me": "Manastir Podvrh",
+            "en": "Podvrh Monastery"
+          },
+          "lat": 43.070139,
+          "lng": 19.902472
+        }
+      ]
+    },
+    {
+      "slug": "rijeka-cehotina",
+      "video": {
+        "url": "https://www.youtube.com/embed/0uIvN4yiBEs",
+        "thumbnail": "https://img.youtube.com/vi/0uIvN4yiBEs/maxresdefault.jpg"
       },
-      {
-        "label": {
+      "title": {
+        "me": "Spomenik prirode Rijeka Ćehotina",
+        "en": "Ćehotina River Nature Monument"
+      },
+      "imageSrc": "/assets/img/projects/cehotina/cover.jpg",
+      "imageAlt": {
+        "me": "Rijeka Ćehotina",
+        "en": "Ćehotina River"
+      },
+      "info": [
+        {
+          "label": {
+            "me": "GODINA",
+            "en": "YEAR"
+          },
+          "value": {
+            "me": "2024",
+            "en": "2024"
+          }
+        },
+        {
+          "label": {
+            "me": "LOKACIJA",
+            "en": "LOCATION"
+          },
+          "value": {
+            "me": "Bijelo Polje, Crna Gora",
+            "en": "Bijelo Polje, Montenegro"
+          }
+        },
+        {
+          "label": {
+            "me": "TIP",
+            "en": "TYPE"
+          },
+          "value": {
+            "me": "Spomenik prirode",
+            "en": "Nature Monument"
+          }
+        }
+      ],
+      "breadcrumbs": {
+        "backgroundImage": "/assets/img/project_heading_bg.jpg",
+        "title": {
           "me": "Rijeka Ćehotina",
           "en": "Ćehotina River"
         },
-        "active": true
-      }
-    ]
-  },
-  "sliderImages": [
-    "/assets/img/projects/cehotina/cover.jpg",
-    "/assets/img/projects/cehotina/1.jpg"
-  ],
-  "description": {
-    "me": "Spomenik prirode rijeka Ćehotina nalazi se u zapadnom dijelu opštine Bijelo Polje, na granici sa opštinom Pljevlja. Obuhvata izvor Glavu Ćehotine i gornji tok rijeke u dužini od oko 6.5 km. Rijeka izvire u speleološkom objektu – pećini Glava Ćehotine, i predstavlja jednu od značajnijih rijeka sjevera Crne Gore.",
-    "en": "The Ćehotina River Nature Monument is located in the western part of the Municipality of Bijelo Polje, on the border with the Municipality of Pljevlja. It includes the source known as the Head of Ćehotina and the upper course of the river over a length of about 6.5 km. The river springs from a speleological feature — the Glava Ćehotine cave — and represents one of the most significant rivers in northern Montenegro."
-  },
-  "outcomes": {
-    "me": "Ćehotina je prirodno raznovrstan prostor sa bogatim biljnim i životinjskim svijetom. Okružena planinskim masivima, rijeka formira dolinu sa klisurama i proširenjima. Područje je stanište brojnih vrsta poput srne, medvjeda, vuka i vidre, kao i velikog broja insekata, riba i vodozemaca, što ga čini važnim za očuvanje biodiverziteta i ekološke ravnoteže.",
-    "en": "Ćehotina is a naturally diverse area with rich plant and animal life. Surrounded by mountain massifs, the river forms a valley with gorges and wider sections. The area is a habitat for numerous species such as roe deer, bears, wolves, and otters, as well as many insects, fish, and amphibians, making it important for preserving biodiversity and ecological balance."
-  },
-  "features": [
-    {
-      "iconClass": "fa6-solid:water",
-      "title": {
-        "me": "Izvor Glava Ćehotine",
-        "en": "Headwaters of Ćehotina"
-      }
-    },
-    {
-      "iconClass": "fa6-solid:mountain",
-      "title": {
-        "me": "Planinski reljef i klisure",
-        "en": "Mountain Relief and Gorges"
-      }
-    },
-    {
-      "iconClass": "fa6-solid:leaf",
-      "title": {
-        "me": "Bogata flora i vegetacija",
-        "en": "Rich Flora and Vegetation"
-      }
-    },
-    {
-      "iconClass": "fa6-solid:paw",
-      "title": {
-        "me": "Raznovrsna fauna",
-        "en": "Diverse Fauna"
-      }
-    },
-    {
-      "iconClass": "fa6-solid:fish",
-      "title": {
-        "me": "Riblji fond i vodeni ekosistem",
-        "en": "Fish Population and Aquatic Ecosystem"
-      }
-    },
-    {
-      "iconClass": "fa6-solid:globe",
-      "title": {
-        "me": "Ekološki značaj",
-        "en": "Ecological Importance"
-      }
-    }
-  ],
-  "gallery": [
-    {
-      "imgSrc": "/assets/img/projects/cehotina/1.jpg",
-      "title": {
-        "me": "Gornji tok rijeke Ćehotine",
-        "en": "Upper Course of the Ćehotina River"
+        "breadcrumbs": [
+          {
+            "label": {
+              "me": "Početna",
+              "en": "Home"
+            },
+            "link": "/"
+          },
+          {
+            "label": {
+              "me": "Rijeka Ćehotina",
+              "en": "Ćehotina River"
+            },
+            "active": true
+          }
+        ]
       },
-      "height": "500px"
+      "sliderImages": ["/assets/img/projects/cehotina/cover.jpg", "/assets/img/projects/cehotina/1.jpg"],
+      "description": {
+        "me": "Spomenik prirode rijeka Ćehotina nalazi se u zapadnom dijelu opštine Bijelo Polje, na granici sa opštinom Pljevlja. Obuhvata izvor Glavu Ćehotine i gornji tok rijeke u dužini od oko 6.5 km. Rijeka izvire u speleološkom objektu – pećini Glava Ćehotine, i predstavlja jednu od značajnijih rijeka sjevera Crne Gore.",
+        "en": "The Ćehotina River Nature Monument is located in the western part of the Municipality of Bijelo Polje, on the border with the Municipality of Pljevlja. It includes the source known as the Head of Ćehotina and the upper course of the river over a length of about 6.5 km. The river springs from a speleological feature — the Glava Ćehotine cave — and represents one of the most significant rivers in northern Montenegro."
+      },
+      "outcomes": {
+        "me": "Ćehotina je prirodno raznovrstan prostor sa bogatim biljnim i životinjskim svijetom. Okružena planinskim masivima, rijeka formira dolinu sa klisurama i proširenjima. Područje je stanište brojnih vrsta poput srne, medvjeda, vuka i vidre, kao i velikog broja insekata, riba i vodozemaca, što ga čini važnim za očuvanje biodiverziteta i ekološke ravnoteže.",
+        "en": "Ćehotina is a naturally diverse area with rich plant and animal life. Surrounded by mountain massifs, the river forms a valley with gorges and wider sections. The area is a habitat for numerous species such as roe deer, bears, wolves, and otters, as well as many insects, fish, and amphibians, making it important for preserving biodiversity and ecological balance."
+      },
+      "features": [
+        {
+          "iconClass": "fa6-solid:water",
+          "title": {
+            "me": "Izvor Glava Ćehotine",
+            "en": "Headwaters of Ćehotina"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:mountain",
+          "title": {
+            "me": "Planinski reljef i klisure",
+            "en": "Mountain Relief and Gorges"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:leaf",
+          "title": {
+            "me": "Bogata flora i vegetacija",
+            "en": "Rich Flora and Vegetation"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:paw",
+          "title": {
+            "me": "Raznovrsna fauna",
+            "en": "Diverse Fauna"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:fish",
+          "title": {
+            "me": "Riblji fond i vodeni ekosistem",
+            "en": "Fish Population and Aquatic Ecosystem"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:globe",
+          "title": {
+            "me": "Ekološki značaj",
+            "en": "Ecological Importance"
+          }
+        }
+      ],
+      "gallery": [
+        {
+          "imgSrc": "/assets/img/projects/cehotina/1.jpg",
+          "title": {
+            "me": "Gornji tok rijeke Ćehotine",
+            "en": "Upper Course of the Ćehotina River"
+          },
+          "height": "500px"
+        }
+      ]
     }
-  ]
-}
   ]
 }

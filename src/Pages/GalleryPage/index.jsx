@@ -3,6 +3,7 @@ import CardSection from "../../Components/CardSection";
 import projectJson from "../../data/project.json";
 import { useParams } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
+import MapRouteSection from "../../Components/MapRouteSection";
 
 export default function GalleryPage() {
   const { language } = useLanguage();
@@ -34,19 +35,6 @@ export default function GalleryPage() {
     ],
   };
 
-  const cardData = {
-    backgroundImage: "/assets/img/card_bg.jpg",
-    tags:
-      language === "me"
-        ? ["Bijelo Polje", "Zaštita prirode", "Održivi razvoj", "Prirodna dobra"]
-        : ["Bijelo Polje", "Nature Protection", "Sustainable Development", "Natural Assets"],
-    title:
-      language === "me"
-        ? "UPRAVLJANJE PRIRODOM <br /> ZA DOBROBIT ZAJEDNICE"
-        : "NATURE MANAGEMENT <br /> FOR THE BENEFIT OF THE COMMUNITY",
-    buttonLink: "/projects",
-  };
-
   return (
     <>
       {/* Ako želiš breadcrumb i ovdje, samo otkomentariši */}
@@ -55,8 +43,7 @@ export default function GalleryPage() {
       <GallerySection data={galleryData} />
 
       <div className="cs_height_100 cs_height_lg_70" />
-
-      <CardSection data={cardData} />
+      <MapRouteSection data={project.mapPoints} />
     </>
   );
 }

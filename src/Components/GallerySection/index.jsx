@@ -12,6 +12,8 @@ export default function GallerySection({ data }) {
   return (
     <>
       <div className="container">
+        <h2>Galerija slika</h2>
+
         <div className="cs_gallery cs_style_2">
           {data?.map((item, index) => (
             <div
@@ -46,9 +48,7 @@ export default function GallerySection({ data }) {
               <img src={item.imgSrc} alt="" />
               <span className="cs_gallery_info_wrap cs_center">
                 <span className="cs_gallery_info text-center cs_center">
-                  <span className="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">
-                    {item.title}
-                  </span>
+                  <span className="cs_white_color cs_fs_16 cs_bold cs_mb_4 d-block">{item.title}</span>
                   <span className="cs_white_color d-block">{item.year}</span>
                 </span>
               </span>
