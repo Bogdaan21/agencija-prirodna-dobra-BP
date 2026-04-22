@@ -7,8 +7,23 @@
 .slick-arrow {
   cursor: pointer;
 }
+
+.brands_section_slider {
+  .swiper-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0.7;
+  }
+  //   img {
+  //   filter: grayscale(100%);
+  //   transition: 0.3s ease;
+  // }
+}
 .swiper-wrapper {
-  cursor: url(/assets/img/drag.png) 16 9, ew-resize !important;
+  cursor:
+    url(/assets/img/drag.png) 16 9,
+    ew-resize !important;
 }
 .slick-slide > div {
   display: flex;
@@ -344,4 +359,9 @@
   .cs_show_lg {
     display: flex !important;
   }
+}
+
+.brand_slider_flex {
+  justify-content: space-around !important;
+  opacity: 0.7;
 }

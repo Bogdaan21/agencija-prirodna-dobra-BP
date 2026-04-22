@@ -2,16 +2,22 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function BrandSection() {
-    const data = [
-    "/assets/img/brand_logo_1.svg",
-    "/assets/img/brand_logo_2.svg",
-    "/assets/img/brand_logo_3.svg",
-    "/assets/img/brand_logo_4.svg",
-    "/assets/img/brand_logo_5.svg",
-    "/assets/img/brand_logo_6.svg",
+  const data = [
+    {
+      img: "/assets/img/brand_logo_1.png",
+      link: "https://ecoteam.me/po%C4%8Detna",
+    },
+    {
+      img: "/assets/img/brand-logo_2.svg",
+      link: "https://www.bijelopolje.co.me/",
+    },
+    {
+      img: "/assets/img/brand_logo_3.png",
+      link: "https://www.nature.org/en-us/",
+    },
   ];
   return (
-    <div className="cs_gray_bg">
+    <div className="cs_gray_bg brands_section_slider">
       <div className="cs_height_64 cs_height_lg_50" />
       <div className="container">
         <Swiper
@@ -38,16 +44,18 @@ export default function BrandSection() {
           }}
           className="cs_slider cs_style_1 cs_slider_gap_24"
         >
-          {data.map((logo, index) => (
+          {data.map((item, index) => (
             <SwiperSlide key={index} className="cs_slide">
               <div className="cs_brand cs_style_1">
-                <img src={logo} alt={`Brand Logo ${index + 1}`} />
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <img src={item.img} alt={`Brand Logo ${index + 1}`} />
+                </a>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-      
+
       <div className="cs_height_64 cs_height_lg_50 mb-10" />
     </div>
   );

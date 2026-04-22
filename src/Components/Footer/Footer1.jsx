@@ -46,7 +46,7 @@ export default function Footer1() {
     },
 
     en: {
-      logo: "/assets/img/logo-colour.png",
+      logo: "/assets/img/logo-colour-eng.png",
       newsletterText: "Stay updated with our latest <br /> projects and information.",
       menus: [
         {
@@ -132,7 +132,10 @@ export default function Footer1() {
 
         <div className="cs_bottom_footer">
           <div className="cs_bottom_footer_left" data-aos="fade-right">
-            <div className="cs_copyright" dangerouslySetInnerHTML={{ __html: data.copyright }} />
+            <div className="cs_copyright cs_footer_links" />© {new Date().getFullYear()}. Sva prava zadržana. |{" "}
+            <a href="https://botech.me" target="_blank" rel="noopener noreferrer" style={{ marginLeft: "6px" }}>
+              Botech IT Solutions
+            </a>
           </div>
 
           <div className="cs_bottom_footer_right" data-aos="fade-left">

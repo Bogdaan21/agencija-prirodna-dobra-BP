@@ -48,6 +48,7 @@ export default function ValueSection() {
           </div>
         </div>
       </div>
+      <div className="cs_height_100 cs_height_lg_70" />
     </section>
   );
 }

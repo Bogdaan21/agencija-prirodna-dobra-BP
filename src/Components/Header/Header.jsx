@@ -3,32 +3,29 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 
 const data = {
-  logo: "/assets/img/logo.png",
-  logoUrl: "/",
+  me: { logo: "/assets/img/logo.png", logoUrl: "/" },
+  en: { logo: "/assets/img/logo-eng.png", logoUrl: "/" },
 };
 
 const menuData = {
   me: [
     { label: "POČETNA", href: "/" },
     { label: "O NAMA", href: "/about" },
-    {
-      label: "VIŠE",
-      href: "/contact",
-      children: [{ label: "PROJEKTI", href: "/projects" }],
-    },
+    { label: "PROJEKTI", href: "/projects" },
+    // {
+    //   label: "VIŠE",
+    //   children: [{ label: "PROJEKTI", href: "/projects" }],
+    // },
     { label: "KONTAKT", href: "/contact" },
   ],
   en: [
     { label: "HOME", href: "/" },
     { label: "ABOUT", href: "/about" },
-    {
-      label: "MORE",
-      href: "/contact",
-      children: [
-        { label: "SERVICES", href: "/services" },
-        { label: "PROJECTS", href: "/projects" },
-      ],
-    },
+    { label: "PROJECTS", href: "/projects" },
+    // {
+    //   label: "MORE",
+    //   children: [{ label: "PROJECTS", href: "/projects" }],
+    // },
     { label: "CONTACT", href: "/contact" },
   ],
 };
@@ -50,6 +47,9 @@ const Header = () => {
   const selectedLang = languages.find((lang) => lang.code === language) || languages[0];
 
   const currentMenuItems = menuData[language] || menuData.me;
+
+    const logoItem = data[language] || data.me;
+
 
   const handleOpenMobileSubmenu = (index) => {
     if (openMobileSubmenuIndex.includes(index)) {
@@ -88,8 +88,8 @@ const Header = () => {
           <div className="container">
             <div className="cs_main_header_in">
               <div className="cs_main_header_left">
-                <Link className="cs_site_branding" to={data.logoUrl}>
-                  <img src={data.logo} alt="Logo" />
+                <Link className="cs_site_branding" to={logoItem.logoUrl}>
+                  <img src={logoItem.logo} alt="Logo" />
                 </Link>
               </div>
               <div className="cs_main_header_center">

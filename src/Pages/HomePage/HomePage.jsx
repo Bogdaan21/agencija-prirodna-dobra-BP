@@ -14,9 +14,13 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <ValueSection />
       <FeatureSection />
+      <div className="cs_heading_bg cs_white_color">
+        <ValueSection />
+      </div>
+
       <WorksSection />
+      <hr/>
       <ServicesSection />
       {/* <WorkingProcess data={workingProcessData} />
       <TestimonialSection data={testimonialData} /> */}

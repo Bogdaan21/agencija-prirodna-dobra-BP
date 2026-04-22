@@ -37,7 +37,6 @@ export default function Footer() {
           ],
         },
       ],
-      copyright: "COURTESY © 2025. SVA PRAVA ZADRŽANA.",
       bottomLinks: [
         { label: "POLITIKA PRIVATNOSTI", url: "/" },
         { label: "USLOVI KORIŠĆENJA", url: "/" },
@@ -46,7 +45,7 @@ export default function Footer() {
     },
 
     en: {
-      logo: "/assets/img/logo.png",
+      logo: "/assets/img/logo-eng.png",
       newsletterText: "Stay updated with our latest <br /> projects and information.",
       menus: [
         {
@@ -76,7 +75,6 @@ export default function Footer() {
           ],
         },
       ],
-      copyright: "COURTESY © 2025. ALL RIGHTS RESERVED.",
       bottomLinks: [
         { label: "PRIVACY POLICY", url: "/" },
         { label: "TERMS & CONDITIONS", url: "/" },
@@ -133,7 +131,12 @@ export default function Footer() {
 
         <div className="cs_bottom_footer">
           <div className="cs_bottom_footer_left" data-aos="fade-right">
-            <div className="cs_copyright" dangerouslySetInnerHTML={{ __html: data.copyright }}></div>
+            <div className="cs_copyright cs_footer_links">
+              © {new Date().getFullYear()}. Sva prava zadržana. |{" "}
+              <a href="https://botech.me" target="_blank" rel="noopener noreferrer" style={{ marginLeft: "6px" }}>
+                Botech IT Solutions
+              </a>
+            </div>
           </div>
           <div className="cs_bottom_footer_right" data-aos="fade-left">
             <ul className="cs_footer_links cs_mp_0">

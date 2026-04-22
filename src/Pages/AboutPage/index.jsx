@@ -279,13 +279,13 @@ export default function AboutPage() {
     <>
       <PageHeading data={data.BreadcrumbsData} />
       <AboutUs data={data.aboutUsData} />
+      <ValueSection data={data.valueData} />
+
       <div className="cs_heading_bg cs_white_color">
-        <ValueSection data={data.valueData} />
         <FeatureSection data={data.featureData} />
       </div>
-      <TeamMember data={data.teamMembersData} />
       <WorkSection1 data={data.WorkingData} />
-      <BrandSection className="mb-5"/>
+      <BrandSection className="mb-5" />
       <CardSection data={data.cardData} />
     </>
   );
