@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function ContactSection({ data }) {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending...");
+
+    const formData = new FormData(event.target);
+    formData.append("access_key", "18aaf79c-7560-438b-a5d1-44b067494616");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const dataRes = await response.json();
+
+    if (dataRes.success) {
+      setResult("Message sent successfully ✅");
+      event.target.reset();
+    } else {
+      setResult("Something went wrong ❌");
+    }
+  };
+
   return (
     <section>
       <div className="cs_height_100 cs_height_lg_70" />
@@ -11,6 +35,7 @@ export default function ContactSection({ data }) {
               <iframe id="map" src={data.locationUrl} allowFullScreen="" />
             </div>
           </div>
+
           <div className="col-lg-7">
             <div className="cs_pl_40">
               <div className="cs_section_heading cs_style_4 cs_mb_25">
@@ -19,45 +44,39 @@ export default function ContactSection({ data }) {
                   dangerouslySetInnerHTML={{ __html: data.mapTitle }}
                 ></h2>
               </div>
-              <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
-                className="row cs_gap_y_24"
-                id="cs_form"
-              >
-                <input
-                  type="hidden"
-                  name="access_key"
-                  defaultValue="cd98b256-0db3-478c-ab28-1ec94f80447c"
-                />
+
+              {/* FORM */}
+              <form onSubmit={onSubmit} className="row cs_gap_y_24">
                 <div className="col-sm-6">
                   <input
                     type="text"
                     name="name"
                     className="cs_form_field"
                     placeholder="Name"
-                    required=""
+                    required
                   />
                 </div>
+
                 <div className="col-sm-6">
                   <input
                     type="email"
                     name="email"
                     className="cs_form_field"
                     placeholder="Email"
-                    required=""
+                    required
                   />
                 </div>
+
                 <div className="col-lg-12">
                   <textarea
                     className="cs_form_field"
                     name="message"
                     placeholder="Message"
                     rows={5}
-                    required=""
-                    defaultValue={""}
+                    required
                   />
                 </div>
+
                 <div className="col-lg-12">
                   <button
                     className="cs_btn cs_style_1 cs_type_1 cs_bold cs_heading_bg cs_white_color w-100"
@@ -65,16 +84,21 @@ export default function ContactSection({ data }) {
                   >
                     {data.formButtonText}
                   </button>
-                  <div id="cs_result" className="cs_heading_color" />
+
+                  {/* RESULT */}
+                  <div className="cs_heading_color mt-3">{result}</div>
                 </div>
               </form>
+
               <div className="cs_height_60 cs_height_lg_40" />
+
               <div className="cs_section_heading cs_style_4 cs_mb_25">
                 <h2
                   className="cs_section_title cs_fs_32 cs_bold mb-0"
                   dangerouslySetInnerHTML={{ __html: data.sectionTitle }}
                 ></h2>
               </div>
+
               <ul className="cs_contact_info cs_mp_0">
                 {data.contactList.map((item, index) => (
                   <li key={index}>
@@ -87,6 +111,7 @@ export default function ContactSection({ data }) {
           </div>
         </div>
       </div>
+
       <div className="cs_height_100 cs_height_lg_70" />
     </section>
   );
