@@ -70,7 +70,13 @@ function Login() {
       <div className="cs_card_left">
         <div className="cs_card_card_out">
           <Link to="/" className="cs_login_logo">
-            <img src="/assets/img/logo_2.svg" alt="Logo" />
+            <img
+              src="/assets/img/logo-colour.png"
+              alt="Logo"
+              style={{
+                height: `80px`,
+              }}
+            />
           </Link>
 
           <div className="cs_card_card_in">
@@ -125,8 +131,21 @@ function Login() {
         className="cs_card_right cs_bg_filed"
         style={{
           backgroundImage: `url(/assets/img/login_img.jpg)`,
+          position: "relative",
         }}
-      />
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "rgba(0,0,0,0.4)",
+            borderRadius: "inherit",
+          }}
+        />
+      </div>
     </div>
   );
 }

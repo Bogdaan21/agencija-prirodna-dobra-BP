@@ -118,7 +118,13 @@ function AdminTable() {
       <div className="container">
         <div className="cs_admin_topbar d-flex justify-content-between align-items-center">
           <Link to="/" className="cs_login_logo">
-            <img src="/assets/img/logo_2.svg" alt="Logo" />
+            <img
+              src="/assets/img/logo-colour.png"
+              alt="Logo"
+              style={{
+                height: `60px`,
+              }}
+            />
           </Link>
 
           <div className="d-flex align-items-center gap-3">
