@@ -37,7 +37,7 @@ export default function AboutPage() {
         },
         cta: {
           backgroundImage: "/assets/img/cta_bg_3.jpg",
-          buttonUrl: "/zasticena-podrucja",
+          buttonUrl: "/projects",
           buttonText: "Pogledaj zaštićena područja",
         },
       },
@@ -56,7 +56,7 @@ export default function AboutPage() {
         sectionTitle: "NAŠA <span>ULOGA I ODGOVORNOSTI</span>",
         buttonText: "Kontakt",
         buttonUrl: "/contact",
-        image: "/assets/img/feature_thumb.jpg",
+        image: "/assets/img/login_img.jpg",
         features: [
           {
             icon: "fa6-solid:leaf",
@@ -136,10 +136,10 @@ export default function AboutPage() {
       },
 
       cardData: {
-        backgroundImage: "/assets/img/card_bg.jpg",
+        backgroundImage: "/assets/img/cta_bg_3.jpg",
         tags: ["Bijelo Polje", "Zaštita prirode", "Održivi razvoj", "Prirodna dobra"],
         title: "UPRAVLJANJE PRIRODOM <br /> ZA DOBROBIT ZAJEDNICE",
-        buttonLink: "/zasticena-podrucja",
+        buttonLink: "/projects",
       },
     },
 
@@ -165,7 +165,7 @@ export default function AboutPage() {
         },
         cta: {
           backgroundImage: "/assets/img/cta_bg_3.jpg",
-          buttonUrl: "/zasticena-podrucja",
+          buttonUrl: "/projects",
           buttonText: "View Protected Areas",
         },
       },
@@ -184,7 +184,7 @@ export default function AboutPage() {
         sectionTitle: "OUR <span>ROLE AND RESPONSIBILITIES</span>",
         buttonText: "Contact",
         buttonUrl: "/contact",
-        image: "/assets/img/feature_thumb.jpg",
+        image: "/assets/img/login_img.jpg",
         features: [
           {
             icon: "fa6-solid:leaf",
@@ -264,10 +264,10 @@ export default function AboutPage() {
       },
 
       cardData: {
-        backgroundImage: "/assets/img/card_bg.jpg",
+        backgroundImage: "/assets/img/cta_bg_3.jpg",
         tags: ["Bijelo Polje", "Nature Protection", "Sustainable Development", "Natural Assets"],
         title: "NATURE MANAGEMENT <br /> FOR THE BENEFIT OF THE COMMUNITY",
-        buttonLink: "/zasticena-podrucja",
+        buttonLink: "/projects",
       },
     },
   };

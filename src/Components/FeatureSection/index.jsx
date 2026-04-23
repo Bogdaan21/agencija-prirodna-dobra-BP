@@ -11,7 +11,7 @@ export default function FeatureSection() {
       sectionTitle: "NAŠA <span>ULOGA I ODGOVORNOSTI</span>",
       buttonText: "Kontakt",
       buttonUrl: "/contact",
-      image: "/assets/img/feature_thumb.jpg",
+      image: "/assets/img/login_img.jpg",
       features: [
         {
           icon: "fa6-solid:leaf",
@@ -44,7 +44,7 @@ export default function FeatureSection() {
       sectionTitle: "OUR <span>ROLE AND RESPONSIBILITIES</span>",
       buttonText: "Contact",
       buttonUrl: "/contact",
-      image: "/assets/img/feature_thumb.jpg",
+      image: "/assets/img/login_img.jpg",
       features: [
         {
           icon: "fa6-solid:leaf",

@@ -57,7 +57,7 @@ export default function ContactPage() {
   };
 
   const cardData = {
-    backgroundImage: "/assets/img/card_bg.jpg",
+    backgroundImage: "/assets/img/cta_bg_3.jpg",
     tags:
       language === "me"
         ? ["Početna", "Vrt", "Dizajn pejzaža", "Ekspert"]

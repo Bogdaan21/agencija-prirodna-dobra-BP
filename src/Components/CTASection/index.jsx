@@ -19,7 +19,7 @@ export default function CTASection() {
   const t = ctaContent[language] || ctaContent.me;
 
   const ctaData = {
-    backgroundImage: "/assets/img/cta_bg.jpg",
+    backgroundImage: "/assets/img/cta_bg_3.jpg",
     title: t.title,
     buttonText: t.buttonText,
     buttonUrl: "/contact",

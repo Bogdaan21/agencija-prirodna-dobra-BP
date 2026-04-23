@@ -15,7 +15,7 @@ const BreadcrumbsData = {
 };
 
 const cardData = {
-  backgroundImage: "/assets/img/card_bg.jpg",
+  backgroundImage: "/assets/img/cta_bg_3.jpg",
   tags: ["Home", "Garden", "Landscape Design", "Expert"],
   title: "MAKE YOUR DREAM <br /> GARDEN INTO REALITY",
   buttonLink: "/projects",
