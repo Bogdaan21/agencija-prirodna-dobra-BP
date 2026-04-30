@@ -1,0 +1,64 @@
+{
+  "offlineMap": [
+    {
+      "name": "Pećina Zavjet ćutanja",
+      "lat": 43.080083,
+      "lng": 19.923778
+    },
+    {
+      "name": "Pećina nad Vražjim firovima",
+      "lat": 43.076306,
+      "lng": 19.922944
+    },
+    {
+      "name": "Vražji virovi",
+      "lat": 43.076567,
+      "lng": 19.922239
+    },
+    {
+      "name": "Vidikovac Ranitova glava",
+      "lat": 43.068361,
+      "lng": 19.923250
+    },
+    {
+      "name": "Pećina Jamovi",
+      "lat": 43.069361,
+      "lng": 19.917667
+    },
+    {
+      "name": "Glava Bistrice",
+      "lat": 43.070611,
+      "lng": 19.917667
+    },
+    {
+      "name": "Vidikovac Vijenci",
+      "lat": 43.072889,
+      "lng": 19.916750
+    },
+    {
+      "name": "Pećina Juriško vrelo",
+      "lat": 43.074417,
+      "lng": 19.909028
+    },
+    {
+      "name": "Juriško vrelo",
+      "lat": 43.074278,
+      "lng": 19.908361
+    },
+    {
+      "name": "Vidikovac Sjedlo",
+      "lat": 43.072389,
+      "lng": 19.907000
+    },
+    {
+      "name": "Most",
+      "lat": 43.072358,
+      "lng": 19.901914
+    },
+    {
+      "name": "Manastir Podvrh",
+      "lat": 43.070139,
+      "lng": 19.902472
+    }
+  ]
+}
