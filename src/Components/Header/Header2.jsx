@@ -19,7 +19,7 @@ const menuData = {
       children: [
         { label: "GALERIJA", href: "/gallery" },
         { label: "USLUGE", href: "/services" },
-        { label: "PROJEKTI", href: "/projects" },
+        { label: "ZAŠTIĆENA PODRUČJA", href: "/protectedareas" },
       ],
     },
   ],
@@ -34,7 +34,7 @@ const menuData = {
       children: [
         { label: "GALLERY", href: "/gallery" },
         { label: "SERVICES", href: "/services" },
-        { label: "PROJECTS", href: "/projects" },
+        { label: "PROTECTED AREAS", href: "/protectedareas" },
       ],
     },
   ],

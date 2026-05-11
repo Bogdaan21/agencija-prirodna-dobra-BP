@@ -68,7 +68,7 @@ export default function ContactPage() {
         ? "PRETVORITE SVOJ VRT IZ SNOVA <br /> U STVARNOST"
         : "MAKE YOUR DREAM <br /> GARDEN INTO REALITY",
 
-    buttonLink: "/projects",
+    buttonLink: "/protectedareas",
   };
 
     pageTitle("Kontakt | Agencija za upravljanje prirodnim dobrima");

@@ -106,7 +106,7 @@ const cardData = {
   backgroundImage: "/assets/img/card_bg_2.jpg",
   tags: ["Home", "Garden", "Landscape Design", "Expert"],
   title: "MAKE YOUR DREAM <br /> GARDEN INTO REALITY",
-  buttonLink: "/projects",
+  buttonLink: "/protectedareas",
 };
 
 export default function ServiceDetailsPage() {

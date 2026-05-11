@@ -9,14 +9,14 @@ export default function ServicesSection() {
 
   const sectionContent = {
     me: {
-      title: "PROJEKTI",
-      btnText: "Pogledaj sve projekte",
-      btnUrl: "/projects",
+      title: "ZAŠTIĆENA PODRUČJA",
+      btnText: "Pogledaj sva zaštićena područja",
+      btnUrl: "/protectedareas",
     },
     en: {
-      title: "PROJECTS",
-      btnText: "See More Projects",
-      btnUrl: "/projects",
+      title: "PROTECTED AREAS",
+      btnText: "See Protected Areas",
+      btnUrl: "/protectedareas",
     },
   };
 
@@ -47,15 +47,15 @@ export default function ServicesSection() {
         subtitle: `${service}${location ? ` — ${location}` : ""}`,
 
         image: project.imageSrc,
-        link: `/projects/${project.slug}`,
+        link: `/protectedareas/${project.slug}`,
 
         tags: [
-          ...(year ? [{ label: year, url: `/projects/${project.slug}` }] : []),
+          ...(year ? [{ label: year, url: `/protectedareas/${project.slug}` }] : []),
           ...(location
-            ? [{ label: location, url: `/projects/${project.slug}` }]
+            ? [{ label: location, url: `/protectedareas/${project.slug}` }]
             : []),
           ...(service
-            ? [{ label: service, url: `/projects/${project.slug}` }]
+            ? [{ label: service, url: `/protectedareas/${project.slug}` }]
             : []),
         ],
       };

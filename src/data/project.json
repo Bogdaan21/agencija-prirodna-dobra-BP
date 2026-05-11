@@ -4,8 +4,8 @@
       "backgroundImage": "/assets/img/project_heading_bg.jpg",
 
       "title": {
-        "me": "NAŠI PROJEKTI",
-        "en": "OUR PROJECTS"
+        "me": "ZAŠTIĆENA PODRUČJA",
+        "en": "PROTECTED AREAS"
       },
 
       "breadcrumbs": [
@@ -18,8 +18,8 @@
         },
         {
           "label": {
-            "me": "Projekti",
-            "en": "Project"
+            "me": "Zaštićena područja",
+            "en": "Protected Areas"
           },
           "active": true
         }

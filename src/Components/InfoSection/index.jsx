@@ -11,15 +11,15 @@ export default function InfoList({ data, slug }) {
 
         <div className="cs_card cs_style_5">
           {/* IMAGE */}
-          <Link to={`/projects/${slug}`} className="cs_card_thumb">
-            <img src={imageSrc} alt={imageAlt || "Project Thumbnail"} />
+          <Link to={`/protectedareas/${slug}`} className="cs_card_thumb">
+            <img src={imageSrc} alt={imageAlt || "Protected Area Thumbnail"} />
           </Link>
 
           <div className="cs_card_right">
             {/* TITLE */}
             {title && (
               <h2 className="cs_card_title cs_fs_80 mb-0">
-                <Link to={`/projects/${slug}`} dangerouslySetInnerHTML={{ __html: title }} />
+                <Link to={`/protectedareas/${slug}`} dangerouslySetInnerHTML={{ __html: title }} />
               </h2>
             )}
 

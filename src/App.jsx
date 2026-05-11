@@ -46,8 +46,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route path="/about" element={<AboutPage />} />
 
-          <Route path="/projects" element={<ProjectPage />} />
-          <Route path="/projects/:slug" element={<ProjectDetailsPage />} />
+          <Route path="/protectedareas" element={<ProjectPage />} />
+          <Route path="/protectedareas/:slug" element={<ProjectDetailsPage />} />
 
           <Route path="/contact" element={<ContactPage />} />
 

@@ -11,20 +11,20 @@ const menuData = {
   me: [
     { label: "POČETNA", href: "/" },
     { label: "O NAMA", href: "/about" },
-    { label: "PROJEKTI", href: "/projects" },
+    { label: "ZAŠTIĆENA PODRUČJA", href: "/protectedareas" },
     // {
     //   label: "VIŠE",
-    //   children: [{ label: "PROJEKTI", href: "/projects" }],
+    //   children: [{ label: "ZAŠTIĆENA PODRUČJA", href: "/protectedareas" }],
     // },
     { label: "KONTAKT", href: "/contact" },
   ],
   en: [
     { label: "HOME", href: "/" },
     { label: "ABOUT", href: "/about" },
-    { label: "PROJECTS", href: "/projects" },
+    { label: "PROTECTED AREAS", href: "/protectedareas" },
     // {
     //   label: "MORE",
-    //   children: [{ label: "PROJECTS", href: "/projects" }],
+    //   children: [{ label: "PROTECTED AREAS", href: "/protectedareas" }],
     // },
     { label: "CONTACT", href: "/contact" },
   ],

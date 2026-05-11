@@ -388,6 +388,8 @@
     justify-content: space-between;
     gap: 15px 30px;
     color: #7f8f80;
+    align-items: flex-start;
+    overflow: hidden;
     @media (max-width: 991px) {
       flex-direction: column;
     }
@@ -396,6 +398,12 @@
     flex: none;
     max-width: 410px;
     width: 100%;
+    line-height: 1.5;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     @media (max-width: 991px) {
       max-width: 100%;
     }

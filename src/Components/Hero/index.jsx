@@ -16,7 +16,7 @@ export default function HeroSection() {
         "Agencija za upravljanje prirodnim dobrima opštine Bijelo Polje posvećena je zaštiti, očuvanju i unapređenju zaštićenih područja kroz održivo upravljanje, monitoring i razvoj lokalne zajednice.",
 
       btnText1: "Zaštićena područja",
-      btnUrl1: "/projects",
+      btnUrl1: "/protectedareas",
 
       btnText2: "Kontakt",
       btnUrl2: "/contact",
@@ -29,7 +29,7 @@ export default function HeroSection() {
       box: {
         title: "Đalovića klisura",
         subtitle: "Jedno od najvrijednijih prirodnih područja sa bogatom florom, faunom i speleološkim objektima.",
-        link: "/projects/djalovica-klisura",
+        link: "/protectedareas/djalovica-klisura",
       },
 
       backgrounds: [
@@ -46,7 +46,7 @@ export default function HeroSection() {
         "The Agency for the Management of Natural Assets of the Municipality of Bijelo Polje is dedicated to the protection, preservation, and improvement of protected areas through sustainable management, monitoring, and local community development.",
 
       btnText1: "Protected Areas",
-      btnUrl1: "/projects",
+      btnUrl1: "/protectedareas",
 
       btnText2: "Contact",
       btnUrl2: "/contact",
@@ -59,7 +59,7 @@ export default function HeroSection() {
       box: {
         title: "Đalovića Gorge",
         subtitle: "One of the most valuable natural areas, rich in flora, fauna, and speleological sites.",
-        link: "/projects/djalovica-klisura",
+        link: "/protectedareas/djalovica-klisura",
       },
 
       backgrounds: [

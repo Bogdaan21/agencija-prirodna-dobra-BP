@@ -8,7 +8,7 @@ export default function Footer1() {
   const content = {
     me: {
       logo: "/assets/img/logo-colour.png",
-      newsletterText: "Budite u toku sa najnovijim <br /> projektima i informacijama.",
+      newsletterText: "Budite u toku sa najnovijim <br /> zaštićenim područjima i informacijama.",
       menus: [
         {
           title: "PODRŠKA",
@@ -23,17 +23,17 @@ export default function Footer1() {
           title: "LINKOVI",
           links: [
             { label: "O NAMA", url: "/about" },
-            { label: "PROJEKTI", url: "/projects" },
+            { label: "ZAŠTIĆENA PODRUČJA", url: "/protectedareas" },
             { label: "NOVOSTI", url: "/news" },
           ],
         },
         {
           title: "OBLASTI",
           links: [
-            { label: "ZAŠTITA PRIRODE", url: "/projects" },
-            { label: "MONITORING", url: "/projects" },
-            { label: "EDUKACIJA", url: "/projects" },
-            { label: "PROMOCIJA", url: "/projects" },
+            { label: "ZAŠTITA PRIRODE", url: "/protectedareas" },
+            { label: "MONITORING", url: "/protectedareas" },
+            { label: "EDUKACIJA", url: "/protectedareas" },
+            { label: "PROMOCIJA", url: "/protectedareas" },
           ],
         },
       ],
@@ -47,7 +47,7 @@ export default function Footer1() {
 
     en: {
       logo: "/assets/img/logo-colour-eng.png",
-      newsletterText: "Stay updated with our latest <br /> projects and information.",
+      newsletterText: "Stay updated with our latest <br /> protected areas and information.",
       menus: [
         {
           title: "SUPPORT",
@@ -62,17 +62,17 @@ export default function Footer1() {
           title: "LINKS",
           links: [
             { label: "ABOUT US", url: "/about" },
-            { label: "PROJECTS", url: "/projects" },
+            { label: "PROTECTED AREAS", url: "/protectedareas" },
             { label: "NEWS", url: "/news" },
           ],
         },
         {
           title: "AREAS",
           links: [
-            { label: "NATURE PROTECTION", url: "/projects" },
-            { label: "MONITORING", url: "/projects" },
-            { label: "EDUCATION", url: "/projects" },
-            { label: "PROMOTION", url: "/projects" },
+            { label: "NATURE PROTECTION", url: "/protectedareas" },
+            { label: "MONITORING", url: "/protectedareas" },
+            { label: "EDUCATION", url: "/protectedareas" },
+            { label: "PROMOTION", url: "/protectedareas" },
           ],
         },
       ],

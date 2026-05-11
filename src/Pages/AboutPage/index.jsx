@@ -9,6 +9,7 @@ import CardSection from "../../Components/CardSection";
 import { pageTitle } from "../../helper";
 import { useLanguage } from "../../context/LanguageContext";
 import BrandSection from "../../Components/BrandSection";
+import DocumentsSection from "../../Components/DocumentsSection";
 
 export default function AboutPage() {
   pageTitle("O nama | Agencija za upravljanje prirodnim dobrima");
@@ -37,7 +38,7 @@ export default function AboutPage() {
         },
         cta: {
           backgroundImage: "/assets/img/cta_bg_3.jpg",
-          buttonUrl: "/projects",
+          buttonUrl: "/protectedareas",
           buttonText: "Pogledaj zaštićena područja",
         },
       },
@@ -49,6 +50,85 @@ export default function AboutPage() {
           { text: "Održivo upravljanje" },
           { text: "Edukacija i monitoring" },
           { text: "Promocija prirodnih dobara" },
+        ],
+      },
+
+      documentsData: {
+        eyebrow: "DOKUMENTA",
+        title: "JAVNI <span>DOKUMENTI</span>",
+        description:
+          "Pregled najvažnijih akata, izvještaja, planova i obrazaca Agencije.",
+        documents: [
+          {
+            title: "Statut Agencije",
+            category: "Osnivački akt",
+            year: "2025",
+            description: "Osnovni dokument kojim se uređuju nadležnosti i način rada.",
+            href: "",
+          },
+          {
+            title: "Program rada",
+            category: "Planiranje",
+            year: "2025",
+            description: "Godišnji pregled planiranih aktivnosti i prioriteta.",
+            href: "",
+          },
+          {
+            title: "Izvještaj o radu",
+            category: "Izvještaji",
+            year: "2024",
+            description: "Pregled realizovanih aktivnosti i rezultata Agencije.",
+            href: "",
+          },
+          {
+            title: "Plan upravljanja zaštićenim područjima",
+            category: "Upravljanje",
+            year: "2025",
+            description: "Smjernice za zaštitu, monitoring i održivo korišćenje područja.",
+            href: "",
+          },
+          {
+            title: "Finansijski izvještaj",
+            category: "Finansije",
+            year: "2024",
+            description: "Sažetak finansijskog poslovanja i osnovnih pokazatelja.",
+            href: "",
+          },
+          {
+            title: "Pravilnik o unutrašnjoj organizaciji",
+            category: "Organizacija",
+            year: "2025",
+            description: "Organizaciona struktura, službe i radna zaduženja.",
+            href: "",
+          },
+          {
+            title: "Javni pozivi i konkursi",
+            category: "Obavještenja",
+            year: "2025",
+            description: "Dokumentacija za otvorene pozive, konkurse i prijave.",
+            href: "",
+          },
+          {
+            title: "Odluke i rješenja",
+            category: "Akti",
+            year: "2025",
+            description: "Relevantne odluke, rješenja i službeni akti.",
+            href: "",
+          },
+          {
+            title: "Cjenovnik usluga",
+            category: "Usluge",
+            year: "2025",
+            description: "Pregled naknada i usluga iz nadležnosti Agencije.",
+            href: "",
+          },
+          {
+            title: "Obrasci i zahtjevi",
+            category: "Obrasci",
+            year: "2025",
+            description: "Standardizovani obrasci za građane, organizacije i institucije.",
+            href: "",
+          },
         ],
       },
 
@@ -139,7 +219,7 @@ export default function AboutPage() {
         backgroundImage: "/assets/img/cta_bg_3.jpg",
         tags: ["Bijelo Polje", "Zaštita prirode", "Održivi razvoj", "Prirodna dobra"],
         title: "UPRAVLJANJE PRIRODOM <br /> ZA DOBROBIT ZAJEDNICE",
-        buttonLink: "/projects",
+        buttonLink: "/protectedareas",
       },
     },
 
@@ -165,7 +245,7 @@ export default function AboutPage() {
         },
         cta: {
           backgroundImage: "/assets/img/cta_bg_3.jpg",
-          buttonUrl: "/projects",
+          buttonUrl: "/protectedareas",
           buttonText: "View Protected Areas",
         },
       },
@@ -177,6 +257,85 @@ export default function AboutPage() {
           { text: "Sustainable Management" },
           { text: "Education and Monitoring" },
           { text: "Promotion of Natural Assets" },
+        ],
+      },
+
+      documentsData: {
+        eyebrow: "DOCUMENTS",
+        title: "PUBLIC <span>DOCUMENTS</span>",
+        description:
+          "A clear overview of the Agency's key acts, reports, plans, and forms.",
+        documents: [
+          {
+            title: "Agency Statute",
+            category: "Founding Act",
+            year: "2025",
+            description: "The core document defining responsibilities and operations.",
+            href: "",
+          },
+          {
+            title: "Work Program",
+            category: "Planning",
+            year: "2025",
+            description: "Annual overview of planned activities and priorities.",
+            href: "",
+          },
+          {
+            title: "Annual Report",
+            category: "Reports",
+            year: "2024",
+            description: "Overview of completed activities and Agency results.",
+            href: "",
+          },
+          {
+            title: "Protected Areas Management Plan",
+            category: "Management",
+            year: "2025",
+            description: "Guidelines for protection, monitoring, and sustainable use.",
+            href: "",
+          },
+          {
+            title: "Financial Report",
+            category: "Finance",
+            year: "2024",
+            description: "Summary of financial operations and key indicators.",
+            href: "",
+          },
+          {
+            title: "Internal Organization Rulebook",
+            category: "Organization",
+            year: "2025",
+            description: "Organizational structure, departments, and responsibilities.",
+            href: "",
+          },
+          {
+            title: "Public Calls and Competitions",
+            category: "Notices",
+            year: "2025",
+            description: "Documentation for open calls, competitions, and applications.",
+            href: "",
+          },
+          {
+            title: "Decisions and Resolutions",
+            category: "Acts",
+            year: "2025",
+            description: "Relevant decisions, resolutions, and official acts.",
+            href: "",
+          },
+          {
+            title: "Service Price List",
+            category: "Services",
+            year: "2025",
+            description: "Overview of fees and services within the Agency's scope.",
+            href: "",
+          },
+          {
+            title: "Forms and Requests",
+            category: "Forms",
+            year: "2025",
+            description: "Standardized forms for citizens, organizations, and institutions.",
+            href: "",
+          },
         ],
       },
 
@@ -267,7 +426,7 @@ export default function AboutPage() {
         backgroundImage: "/assets/img/cta_bg_3.jpg",
         tags: ["Bijelo Polje", "Nature Protection", "Sustainable Development", "Natural Assets"],
         title: "NATURE MANAGEMENT <br /> FOR THE BENEFIT OF THE COMMUNITY",
-        buttonLink: "/projects",
+        buttonLink: "/protectedareas",
       },
     },
   };
@@ -279,7 +438,8 @@ export default function AboutPage() {
     <>
       <PageHeading data={data.BreadcrumbsData} />
       <AboutUs data={data.aboutUsData} />
-      <ValueSection data={data.valueData} />
+      <DocumentsSection data={data.documentsData} />
+      {/* <ValueSection data={data.valueData} /> */}
 
       <div className="cs_heading_bg cs_white_color">
         <FeatureSection data={data.featureData} />

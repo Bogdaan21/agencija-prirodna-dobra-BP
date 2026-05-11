@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const data = {
   logo: "/assets/img/footer_logo.svg",
   newsletterText:
-    " Stay updated with our latest <br /> projects and gardening tips.",
+    " Stay updated with our latest <br /> protected areas and gardening tips.",
   menus: [
     {
       title: "SUPPORT",
@@ -19,7 +19,7 @@ const data = {
       links: [
         { label: "ABOUT US", url: "/about" },
         { label: "GALLERY", url: "/gallery" },
-        { label: "PROJECTS", url: "/projects" },
+        { label: "PROTECTED AREAS", url: "/protectedareas" },
         { label: "NEWS", url: "/news" },
       ],
     },

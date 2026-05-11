@@ -17,7 +17,13 @@ export default function ProjectDetailsPage() {
   const project = projects.find((item) => item.slug === slug);
 
   if (!project) {
-    return <h2>Project not found</h2>;
+    return (
+      <h2>
+        {language === "en"
+          ? "Protected area not found"
+          : "Zaštićeno područje nije pronađeno"}
+      </h2>
+    );
   }
 
   const getLangValue = (value) =>
