@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+const WEB3FORMS_ACCESS_KEY = "7973d0bf-c5cc-4baa-b868-fbaed93810b1";
+
 export default function ContactSection({ data }) {
   const [result, setResult] = useState("");
 
@@ -8,9 +10,8 @@ export default function ContactSection({ data }) {
     setResult("Sending...");
 
     const formData = new FormData(event.target);
-    formData.append("access_key", "18aaf79c-7560-438b-a5d1-44b067494616");
 
-    const response = await fetch("https://api.web3forms.com/submit", { 
+    const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
     });
@@ -46,7 +47,14 @@ export default function ContactSection({ data }) {
               </div>
 
               {/* FORM */}
-              <form onSubmit={onSubmit} className="row cs_gap_y_24">
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                onSubmit={onSubmit}
+                className="row cs_gap_y_24"
+              >
+                <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+
                 <div className="col-sm-6">
                   <input
                     type="text"
@@ -81,7 +89,7 @@ export default function ContactSection({ data }) {
                   <button
                     className="cs_btn cs_style_1 cs_type_1 cs_bold cs_heading_bg cs_white_color w-100"
                     type="submit"
-                  >
+                  > 
                     {data.formButtonText}
                   </button>
 
