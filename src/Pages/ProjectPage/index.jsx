@@ -24,7 +24,20 @@ export default function ProjectPage() {
     })),
   };
 
-    pageTitle("Zaštićena područja | Agencija za upravljanje prirodnim dobrima");
+    pageTitle(
+      language === "me"
+        ? "Zaštićena područja | Agencija za upravljanje prirodnim dobrima"
+        : "Protected Areas | Agency for Management of Natural Assets",
+      {
+        description:
+          language === "me"
+            ? "Pregled zaštićenih prirodnih područja pod upravljanjem Agencije u opštini Bijelo Polje, uključujući Đalovića klisuru i rijeku Ćehotinu."
+            : "Overview of protected natural areas managed by the Agency in Bijelo Polje, including Đalovića Gorge and the Ćehotina River.",
+        path: "/protectedareas",
+        image: "/assets/img/project_heading_bg.jpg",
+        locale: language,
+      },
+    );
 
   return (
     <>

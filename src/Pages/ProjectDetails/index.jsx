@@ -17,6 +17,13 @@ export default function ProjectDetailsPage() {
   const project = projects.find((item) => item.slug === slug);
 
   if (!project) {
+    pageTitle("Zaštićeno područje nije pronađeno | Agencija za upravljanje prirodnim dobrima", {
+      description: "Traženo zaštićeno područje nije pronađeno.",
+      path: `/protectedareas/${slug || ""}`,
+      noIndex: true,
+      locale: language,
+    });
+
     return (
       <h2>
         {language === "en"
@@ -62,7 +69,21 @@ export default function ProjectDetailsPage() {
     })),
   };
 
-  pageTitle(`${translatedProject.title} | Agencija za upravljanje prirodnim dobrima`);
+  pageTitle(
+    `${translatedProject.title} | Agencija za upravljanje prirodnim dobrima`,
+    {
+      description:
+        translatedProject.description ||
+        translatedProject.outcomes ||
+        (language === "me"
+          ? "Detaljan prikaz zaštićenog područja pod upravljanjem Agencije za upravljanje prirodnim dobrima."
+          : "Detailed overview of a protected area managed by the Agency for Management of Natural Assets."),
+      path: `/protectedareas/${project.slug}`,
+      image: project.imageSrc,
+      type: "article",
+      locale: language,
+    },
+  );
 
   return (
     <>

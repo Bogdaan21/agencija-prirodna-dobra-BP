@@ -110,7 +110,11 @@ const cardData = {
 };
 
 export default function ServiceDetailsPage() {
-  pageTitle("Service Details | aupdbp");
+  pageTitle("Detalji usluge | Agencija za upravljanje prirodnim dobrima", {
+    description: "Interna template stranica za detalje usluge.",
+    path: "/services/services-details",
+    noIndex: true,
+  });
   return (
     <>
       <ServiceDetailsSection data={serviceDetailsData} />{" "}

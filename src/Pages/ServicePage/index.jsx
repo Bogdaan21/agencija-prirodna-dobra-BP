@@ -67,7 +67,11 @@ export default function ServicePage() {
     buttonUrl: "/contact",
   };
 
-  pageTitle("Service | aupdbp");
+  pageTitle("Usluge | Agencija za upravljanje prirodnim dobrima", {
+    description: "Interna template stranica za usluge.",
+    path: "/services",
+    noIndex: true,
+  });
   return (
     <>
       <PageHeading data={BreadcrumbsData} />

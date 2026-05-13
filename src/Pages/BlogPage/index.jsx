@@ -9,7 +9,20 @@ import { useLanguage } from "../../context/LanguageContext";
 export default function BlogPage() {
   const { language } = useLanguage();
 
-  pageTitle("Novosti | Agencija za upravljanje prirodnim dobrima");
+  pageTitle(
+    language === "me"
+      ? "Novosti | Agencija za upravljanje prirodnim dobrima"
+      : "News | Agency for Management of Natural Assets",
+    {
+      description:
+        language === "me"
+          ? "Najnovije objave, obavještenja i aktivnosti Agencije za upravljanje prirodnim dobrima opštine Bijelo Polje."
+          : "Latest news, notices, and activities from the Agency for Management of Natural Assets of Bijelo Polje.",
+      path: "/news",
+      image: "/assets/img/about_heading_bg.jpg",
+      locale: language,
+    },
+  );
 
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);

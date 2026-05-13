@@ -12,8 +12,6 @@ import BrandSection from "../../Components/BrandSection";
 import DocumentsSection from "../../Components/DocumentsSection";
 
 export default function AboutPage() {
-  pageTitle("O nama | Agencija za upravljanje prirodnim dobrima");
-
   const { language } = useLanguage();
   const content = {
     me: {
@@ -433,7 +431,20 @@ export default function AboutPage() {
 
   const data = content[language] || content.me;
 
-  pageTitle("O nama | Agencija za upravljanje prirodnim dobrima");
+  pageTitle(
+    language === "me"
+      ? "O nama | Agencija za upravljanje prirodnim dobrima"
+      : "About Us | Agency for Management of Natural Assets",
+    {
+      description:
+        language === "me"
+          ? "Saznajte više o Agenciji za upravljanje prirodnim dobrima Bijelo Polje, njenoj ulozi, dokumentima, organizaciji i zaštićenim područjima kojima upravlja."
+          : "Learn more about the Agency for Management of Natural Assets in Bijelo Polje, its role, documents, organization, and protected areas under management.",
+      path: "/about",
+      image: "/assets/img/about_heading_bg.jpg",
+      locale: language,
+    },
+  );
   return (
     <>
       <PageHeading data={data.BreadcrumbsData} />

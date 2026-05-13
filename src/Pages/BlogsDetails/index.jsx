@@ -58,7 +58,22 @@ export default function BlogDetailsPage() {
 
         setBlogData(mappedBlog);
 
-        pageTitle(`${firebaseBlog?.title?.en || firebaseBlog?.title?.me || "Detaljno"} | Agencija za upravljanje prirodnim dobrima`);
+        pageTitle(`${mappedBlog.title} | Agencija za upravljanje prirodnim dobrima`, {
+          description:
+            firebaseBlog?.excerpt?.[language] ||
+            firebaseBlog?.excerpt?.en ||
+            firebaseBlog?.excerpt?.me ||
+            stripHtml(firebaseBlog?.content?.[language]) ||
+            stripHtml(firebaseBlog?.content?.en) ||
+            stripHtml(firebaseBlog?.content?.me) ||
+            (language === "me"
+              ? "Detaljna objava Agencije za upravljanje prirodnim dobrima."
+              : "Detailed news post from the Agency for Management of Natural Assets."),
+          path: `/news/${slug}`,
+          image: mappedBlog.postThumb,
+          type: "article",
+          locale: language,
+        });
       } catch (error) {
         console.error("Error fetching blog:", error);
         setBlogData(null);
@@ -94,6 +109,21 @@ export default function BlogDetailsPage() {
   }
 
   if (!blogData) {
+    pageTitle(
+      language === "me"
+        ? "Objava nije pronađena | Agencija za upravljanje prirodnim dobrima"
+        : "Post Not Found | Agency for Management of Natural Assets",
+      {
+        description:
+          language === "me"
+            ? "Tražena objava ne postoji ili je premještena."
+            : "The requested news post does not exist or has been moved.",
+        path: `/news/${slug || ""}`,
+        noIndex: true,
+        locale: language,
+      },
+    );
+
     return (
       <>
         <PageHeading
@@ -149,4 +179,11 @@ function formatDate(dateValue) {
   const year = dateObj.getFullYear();
 
   return `${day} ${month} ${year}`;
+}
+
+function stripHtml(html) {
+  if (!html) return "";
+  const div = document.createElement("div");
+  div.innerHTML = html;
+  return div.textContent || div.innerText || "";
 }

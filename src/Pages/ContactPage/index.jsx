@@ -71,7 +71,20 @@ export default function ContactPage() {
     buttonLink: "/protectedareas",
   };
 
-    pageTitle("Kontakt | Agencija za upravljanje prirodnim dobrima");
+    pageTitle(
+      language === "me"
+        ? "Kontakt | Agencija za upravljanje prirodnim dobrima"
+        : "Contact | Agency for Management of Natural Assets",
+      {
+        description:
+          language === "me"
+            ? "Kontaktirajte Agenciju za upravljanje prirodnim dobrima opštine Bijelo Polje. Pronađite email, telefon, adresu i kontakt formu."
+            : "Contact the Agency for Management of Natural Assets of Bijelo Polje. Find email, phone, address, and the contact form.",
+        path: "/contact",
+        image: "/assets/img/about_heading_bg.jpg",
+        locale: language,
+      },
+    );
 
   return (
     <>
