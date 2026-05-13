@@ -4,6 +4,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
 import { EffectCube } from "swiper/modules";
 import { useLanguage } from "../../context/LanguageContext";
+import { Icon } from "@iconify/react";
+
+const socialLinks = [
+  { label: "Instagram", icon: "lucide:instagram", url: "#" },
+  { label: "YouTube", icon: "lucide:youtube", url: "#" },
+  { label: "Facebook", icon: "lucide:facebook", url: "#" }
+];
 
 export default function HeroSection() {
   const { language } = useLanguage();
@@ -40,7 +47,7 @@ export default function HeroSection() {
     },
 
     en: {
-      title: "PROTECTION OF <b>NATURAL ASSETS</b> BIJELO POLJE",
+      title: "NATURAL RESOURCES <b>MANAGEMENT AGENCY</b> OF BIJELO POLJE",
 
       subtitle:
         "The Agency for the Management of Natural Assets of the Municipality of Bijelo Polje is dedicated to the protection, preservation, and improvement of protected areas through sustainable management, monitoring, and local community development.",
@@ -118,12 +125,18 @@ export default function HeroSection() {
                 ></p>
 
                 <div className="cs_circle_group">
-                  <span />
-                  <span />
-                  <span />
-                  {/* <span style={{ backgroundImage: "url('/assets/img/projects/djalovica-klisura/cover.jpg')" }} />
-                  <span style={{ backgroundImage: "url('/assets/img/projects/cehotina/cover.jpg')" }} />
-                  <span style={{ backgroundImage: "url('/assets/img/projects/cehotina/cover.jpg')" }} /> */}
+                  {socialLinks.map((item) => (
+                    <a
+                      key={item.label}
+                      href={item.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={item.label}
+                      title={item.label}
+                    >
+                      <Icon icon={item.icon} width="18" height="18" />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>

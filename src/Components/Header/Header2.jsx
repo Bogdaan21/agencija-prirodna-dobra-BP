@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
+import { Icon } from "@iconify/react";
 
 const data = {
   logo: "/assets/img/logo.svg",
@@ -43,6 +44,14 @@ const menuData = {
 const languages = [
   { code: "me", label: "MNE", flag: "🇲🇪" },
   { code: "en", label: "ENG", flag: "🇬🇧" },
+];
+
+const socialLinks = [
+  { label: "Instagram", icon: "lucide:instagram", url: "#" },
+  { label: "YouTube", icon: "lucide:youtube", url: "#" },
+  { label: "Facebook", icon: "lucide:facebook", url: "#" },
+  { label: "Google", icon: "simple-icons:google", url: "#" },
+  { label: "LinkedIn", icon: "lucide:linkedin", url: "#" },
 ];
 
 const Header2 = () => {
@@ -126,6 +135,20 @@ const Header2 = () => {
                           )}
                         </li>
                       ))}
+                      <li className="cs_mobile_social_links">
+                        {socialLinks.map((item) => (
+                          <a
+                            key={item.label}
+                            href={item.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label={item.label}
+                            title={item.label}
+                          >
+                            <Icon icon={item.icon} width="20" height="20" />
+                          </a>
+                        ))}
+                      </li>
                     </ul>
                   </nav>
                   <span
