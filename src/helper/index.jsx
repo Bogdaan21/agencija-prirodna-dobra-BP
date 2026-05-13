@@ -1,4 +1,5 @@
 const SITE_NAME = "Agencija za upravljanje prirodnim dobrima";
+const SITE_URL = "https://aupd.me";
 const DEFAULT_TITLE = "Agencija za upravljanje prirodnim dobrima Bijelo Polje";
 const DEFAULT_DESCRIPTION =
   "Agencija za upravljanje prirodnim dobrima opštine Bijelo Polje upravlja, štiti i promoviše zaštićena prirodna područja, biodiverzitet i održivo korišćenje prirodnih resursa.";
@@ -7,12 +8,7 @@ const DEFAULT_IMAGE = "/assets/img/cover-hero.jpg";
 const getAbsoluteUrl = (path = "/") => {
   if (/^https?:\/\//i.test(path)) return path;
 
-  const origin =
-    typeof window !== "undefined" && window.location?.origin
-      ? window.location.origin
-      : "";
-
-  return `${origin}${path.startsWith("/") ? path : `/${path}`}`;
+  return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 };
 
 const getCurrentPath = () => {
