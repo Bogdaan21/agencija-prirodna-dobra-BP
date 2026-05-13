@@ -10,7 +10,7 @@ export default function HeroSection() {
 
   const heroContent = {
     me: {
-      title: "ZAŠTITA <b>PRIRODNIH DOBARA</b> BIJELO POLJE",
+      title: "ZAŠTITA <b>PRIRODNIH DOBARA</b> BIJELOG POLJA",
 
       subtitle:
         "Agencija za upravljanje prirodnim dobrima opštine Bijelo Polje posvećena je zaštiti, očuvanju i unapređenju zaštićenih područja kroz održivo upravljanje, monitoring i razvoj lokalne zajednice.",
@@ -29,7 +29,7 @@ export default function HeroSection() {
       box: {
         title: "Đalovića klisura",
         subtitle: "Jedno od najvrijednijih prirodnih područja sa bogatom florom, faunom i speleološkim objektima.",
-        link: "/protectedareas/djalovica-klisura",
+        link: "/protectedareas/djalovica-klisura#map",
       },
 
       backgrounds: [
@@ -59,7 +59,7 @@ export default function HeroSection() {
       box: {
         title: "Đalovića Gorge",
         subtitle: "One of the most valuable natural areas, rich in flora, fauna, and speleological sites.",
-        link: "/protectedareas/djalovica-klisura",
+        link: "/protectedareas/djalovica-klisura#map",
       },
 
       backgrounds: [

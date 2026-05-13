@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import PageHeading from "../../Components/PageHeading";
 import ProjectDetailsSection from "../../Components/ProjectDetails";
 import { pageTitle } from "../../helper";
@@ -10,9 +10,21 @@ import GalleryPage from "../GalleryPage";
 
 export default function ProjectDetailsPage() {
   const { slug } = useParams();
+  const { hash } = useLocation();
   const { language } = useLanguage();
 
   const { projects } = projectJson;
+
+  React.useEffect(() => {
+    if (!hash) return;
+
+    const timeoutId = window.setTimeout(() => {
+      const target = document.getElementById(hash.replace("#", ""));
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 300);
+
+    return () => window.clearTimeout(timeoutId);
+  }, [hash, slug]);
 
   const project = projects.find((item) => item.slug === slug);
 

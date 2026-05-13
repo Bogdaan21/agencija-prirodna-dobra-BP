@@ -59,7 +59,7 @@ export default function MapRouteSection({ data = [] }) {
   if (!translatedPoints.length) return null;
 
   return (
-    <section className="cs_half_bg">
+    <section id="map" className="cs_half_bg">
       <div className="container">
         <h2 className="cs_section_title cs_fs_32 cs_bold" style={{ marginBottom: "20px" }}>
           {language === "me" ? "Lokacije na mapi" : "Locations on map"}

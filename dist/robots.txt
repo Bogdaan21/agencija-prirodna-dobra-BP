@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+Disallow: /login
+Disallow: /admintable
+Disallow: /adminadd
+Disallow: /adminedit
+
+Sitemap: https://aupd.me/sitemap.xml
