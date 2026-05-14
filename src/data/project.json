@@ -113,45 +113,45 @@
       },
       "features": [
         {
-          "iconClass": "fa6-solid:mountain",
-          "title": {
-            "me": "Kanjonski reljef",
-            "en": "Canyon Relief"
-          }
-        },
-        {
-          "iconClass": "fa6-solid:water",
-          "title": {
-            "me": "Izvori i rijeka Bistrica",
-            "en": "Springs and the Bistrica River"
-          }
-        },
-        {
           "iconClass": "fa6-solid:leaf",
           "title": {
-            "me": "Bogata flora i fauna",
-            "en": "Rich Flora and Fauna"
+            "me": "Flora i fauna",
+            "en": "Flora and Fauna"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:mountain",
+          "title": {
+            "me": "Prirodni lokaliteti",
+            "en": "Natural Landmarks"
           }
         },
         {
           "iconClass": "fa6-solid:landmark",
           "title": {
-            "me": "Speleološki objekti",
-            "en": "Speleological Sites"
-          }
-        },
-        {
-          "iconClass": "fa6-solid:tree",
-          "title": {
-            "me": "Šumski ekosistemi",
-            "en": "Forest Ecosystems"
+            "me": "Kulturna baština",
+            "en": "Cultural Heritage"
           }
         },
         {
           "iconClass": "fa6-solid:binoculars",
           "title": {
-            "me": "Turistički potencijal",
-            "en": "Tourism Potential"
+            "me": "Turizam",
+            "en": "Tourism"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:person-hiking",
+          "title": {
+            "me": "Aktivnosti",
+            "en": "Activities"
+          }
+        },
+        {
+          "iconClass": "fa6-solid:water",
+          "title": {
+            "me": "Speleološki objekti",
+            "en": "Speleological Sites"
           }
         }
       ],
@@ -525,45 +525,45 @@
       },
       "features": [
         {
-          "iconClass": "fa6-solid:water",
+          "iconClass": "fa6-solid:leaf",
           "title": {
-            "me": "Izvor Glava Ćehotine",
-            "en": "Headwaters of Ćehotina"
+            "me": "Flora i fauna",
+            "en": "Flora and Fauna"
           }
         },
         {
           "iconClass": "fa6-solid:mountain",
           "title": {
-            "me": "Planinski reljef i klisure",
-            "en": "Mountain Relief and Gorges"
+            "me": "Prirodni lokaliteti",
+            "en": "Natural Landmarks"
           }
         },
         {
-          "iconClass": "fa6-solid:leaf",
+          "iconClass": "fa6-solid:landmark",
           "title": {
-            "me": "Bogata flora i vegetacija",
-            "en": "Rich Flora and Vegetation"
+            "me": "Kulturna baština",
+            "en": "Cultural Heritage"
           }
         },
         {
-          "iconClass": "fa6-solid:paw",
+          "iconClass": "fa6-solid:binoculars",
           "title": {
-            "me": "Raznovrsna fauna",
-            "en": "Diverse Fauna"
+            "me": "Turizam",
+            "en": "Tourism"
           }
         },
         {
-          "iconClass": "fa6-solid:fish",
+          "iconClass": "fa6-solid:person-hiking",
           "title": {
-            "me": "Riblji fond i vodeni ekosistem",
-            "en": "Fish Population and Aquatic Ecosystem"
+            "me": "Aktivnosti",
+            "en": "Activities"
           }
         },
         {
-          "iconClass": "fa6-solid:globe",
+          "iconClass": "fa6-solid:water",
           "title": {
-            "me": "Ekološki značaj",
-            "en": "Ecological Importance"
+            "me": "Speleološki objekti",
+            "en": "Speleological Sites"
           }
         }
       ],
