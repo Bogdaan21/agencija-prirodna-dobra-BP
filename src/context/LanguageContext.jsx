@@ -1,24 +1,27 @@
 import React, { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 const LanguageContext = createContext(null);
+const DEFAULT_LANGUAGE = "me";
+const LANGUAGE_STORAGE_KEY = "aupd-language";
+const SUPPORTED_LANGUAGES = ["me", "en"];
 
 export function LanguageProvider({ children }) {
-  const [language, setLanguage] = useState("me");
+  const [language, setLanguage] = useState(() => {
+    const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    return SUPPORTED_LANGUAGES.includes(savedLanguage)
+      ? savedLanguage
+      : DEFAULT_LANGUAGE;
+  });
 
   useEffect(() => {
-    const savedLanguage = localStorage.getItem("language");
-
-    if (savedLanguage) {
-      setLanguage(savedLanguage);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("language", language);
+    localStorage.removeItem("language");
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, language);
   }, [language]);
 
   const changeLanguage = (lang) => {
-    setLanguage(lang);
+    if (SUPPORTED_LANGUAGES.includes(lang)) {
+      setLanguage(lang);
+    }
   };
 
   const value = useMemo(
