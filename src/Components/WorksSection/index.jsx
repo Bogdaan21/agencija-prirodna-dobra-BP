@@ -132,7 +132,9 @@ export default function WorksSection() {
                         <ul className="cs_card_info_list cs_mp_0">
                           <li>
                             <p className="mb-0">{t.titleLabel}</p>
-                            <h3 className="mb-0 cs_fs_20 cs_bold">{slide.name}</h3>
+                            <h3 className="mb-0 cs_fs_20 cs_bold">
+                              <Link to={`/news/${slide.slug}`}>{slide.name}</Link>
+                            </h3>
                           </li>
                           <li>
                             <p className="mb-0">{t.dateLabel}</p>

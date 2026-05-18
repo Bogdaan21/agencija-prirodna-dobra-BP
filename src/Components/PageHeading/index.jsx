@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function PageHeading({ data }) {
+  const TitleTag = data.titleTag === "div" ? "div" : "h1";
+
   return (
     <>
       <section
@@ -22,11 +24,11 @@ export default function PageHeading({ data }) {
               </li>
             ))}
           </ol>
-          <h1
+          <TitleTag
             className="cs_page_title mb-0 cs_fs_80"
             data-aos="fade-up"
             dangerouslySetInnerHTML={{ __html: data.title }}
-          ></h1>
+          />
         </div>
       </section>
     </>

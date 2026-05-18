@@ -274,6 +274,53 @@
   font-size: 15px;
 }
 
+.cs_blog_documents {
+  display: grid;
+  gap: 12px;
+}
+
+.cs_blog_document_item {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 40px;
+  align-items: center;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid #e3e8df;
+  border-radius: 8px;
+  background: #fff;
+  color: #1b1b1b;
+
+  &:hover {
+    border-color: #374836;
+    color: #374836;
+  }
+}
+
+.cs_blog_document_icon,
+.cs_blog_document_download {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: rgba(55, 72, 54, 0.09);
+  color: #374836;
+}
+
+.cs_blog_document_body {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+}
+
+.cs_blog_document_name {
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+
+.cs_blog_document_size {
+  color: #6b7280;
+  font-size: 14px;
+}
+
 @media (max-width: 767px) {
   .cs_blog_gallery {
     grid-template-columns: 1fr;

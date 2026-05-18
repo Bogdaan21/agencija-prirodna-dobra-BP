@@ -20,6 +20,7 @@ function AdminAdd() {
 
   const [gallery, setGallery] = useState([]);
   const [galleryPreview, setGalleryPreview] = useState([]);
+  const [documents, setDocuments] = useState([]);
 
   const [date, setDate] = useState(() => new Date().toISOString().split("T")[0]);
   const [error, setError] = useState("");
@@ -69,23 +70,27 @@ function AdminAdd() {
     [],
   );
 
-const compressImage = async (file) => {
-  try {
-    const compressedFile = await imageCompression(file, {
-      maxSizeMB: 0.5, // ~500KB
-      maxWidthOrHeight: 1920, // veća rezolucija
-      initialQuality: 0.8, // bitno za kvalitet (default je niži)
-      useWebWorker: true,
-    });
+  const compressImage = async (file) => {
+    try {
+      const compressedFile = await imageCompression(file, {
+        maxSizeMB: 0.5, // ~500KB
+        maxWidthOrHeight: 1920, // veća rezolucija
+        initialQuality: 0.8, // bitno za kvalitet (default je niži)
+        useWebWorker: true,
+      });
 
-    return new File([compressedFile], file.name, {
-      type: "image/jpeg", // forsiraj JPEG za bolju kompresiju
-    });
-  } catch (err) {
-    console.error("Image compression error:", err);
-    return file;
-  }
-};
+      return new File([compressedFile], file.name, {
+        type: "image/jpeg", // forsiraj JPEG za bolju kompresiju
+      });
+    } catch (err) {
+      console.error("Image compression error:", err);
+      return file;
+    }
+  };
+
+  const allowedDocumentExtensions = ["pdf", "doc", "docx", "xls", "xlsx"];
+  const maxDocumentSizeMb = 10;
+  const maxDocumentSizeBytes = maxDocumentSizeMb * 1024 * 1024;
 
   const handleImageChange = async (e) => {
     const file = e.target.files?.[0];
@@ -119,6 +124,57 @@ const compressImage = async (file) => {
   const removeGalleryImage = (indexToRemove) => {
     setGallery((prev) => prev.filter((_, index) => index !== indexToRemove));
     setGalleryPreview((prev) => prev.filter((_, index) => index !== indexToRemove));
+  };
+
+  const handleDocumentsChange = (e) => {
+    const files = Array.from(e.target.files || []);
+    if (!files.length) return;
+
+    const filesWithAllowedFormat = files.filter((file) => {
+      const extension = file.name.split(".").pop()?.toLowerCase();
+      return allowedDocumentExtensions.includes(extension);
+    });
+
+    const validFiles = filesWithAllowedFormat.filter((file) => file.size <= maxDocumentSizeBytes);
+    const hasInvalidFormat = filesWithAllowedFormat.length !== files.length;
+    const hasOversizedFiles = filesWithAllowedFormat.length !== validFiles.length;
+
+    if (hasInvalidFormat) {
+      setError("Allowed document formats are PDF, Word and Excel files.");
+    }
+
+    if (hasOversizedFiles) {
+      setError(`Document is too large. Maximum allowed size is ${maxDocumentSizeMb} MB per file.`);
+    }
+
+    if (!hasInvalidFormat && !hasOversizedFiles) {
+      setError("");
+    }
+
+    if (!validFiles.length) {
+      e.target.value = "";
+      return;
+    }
+
+    const documentItems = validFiles.map((file) => ({
+      file,
+      title: file.name.replace(/\.[^/.]+$/, ""),
+      originalName: file.name,
+      size: file.size,
+    }));
+
+    setDocuments((prev) => [...prev, ...documentItems]);
+    e.target.value = "";
+  };
+
+  const updateDocumentTitle = (indexToUpdate, title) => {
+    setDocuments((prev) =>
+      prev.map((documentItem, index) => (index === indexToUpdate ? { ...documentItem, title } : documentItem)),
+    );
+  };
+
+  const removeDocument = (indexToRemove) => {
+    setDocuments((prev) => prev.filter((_, index) => index !== indexToRemove));
   };
 
   const stripHtml = (html) => {
@@ -161,6 +217,27 @@ const compressImage = async (file) => {
     };
   };
 
+  const uploadSingleDocument = async (documentItem) => {
+    const file = documentItem.file;
+    const fileExtension = file.name.split(".").pop();
+    const cleanName = file.name.replace(/\.[^/.]+$/, "");
+    const safeName = generateSlug(cleanName || "document");
+    const fileName = `${Date.now()}-${safeName}.${fileExtension}`;
+
+    const storageRef = ref(storage, `blogs/documents/${fileName}`);
+    await uploadBytes(storageRef, file);
+    const url = await getDownloadURL(storageRef);
+
+    return {
+      url,
+      fileName,
+      title: documentItem.title?.trim() || file.name,
+      originalName: file.name,
+      contentType: file.type || "",
+      size: file.size,
+    };
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -199,6 +276,10 @@ const compressImage = async (file) => {
         }),
       );
 
+      const documentUploads = await Promise.all(
+        documents.map(async (documentItem) => uploadSingleDocument(documentItem)),
+      );
+
       const blogData = {
         title: {
           me: titleMe.trim(),
@@ -217,6 +298,7 @@ const compressImage = async (file) => {
         imageUrl,
         imageName,
         gallery: galleryUploads,
+        documents: documentUploads,
         createdAt: serverTimestamp(),
       };
 
@@ -365,6 +447,39 @@ const compressImage = async (file) => {
                         }}
                       >
                         ×
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              <div className="cs_mb_20">
+                <label>Documents</label>
+                <input
+                  type="file"
+                  multiple
+                  accept=".pdf,.doc,.docx,.xls,.xlsx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                  className="cs_form_field cs_file_input"
+                  onChange={handleDocumentsChange}
+                />
+              </div>
+
+              {documents.length > 0 && (
+                <div className="cs_admin_documents_list cs_mb_20">
+                  {documents.map((documentItem, index) => (
+                    <div className="cs_admin_document_item" key={`${documentItem.originalName}-${index}`}>
+                      <div className="cs_admin_document_fields">
+                        <span>{documentItem.originalName}</span>
+                        <input
+                          type="text"
+                          className="cs_form_field admin_cms"
+                          value={documentItem.title}
+                          onChange={(e) => updateDocumentTitle(index, e.target.value)}
+                          placeholder="Document display name"
+                        />
+                      </div>
+                      <button type="button" onClick={() => removeDocument(index)}>
+                        Remove
                       </button>
                     </div>
                   ))}

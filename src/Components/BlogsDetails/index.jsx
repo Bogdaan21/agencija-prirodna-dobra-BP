@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Icon } from "@iconify/react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 
@@ -15,6 +16,23 @@ export default function BlogDetailsSection({ data }) {
 
   const closeLightbox = () => {
     setLightboxOpen(false);
+  };
+
+  const getDocumentName = (documentItem) => {
+    if (typeof documentItem === "string") return documentItem.split("/").pop() || "Document";
+    return documentItem?.title || documentItem?.displayName || documentItem?.originalName || documentItem?.fileName || "Document";
+  };
+
+  const getDocumentUrl = (documentItem) => {
+    if (typeof documentItem === "string") return documentItem;
+    return documentItem?.url || "#";
+  };
+
+  const formatFileSize = (size) => {
+    if (!size) return "";
+    const sizeInMb = size / (1024 * 1024);
+    if (sizeInMb >= 1) return `${sizeInMb.toFixed(1)} MB`;
+    return `${Math.max(1, Math.round(size / 1024))} KB`;
   };
 
   const showPrevImage = () => {
@@ -69,7 +87,7 @@ export default function BlogDetailsSection({ data }) {
             )}
           </div>
 
-          <h2 className="cs_post_title" dangerouslySetInnerHTML={{ __html: data.title || "" }} />
+          <h1 className="cs_post_title" dangerouslySetInnerHTML={{ __html: data.title || "" }} />
 
           {data.content?.map((item, index) => {
             if (item.type === "p") {
@@ -154,6 +172,38 @@ export default function BlogDetailsSection({ data }) {
                   </div>
                 </div>
               )}
+            </>
+          )}
+
+          {!!data.documents?.length && (
+            <>
+              <div className="cs_height_40 cs_height_lg_25" />
+              <h3 className="cs_fs_24 cs_mb_20">{language === "me" ? "Dokumenta" : "Documents"}</h3>
+
+              <div className="cs_blog_documents">
+                {data.documents.map((documentItem, index) => (
+                  <a
+                    className="cs_blog_document_item"
+                    href={getDocumentUrl(documentItem)}
+                    target="_blank"
+                    rel="noreferrer"
+                    key={`${getDocumentName(documentItem)}-${index}`}
+                  >
+                    <span className="cs_blog_document_icon cs_center">
+                      <Icon icon="lucide:file-text" width="22" height="22" />
+                    </span>
+                    <span className="cs_blog_document_body">
+                      <span className="cs_blog_document_name">{getDocumentName(documentItem)}</span>
+                      {documentItem?.size && (
+                        <span className="cs_blog_document_size">{formatFileSize(documentItem.size)}</span>
+                      )}
+                    </span>
+                    <span className="cs_blog_document_download cs_center">
+                      <Icon icon="lucide:download" width="18" height="18" />
+                    </span>
+                  </a>
+                ))}
+              </div>
             </>
           )}
 

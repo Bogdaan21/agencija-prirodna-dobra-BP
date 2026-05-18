@@ -46,6 +46,49 @@
   }
 }
 
+.cs_admin_documents_list {
+  display: grid;
+  gap: 10px;
+}
+
+.cs_admin_document_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid #e7e7e7;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.cs_admin_document_fields {
+  min-width: 0;
+  flex: 1;
+  display: grid;
+  gap: 8px;
+
+  span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    color: #1b1b1b;
+    font-weight: 500;
+  }
+}
+
+.cs_admin_document_item {
+  button {
+    border: 0;
+    border-radius: 6px;
+    padding: 6px 10px;
+    background: #374836;
+    color: #fff;
+    font-size: 13px;
+    line-height: 1.2;
+    white-space: nowrap;
+  }
+}
+
 .cs_editor_wrap {
   .ql-toolbar.ql-snow {
     border: 1px solid #e7e7e7;

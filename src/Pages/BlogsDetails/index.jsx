@@ -47,6 +47,7 @@ export default function BlogDetailsPage() {
             },
           ],
           gallery: firebaseBlog.gallery || [],
+          documents: firebaseBlog.documents || [],
           sections: [],
           videoUrl: "",
           closingParagraph: "",
@@ -93,7 +94,8 @@ export default function BlogDetailsPage() {
       { label: language === "me" ? "Početna" : "Home", link: "/" },
       { label: language === "me" ? "Novosti" : "News", link: "/news" },
     ],
-    title: blogData?.title || "Blog Details",
+    title: language === "me" ? "Novosti" : "News",
+    titleTag: "div",
   };
 
   if (loading) {
