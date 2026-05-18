@@ -7,9 +7,9 @@ import { useLanguage } from "../../context/LanguageContext";
 import { Icon } from "@iconify/react";
 
 const socialLinks = [
-  { label: "Instagram", icon: "lucide:instagram", url: "#" },
-  { label: "YouTube", icon: "lucide:youtube", url: "#" },
-  { label: "Facebook", icon: "lucide:facebook", url: "#" }
+  { label: "Instagram", icon: "lucide:instagram", url: "https://www.instagram.com/aupdbp?igsh=MTU1aXcxYXl1eno4eA==" },
+  { label: "YouTube", icon: "lucide:youtube", url: "https://www.youtube.com/channel/UCISEsNiYFIoDXsNToQdwFMg" },
+  { label: "Facebook", icon: "lucide:facebook", url: "https://www.facebook.com/share/1D3CE9sWiH/" }
 ];
 
 export default function HeroSection() {
