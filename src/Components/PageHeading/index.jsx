@@ -26,7 +26,7 @@ export default function PageHeading({ data }) {
           </ol>
           <TitleTag
             className="cs_page_title mb-0 cs_fs_80"
-            data-aos="fade-up"
+            data-aos={data.disableAnimation ? undefined : "fade-up"}
             dangerouslySetInnerHTML={{ __html: data.title }}
           />
         </div>

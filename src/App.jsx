@@ -23,6 +23,7 @@ import AdminTable from "./Pages/AdminTable";
 import AdminAdd from "./Pages/AdminAdd";
 import AdminEdit from "./Pages/AdminEdit";
 import PrivateRoute from "./Components/PrivateRoute";
+import DocumentsPage from "./Pages/DocumentsPage";
 
 function App() {
   Aos.init({
@@ -53,6 +54,7 @@ function App() {
 
           <Route path="/news" element={<BlogPage />} />
           <Route path="/news/:slug" element={<BlogDetailsPage />} />
+          <Route path="/documents" element={<DocumentsPage />} />
 
           {/* <Route path="/faq" element={<FaqPage />} /> */}
         </Route>

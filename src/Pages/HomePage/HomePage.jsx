@@ -7,8 +7,10 @@ import ServicesSection from "../../Components/ServicesSection";
 import TestimonialSection from "../../Components/TestimonialSection";
 import WorksSection from "../../Components/WorksSection";
 import CTASection from "../../Components/CTASection";
+import DocumentLibrary from "../../Components/DocumentLibrary";
 import { pageTitle } from "../../helper";
 import { useLanguage } from "../../context/LanguageContext";
+import documentLibrary from "../../data/documentLibrary";
 
 export default function HomePage() {
   const { language } = useLanguage();
@@ -38,6 +40,7 @@ export default function HomePage() {
       <WorksSection />
       <hr/>
       <ServicesSection />
+      <DocumentLibrary data={documentLibrary[language] || documentLibrary.me} compact />
       {/* <WorkingProcess data={workingProcessData} />
       <TestimonialSection data={testimonialData} /> */}
       <CTASection />

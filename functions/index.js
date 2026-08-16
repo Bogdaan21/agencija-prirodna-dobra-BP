@@ -13,6 +13,7 @@ const staticUrls = [
   { path: "/protectedareas", priority: "0.9" },
   { path: "/protectedareas/djalovica-klisura", priority: "0.8" },
   { path: "/protectedareas/cehotina", priority: "0.8" },
+  { path: "/documents", priority: "0.8" },
   { path: "/news", priority: "0.8" },
   { path: "/contact", priority: "0.7" },
   { path: "/faq", priority: "0.5" },

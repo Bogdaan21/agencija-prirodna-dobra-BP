@@ -24,6 +24,7 @@ export default function Footer() {
           links: [
             { label: "O NAMA", url: "/about" },
             { label: "ZAŠTIĆENA PODRUČJA", url: "/protectedareas" },
+            { label: "DOKUMENTA", url: "/documents" },
             { label: "NOVOSTI", url: "/news" },
           ],
         },
@@ -62,6 +63,7 @@ export default function Footer() {
           links: [
             { label: "ABOUT US", url: "/about" },
             { label: "PROTECTED AREAS", url: "/protectedareas" },
+            { label: "DOCUMENTS", url: "/documents" },
             { label: "NEWS", url: "/news" },
           ],
         },

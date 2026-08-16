@@ -13,6 +13,7 @@ const menuData = {
     { label: "POČETNA", href: "/" },
     { label: "O NAMA", href: "/about" },
     { label: "ZAŠTIĆENA PODRUČJA", href: "/protectedareas" },
+    { label: "DOKUMENTA", href: "/documents" },
     // {
     //   label: "VIŠE",
     //   children: [{ label: "ZAŠTIĆENA PODRUČJA", href: "/protectedareas" }],
@@ -23,6 +24,7 @@ const menuData = {
     { label: "HOME", href: "/" },
     { label: "ABOUT", href: "/about" },
     { label: "PROTECTED AREAS", href: "/protectedareas" },
+    { label: "DOCUMENTS", href: "/documents" },
     // {
     //   label: "MORE",
     //   children: [{ label: "PROTECTED AREAS", href: "/protectedareas" }],
