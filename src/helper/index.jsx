@@ -68,6 +68,13 @@ const upsertJsonLd = (id, data) => {
   element.textContent = JSON.stringify(data);
 };
 
+const removeJsonLd = (id) => {
+  const element = document.head.querySelector(`script[data-seo="${id}"]`);
+  if (element) {
+    element.remove();
+  }
+};
+
 export const setSeoMeta = ({
   title = DEFAULT_TITLE,
   description = DEFAULT_DESCRIPTION,
@@ -76,6 +83,7 @@ export const setSeoMeta = ({
   type = "website",
   locale = "me",
   noIndex = false,
+  structuredData,
 } = {}) => {
   const canonicalUrl = getAbsoluteUrl(path || getCurrentPath());
   const imageUrl = getAbsoluteUrl(image);
@@ -127,6 +135,12 @@ export const setSeoMeta = ({
       contactType: "customer support",
     },
   });
+
+  if (structuredData) {
+    upsertJsonLd("page", structuredData);
+  } else {
+    removeJsonLd("page");
+  }
 };
 
 export const pageTitle = (title, options = {}) => {

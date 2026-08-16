@@ -59,21 +59,45 @@ export default function BlogDetailsPage() {
 
         setBlogData(mappedBlog);
 
+        const seoDescription =
+          firebaseBlog?.excerpt?.[language] ||
+          firebaseBlog?.excerpt?.en ||
+          firebaseBlog?.excerpt?.me ||
+          stripHtml(firebaseBlog?.content?.[language]) ||
+          stripHtml(firebaseBlog?.content?.en) ||
+          stripHtml(firebaseBlog?.content?.me) ||
+          (language === "me"
+            ? "Detaljna objava Agencije za upravljanje prirodnim dobrima."
+            : "Detailed news post from the Agency for Management of Natural Assets.");
+
         pageTitle(`${mappedBlog.title} | Agencija za upravljanje prirodnim dobrima`, {
-          description:
-            firebaseBlog?.excerpt?.[language] ||
-            firebaseBlog?.excerpt?.en ||
-            firebaseBlog?.excerpt?.me ||
-            stripHtml(firebaseBlog?.content?.[language]) ||
-            stripHtml(firebaseBlog?.content?.en) ||
-            stripHtml(firebaseBlog?.content?.me) ||
-            (language === "me"
-              ? "Detaljna objava Agencije za upravljanje prirodnim dobrima."
-              : "Detailed news post from the Agency for Management of Natural Assets."),
+          description: seoDescription,
           path: `/news/${slug}`,
           image: mappedBlog.postThumb,
           type: "article",
           locale: language,
+          structuredData: {
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            headline: mappedBlog.title,
+            description: seoDescription,
+            image: [getAbsoluteSchemaUrl(mappedBlog.postThumb)],
+            datePublished: normalizeSchemaDate(firebaseBlog.createdAt || firebaseBlog.date),
+            dateModified: normalizeSchemaDate(firebaseBlog.updatedAt || firebaseBlog.createdAt || firebaseBlog.date),
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": `https://aupd.me/news/${slug}`,
+            },
+            publisher: {
+              "@type": "GovernmentOrganization",
+              name: "Agencija za upravljanje prirodnim dobrima",
+              url: "https://aupd.me",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://aupd.me/assets/img/logo.png",
+              },
+            },
+          },
         });
       } catch (error) {
         console.error("Error fetching blog:", error);
@@ -188,4 +212,23 @@ function stripHtml(html) {
   const div = document.createElement("div");
   div.innerHTML = html;
   return div.textContent || div.innerText || "";
+}
+
+function normalizeSchemaDate(dateValue) {
+  if (!dateValue) return undefined;
+
+  if (typeof dateValue.toDate === "function") {
+    return dateValue.toDate().toISOString();
+  }
+
+  const dateObj = new Date(dateValue);
+  if (Number.isNaN(dateObj.getTime())) return undefined;
+
+  return dateObj.toISOString();
+}
+
+function getAbsoluteSchemaUrl(url) {
+  if (!url) return "https://aupd.me/assets/img/cover-hero.jpg";
+  if (/^https?:\/\//i.test(url)) return url;
+  return `https://aupd.me${url.startsWith("/") ? url : `/${url}`}`;
 }

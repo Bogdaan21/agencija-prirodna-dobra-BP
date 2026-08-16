@@ -54,7 +54,7 @@ function App() {
           <Route path="/news" element={<BlogPage />} />
           <Route path="/news/:slug" element={<BlogDetailsPage />} />
 
-          <Route path="/faq" element={<FaqPage />} />
+          {/* <Route path="/faq" element={<FaqPage />} /> */}
         </Route>
 
         <Route path="/" element={<Layout3 />}>

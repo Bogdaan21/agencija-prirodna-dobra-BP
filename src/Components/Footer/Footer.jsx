@@ -15,8 +15,8 @@ export default function Footer() {
           links: [
             { label: "FAQ", url: "/faq" },
             { label: "KORISNIČKO UPUTSTVO", url: "/" },
-            { label: "UTISCI", url: "/" },
-            { label: "KORISNICI", url: "/" },
+            // { label: "UTISCI", url: "/" },
+            // { label: "KORISNICI", url: "/" },
           ],
         },
         {
@@ -53,8 +53,8 @@ export default function Footer() {
           links: [
             { label: "FAQ", url: "/faq" },
             { label: "USER GUIDE", url: "/" },
-            { label: "TESTIMONIALS", url: "/" },
-            { label: "CUSTOMERS", url: "/" },
+            // { label: "TESTIMONIALS", url: "/" },
+            // { label: "CUSTOMERS", url: "/" },
           ],
         },
         {

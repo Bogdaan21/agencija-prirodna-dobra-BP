@@ -1,4 +1,7 @@
 User-agent: *
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
 Allow: /
 
 Disallow: /login
