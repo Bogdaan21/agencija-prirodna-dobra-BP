@@ -19,6 +19,7 @@ Important pages:
 - Djalovica Gorge: https://aupd.me/protectedareas/djalovica-klisura
 - Cehotina River: https://aupd.me/protectedareas/cehotina
 - News: https://aupd.me/news
+- Documents: https://aupd.me/documents
 - Contact: https://aupd.me/contact
 - Sitemap: https://aupd.me/sitemap.xml
 
