@@ -32,9 +32,16 @@
 }
 .cs_hero.cs_style_1 {
   position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  min-height: 100dvh;
+  overflow: hidden;
   .cs_hero_in {
-    min-height: 780px;
-    padding: 150px 0;
+    min-height: 100vh;
+    min-height: 100svh;
+    min-height: 100dvh;
+    padding: 130px 0 90px;
+    box-sizing: border-box;
     position: relative;
     width: 100%;
     display: flex;
@@ -116,6 +123,8 @@
     .cs_slider,
     .cs_slider_container,
     .cs_slider_wrapper,
+    .swiper-wrapper,
+    .swiper-slide,
     .slick-list,
     .slick-track,
     .slick-track * {
@@ -128,6 +137,57 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-height: 720px) {
+  .cs_hero.cs_style_1 {
+    .cs_hero_in {
+      padding: 110px 0 55px;
+    }
+
+    .cs_hero_funfact_wrap,
+    .cs_hero_box {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cs_hero.cs_style_1 {
+    .cs_hero_in {
+      padding: 110px 0 60px;
+    }
+
+    .cs_hero_title {
+      font-size: 50px;
+      line-height: 1.08em;
+    }
+
+    .cs_hero_subtitle {
+      font-size: 18px;
+      line-height: 1.45em;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_hero.cs_style_1 {
+    .cs_hero_in {
+      padding: 100px 0 45px;
+    }
+
+    .cs_hero_subtitle {
+      margin-bottom: 24px;
+    }
+
+    .cs_hero_btns {
+      gap: 10px 18px;
+
+      .cs_btn.cs_style_1 {
+        padding: 10px 22px;
+      }
     }
   }
 }

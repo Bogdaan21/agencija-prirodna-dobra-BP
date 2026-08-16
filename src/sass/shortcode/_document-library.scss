@@ -13,6 +13,10 @@
   align-items: end;
 }
 
+.cs_document_library:not(.cs_document_library_compact) .cs_document_library_head {
+  grid-template-columns: 1fr;
+}
+
 .cs_document_library_intro {
   max-width: 540px;
   color: #5f6f60;

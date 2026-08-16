@@ -111,9 +111,7 @@ export default function DocumentLibrary({ data, compact = false }) {
               dangerouslySetInnerHTML={{ __html: data.title }}
             />
           </div>
-          <p className="cs_document_library_intro mb-0">
-            {compact ? data.previewDescription : data.description}
-          </p>
+          {compact && <p className="cs_document_library_intro mb-0">{data.previewDescription}</p>}
         </div>
 
         <div className="cs_height_50 cs_height_lg_35" />
